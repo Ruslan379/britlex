@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	// outline: 1px solid palevioletred;
+}
+*::after,
+::before {
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+}
+html {
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+input,
+button,
+textarea {
+	outline: none;
+	border: none;
+}
+address {
+	font-style: normal;
+}
+button {
+	cursor: pointer;
+}
+
+// От Руслана
+/** Этот файл обнуляет стандартные отступы и отступы отступов,  */
+/** устанавливает базовый размер шрифта в 100%,  */
+/** убирает стили списков и т. д. */
+
+/*! Reset styles */
+/* *,
+*::before,
+*::after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+} */
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    display: block;
+}
+
+button:hover {
+    cursor: pointer;
+}
+

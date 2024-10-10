@@ -1,0 +1,22 @@
+// utils/reset
+@import './base/reset';
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/function';
+@import './utils/mixins';
+
+// base
+@import './base/common';
+
+// components
+@import './components/container';
+
+// layouts
+@import './layout/01_header';
+@import './layout/02_hero';
+@import './layout/skils';
+@import './layout/about';
+@import './layout/pricing';
+@import './layout/contactcs';
+@import './layout/10_footer';
