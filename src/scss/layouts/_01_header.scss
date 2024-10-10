@@ -10,7 +10,8 @@
         // @include outline($type: dashed, $color: red);
 
         .navigation {
-            // ! міксін outline
+            @include flex_JCsb-AIcen;
+              // ! міксін outline
             @include outline($size: 2px,$type: dashed, $color: red);
 
             // ? Moved to scss/components
@@ -25,6 +26,23 @@
             //         color: getColor("gray-first");
             //     }
             // }
+
+            //? Кнопка Бургер-меню_(open)
+            .button-menu-toggle {
+                @include buttons-menu-toggle;
+                
+                //! Медіа-запити
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    //? Приховуємо кнопку Бургер-меню
+                    display: none;
+                }
+                
+                // &:focus,
+                // &:hover {
+                //     color: getColor('hover');
+                // }
+            }
         }
     }
 }
