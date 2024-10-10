@@ -1,6 +1,42 @@
-$colors: (
-	primary: #263238,
-	secondary: #8f95a5,
-	white: #f5f5f5,
-	text: #8f95a5
+//? ==============  var-02. map ==============
+// * ================= fonts ===================
+$fonts: (
+    main-family: "Poppins",
+    // second-family: "Playfair Display",
+    // third-family: "PT Serif",
 );
+// * ================= colors ==================
+$colors: (
+	dark: #000000,
+	gray-first: #939393,
+	gray-second: #546269,
+	light: #ffffff,
+	title-first: #263238,
+	title-second: #2a3246,
+	text: #8f95a5,
+	background: #f5f5f5,
+);
+//? _______________________________________________
+
+
+
+//? ======== var-03. function ========
+// * ================= fonts ===================
+@function getFont($font) {
+    @return map-get($fonts, $font);
+}
+// * ================= colors ==================
+@function getColor($color) {
+    @return map-get($colors, $color);
+}
+//? _______________________________________________
+
+
+
+//? == Cписок, або масив значень (icons) ==
+$icons: "premium-quality", "indelible-paint", "fast-shipping";
+//? ______________________________________________
+
+//? == Cписок, або масив значень (images) ==
+$images-benefits: "shoelace", "lining", "logo", "mesh", "sole";
+//? ______________________________________________

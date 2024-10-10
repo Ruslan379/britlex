@@ -1,22 +1,22 @@
-// utils/reset
+//! utils/reset
 @import './base/reset';
-@import './utils/fonts';
+// @import './utils/fonts';
 @import './utils/variables';
 @import './utils/breakpoints';
-@import './utils/function';
+// @import './utils/function';
 @import './utils/mixins';
 
-// base
+//! base
 @import './base/common';
 
-// components
+//! components
 @import './components/container';
 
-// layouts
-@import './layout/01_header';
-@import './layout/02_hero';
-@import './layout/skils';
-@import './layout/about';
-@import './layout/pricing';
-@import './layout/contactcs';
-@import './layout/10_footer';
+//! layouts
+@import './layouts/01_header';
+@import './layouts/02_hero';
+@import './layouts/03_skils';
+@import './layouts/04_about';
+@import './layouts/05_pricing';
+@import './layouts/06_contacts';
+@import './layouts/07_footer';

@@ -1,4 +1,4 @@
-//? ============= var-01.SCSS-змінні ============
+//? ============= var-01. SCSS-змінні ============
 //* ================= break-points ==================
 $sm: 320px;
 $md: 575px;
@@ -7,7 +7,7 @@ $xl: 992px;
 $xxl: 1330px;
 
 
-//? ==============  var-02.map-get ==============
+//? ==============  var-02. map ==============
 // * ================= break-points ===================
 $break-points: (
     sm: 320px,
@@ -17,8 +17,8 @@ $break-points: (
     xxl: 1330px,
 );
 
-//? ======== var-03.map-get --> getBreakPoint ========
+//? ======== var-03. function ========
 // * ================= break-points ===================
-@function getBreakPoint($key) {
-    @return map-get($break-points, $key);
+@function getBreakPoint($break-point) {
+    @return map-get($break-points, $break-point);
 }
