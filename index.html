@@ -25,7 +25,7 @@
 		<!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 		<!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
 		
-		<link rel="stylesheet" href="/britlex/assets/index-0a274336.css">
+		<link rel="stylesheet" href="/britlex/assets/index-c0f0fcc8.css">
 	</head>
 
 	<body>
@@ -39,6 +39,24 @@
             <!-- <a class="logo" href="#">Brit<span class="logo__light">lex</span></a> -->
             <a class="logo" href="#">Brit<span class="logo__light">lex</span></a>
 
+            <!--? Кнопка Бургер-меню_(open)-->
+            <button
+                class="button-menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <svg 
+                    width="34" 
+                    height="19" 
+                    viewBox="0 0 34 19" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="33.5294" height="3.35294" rx="1" fill="#39515E" />
+                    <rect y="7.82353" width="33.5294" height="3.35294" rx="1" fill="#39515E" />
+                    <rect y="15.6471" width="23.7159" height="3.35294" rx="1" fill="#39515E" />
+                </svg>
+            </button>
             <!-- <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link active-link" href="./webstudio.html">Студія</a></li>
                 <li class="nav-item"><a class="nav-link" href="./portfolio.html">Портфоліо</a></li>
@@ -85,5 +103,51 @@
         <p>07_FOOTER</p>
     </div>
 </footer>
+
+		<!--? Контейнер для Бургер-меню -->
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<!--? Кнопка Бургер-меню_(close)-->
+			<button class="button-menu-toggle js-close-menu">
+				<svg
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+						clip-rule="evenodd"
+					>
+					</path>
+				</svg>
+			</button>
+			<!--? Список для Бургер-меню -->
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./lifestyle.html">LIFESTYLE</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./photodiary.html">PHOTODIARY</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./music.html">MUSIC</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./travel.html">TRAVEL</a>
+				</li>
+			</ul>
+		</div>
+		<!--? Скрипт для блокування вертикальної смуги прокрутки  -->
+		<script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"
+    >
+    </script>
+    <!--? Скрипт для Бургер-меню -->
+    <script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>
