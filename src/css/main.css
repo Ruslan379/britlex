@@ -88,12 +88,15 @@ button:hover {
 
 body {
   font-family: "Poppins";
-  font-size: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #8f95a5;
 }
 
 .container {
   width: 100%;
   min-width: 320px;
+  padding: 0 10px;
   margin: 0 auto;
   outline: 1px solid tomato;
 }
@@ -128,9 +131,24 @@ body {
   }
 }
 
+.logo {
+  font-size: 24px;
+  color: #000000;
+}
+.logo__light {
+  color: #939393;
+}
+
 .header {
-  height: 120px;
-  background-color: rgb(255, 255, 84);
+  padding-top: 36px;
+  padding-bottom: 29px;
+  background-color: #ffff54;
+}
+.header .container {
+  padding: 0 15px;
+}
+.header .container .navigation {
+  outline: 2px dashed red;
 }
 
 .hero {

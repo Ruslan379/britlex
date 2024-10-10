@@ -1,4 +1,30 @@
 .header {
-    height: 120px;
-    background-color: rgb(255, 255, 84);
+    // height: 101px;
+    padding-top: 36px;
+    padding-bottom: 29px;
+    background-color: #ffff54;
+
+    .container {
+        padding: 0 15px;
+        // ! міксін outline
+        // @include outline($type: dashed, $color: red);
+
+        .navigation {
+            // ! міксін outline
+            @include outline($size: 2px,$type: dashed, $color: red);
+
+            // ? Moved to scss/components
+            // .logo {
+            //     // font-family: getFont("main-family");
+            //     // font-weight: 400;
+            //     font-size: 24px;
+            //     // line-height: 1.5;
+            //     color: getColor("dark");
+                
+            //     &__light {
+            //         color: getColor("gray-first");
+            //     }
+            // }
+        }
+    }
 }
