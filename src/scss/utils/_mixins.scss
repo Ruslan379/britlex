@@ -91,11 +91,14 @@
 }
 
 //! ----------- SASS: Загальні стилі кнопок -----------
-@mixin buttons {
-    align-self: center;
-    padding: 20px 48px 21px 48px;
-    font-size: 1.5rem;
-    background-color: inherit;
+@mixin button($width: 178px, $height: 50px) {
+	width: $width;
+	height: $height;
+	border-radius: 5px;
+	color: getColor("light");
+    background-color: getColor("title-first");
+	// ! міксін outline
+	// @include outline($size: 1px, $type: dotted, $color: red);
 }
 
 @mixin buttons-menu-toggle {
@@ -106,9 +109,9 @@
     padding: 0;
     @include flex_JCcen-AIcen;
     cursor: pointer;
-    border: none;
+    // border: none; //? in reset.css
 	// border-radius: 5px;
-    outline: none;
+    // outline: none; //? in reset.css
     background-color: transparent;
 	// ! міксін outline
 	// @include outline($size: 1px, $type: dashed, $color: blue);

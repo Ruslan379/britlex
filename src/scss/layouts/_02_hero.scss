@@ -1,5 +1,4 @@
 .hero {
-    // height: auto;
     height: 616px;
     padding-bottom: 51px;
     background-color: #ccffaf;
@@ -13,9 +12,9 @@
         padding-left: 11px;
         text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: red);
+        // @include outline($type: dashed, $color: red);
         
-        .hero__title{
+        .hero__title {
             padding-top: 315px;
             padding-bottom: 20px;
             // font-family: getFont("main-family");
@@ -26,7 +25,7 @@
             color: getColor('dark');
         }
         
-        .hero__text{
+        .hero__text {
             padding-bottom: 35px;
             // font-family: getFont("main-family");
             // font-weight: 400;
@@ -34,6 +33,14 @@
             // line-height: 1.5;
             // text-align: center;
             // color: getColor("text");
+        }
+
+        .hero__button {
+            @include button(289px, 60px);
+            // font-family: getFont("main-family");
+            font-weight: 500;
+            font-size: 18px;
+            // color: getColor("light");
         }
     }
 }

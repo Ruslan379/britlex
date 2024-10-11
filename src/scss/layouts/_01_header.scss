@@ -11,8 +11,8 @@
 
         .navigation {
             @include flex_JCsb-AIcen;
-              // ! міксін outline
-            @include outline($size: 2px,$type: dashed, $color: red);
+            // ! міксін outline
+            // @include outline($size: 2px, $type: dashed, $color: red);
 
             // ? Moved to scss/components
             // .logo {

@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/** Этот файл обнуляет стандартные отступы и отступы отступов,  */
+/** устанавливает базовый размер шрифта в 100%,  */
+/** убирает стили списков и т. д. */
+/*! Reset styles */
+/* *,
+*::before,
+*::after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+} */
 * {
   padding: 0;
   margin: 0;
@@ -11,65 +21,35 @@
 }
 
 body {
+  margin: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 li {
   list-style: none;
-}
-
-input,
-button,
-textarea {
-  outline: none;
-  border: none;
-}
-
-address {
-  font-style: normal;
-}
-
-button {
-  cursor: pointer;
-}
-
-/** Этот файл обнуляет стандартные отступы и отступы отступов,  */
-/** устанавливает базовый размер шрифта в 100%,  */
-/** убирает стили списков и т. д. */
-/*! Reset styles */
-/* *,
-*::before,
-*::after {
-    box-sizing: inherit;
-    box-sizing: border-box;
-} */
-body {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-
-ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 img {
@@ -80,6 +60,18 @@ img {
 
 svg {
   display: block;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
 }
 
 button:hover {
@@ -152,7 +144,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  outline: 2px dashed red;
 }
 .header .container .navigation .button-menu-toggle {
   width: 34px;
@@ -163,8 +154,6 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: none;
-  outline: none;
   background-color: transparent;
 }
 .header .container .navigation .button-menu-toggle:hover {
@@ -188,7 +177,6 @@ body {
 .hero .container {
   padding-left: 11px;
   text-align: center;
-  outline: 1px dashed red;
 }
 .hero .container .hero__title {
   padding-top: 315px;
@@ -199,6 +187,15 @@ body {
 }
 .hero .container .hero__text {
   padding-bottom: 35px;
+}
+.hero .container .hero__button {
+  width: 289px;
+  height: 60px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #263238;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .skills {
