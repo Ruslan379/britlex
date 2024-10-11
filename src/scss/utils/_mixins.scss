@@ -99,14 +99,15 @@
 }
 
 @mixin buttons-menu-toggle {
-    width: 44px;
-	// min-height: 29px;
-	height: 36px;
+    // width: 44px;
+	// height: 36px;
+	width: 34px;
+	height: 19px;
     padding: 0;
     @include flex_JCcen-AIcen;
     cursor: pointer;
     border: none;
-	border-radius: 5px;
+	// border-radius: 5px;
     outline: none;
     background-color: transparent;
 	// ! міксін outline
