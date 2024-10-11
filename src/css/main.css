@@ -224,4 +224,8 @@ body {
 .footer {
   height: 100px;
   background-color: #afecff;
+}
+
+.menu-container {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
