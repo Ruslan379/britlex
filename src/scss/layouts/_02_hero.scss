@@ -10,14 +10,14 @@
 
     .container {
         // height: 100%; //? для перевірки
+        padding-top: 315px;
         padding-left: 11px;
         text-align: center;
         // ! міксін outline
         @include outline($type: dashed, $color: red);
         
         .hero__title {
-            padding-top: 315px;
-            padding-bottom: 20px;
+            margin-bottom: 20px;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;

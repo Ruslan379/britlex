@@ -103,7 +103,7 @@
 	// text-align: center;
 	color: getColor('dark');
 	// ! міксін outline
-	@include outline($size: 1px, $type: dotted, $color: red);
+	@include outline($size: 1px, $type: dotted, $color: green);
 }
 
 

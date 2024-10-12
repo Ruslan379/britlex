@@ -6,7 +6,7 @@
     .container {
         height: 100%; //? для перевірки
         padding: 0 15px;
-        text-align: center;
+        // text-align: center;
         // ! міксін outline
         @include outline($type: dashed, $color: red);
         
@@ -20,6 +20,42 @@
             // color: getColor('dark');
             //? ____________ Replaced by mixin ____________
             @include title(24px, 3.33);
+            text-align: center;
+        }
+
+        .skills-list {
+            // @include outline($type: solid, $color: black);
+            
+            &__item {
+                padding-top: 231px;
+                margin-bottom: 21px;
+                @include outline($type: dotted, $color: violet);
+            }
+            
+            &__title {
+                margin-bottom: -7px;
+                @include title(18px, 4.44);
+                color: getColor("title-first");
+            }
+
+            &__text {
+                margin-bottom: 32px;
+                // font-family: getFont("main-family");
+                // font-weight: 400;
+                font-size: 13px;
+                line-height: 1.54;
+                // text-align: center;
+                // color: getColor("text");
+            }
+
+            &__button {
+                @include button();
+                // font-family: getFont("main-family");
+                font-weight: 500;
+                // font-size: 14px;
+                // color: getColor("light");
+            }
         }
     }
 }
+

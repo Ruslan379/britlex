@@ -175,18 +175,18 @@ body {
   background-size: 299px 299px;
 }
 .hero .container {
+  padding-top: 315px;
   padding-left: 11px;
   text-align: center;
   outline: 1px dashed red;
 }
 .hero .container .hero__title {
-  padding-top: 315px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
   color: #000000;
-  outline: 1px dotted red;
+  outline: 1px dotted green;
 }
 .hero .container .hero__text {
   padding-bottom: 35px;
@@ -209,7 +209,6 @@ body {
 .skills .container {
   height: 100%;
   padding: 0 15px;
-  text-align: center;
   outline: 1px dashed red;
 }
 .skills .container .skills__title {
@@ -218,7 +217,35 @@ body {
   font-size: 24px;
   line-height: 3.33;
   color: #000000;
-  outline: 1px dotted red;
+  outline: 1px dotted green;
+  text-align: center;
+}
+.skills .container .skills-list__item {
+  padding-top: 231px;
+  margin-bottom: 21px;
+  outline: 1px dotted violet;
+}
+.skills .container .skills-list__title {
+  margin-bottom: -7px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 4.44;
+  color: #000000;
+  outline: 1px dotted green;
+  color: #263238;
+}
+.skills .container .skills-list__text {
+  margin-bottom: 32px;
+  font-size: 13px;
+  line-height: 1.54;
+}
+.skills .container .skills-list__button {
+  width: 178px;
+  height: 50px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #263238;
+  font-weight: 500;
 }
 
 .about {
