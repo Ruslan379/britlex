@@ -9,6 +9,7 @@
     outline: $size $type $color;
 }
 
+
 //! -------------------- Breakpoints --------------------
 @mixin media($breakpoint) {
 	@if $breakpoint == 'sm' {
@@ -33,6 +34,7 @@
 		}
 	}
 }
+
 
 //! ----------- SASS-flex-властивості (flex-контейнери-міксіни) -----------
 @mixin flex_JCcen {
@@ -85,12 +87,27 @@
     flex-wrap: wrap;
 }
 
+
 //! -------------------- Анімація --------------------
 @mixin transition($property) {
 	transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-//! ----------- SASS: Загальні стилі кнопок -----------
+
+//! ----------- SASS: Загальні стилі Заголовків -----------
+@mixin title($ont-size: 30px, $line-height: 1.5) {
+	// font-family: getFont("main-family");
+	font-weight: 600;
+	font-size: $ont-size;
+	line-height: $line-height;
+	// text-align: center;
+	color: getColor('dark');
+	// ! міксін outline
+	@include outline($size: 1px, $type: dotted, $color: red);
+}
+
+
+//! ----------- SASS: Загальні стилі Kнопок -----------
 @mixin button($width: 178px, $height: 50px) {
 	width: $width;
 	height: $height;

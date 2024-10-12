@@ -138,6 +138,7 @@ body {
 }
 .header .container {
   padding: 0 15px;
+  outline: 1px dashed red;
 }
 .header .container .navigation {
   display: flex;
@@ -166,7 +167,6 @@ body {
 }
 
 .hero {
-  height: 616px;
   padding-bottom: 51px;
   background-color: #ccffaf;
   background-image: url(../images/02_hero_background-sm.svg);
@@ -177,13 +177,16 @@ body {
 .hero .container {
   padding-left: 11px;
   text-align: center;
+  outline: 1px dashed red;
 }
 .hero .container .hero__title {
   padding-top: 315px;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
+  line-height: 1.5;
   color: #000000;
+  outline: 1px dotted red;
 }
 .hero .container .hero__text {
   padding-bottom: 35px;
@@ -199,8 +202,23 @@ body {
 }
 
 .skills {
-  height: 200px;
+  height: 2244px;
   background-color: rgb(255, 210, 193);
+  padding-bottom: 50px;
+}
+.skills .container {
+  height: 100%;
+  padding: 0 15px;
+  text-align: center;
+  outline: 1px dashed red;
+}
+.skills .container .skills__title {
+  padding-bottom: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 3.33;
+  color: #000000;
+  outline: 1px dotted red;
 }
 
 .about {
