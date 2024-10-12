@@ -27,18 +27,28 @@
             // @include outline($type: solid, $color: black);
             
             &__item {
+                // height: 600px; //? для перевірки
                 padding-top: 231px;
-                margin-bottom: 21px;
+                padding-left: 13px;
+                padding-bottom: 45px;
+                margin-bottom: 21px; //? тимчасово
+                border-radius: 5px;
+                background-color: getColor("background-card");
+                background-image: url(../images/03-1_skills_speaking-sm.svg);
+                background-repeat: no-repeat;
+                background-position: center top 8px;
+                background-size: 213px 213px;
                 @include outline($type: dotted, $color: violet);
             }
             
             &__title {
-                margin-bottom: -7px;
+                margin-bottom: -18px;
                 @include title(18px, 4.44);
                 color: getColor("title-first");
             }
 
             &__text {
+                margin-left: 3px;
                 margin-bottom: 32px;
                 // font-family: getFont("main-family");
                 // font-weight: 400;
@@ -46,6 +56,7 @@
                 line-height: 1.54;
                 // text-align: center;
                 // color: getColor("text");
+                @include outline($type: dotted, $color: blue);
             }
 
             &__button {
