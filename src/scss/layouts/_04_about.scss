@@ -1,4 +1,95 @@
 .about {
-    height: 200px;
-    background-color: #afb7ff;
+    height: 959px; //? для перевірки
+    background-color: #d4d9ff;
+    padding-bottom: 50px;
+
+    .container {
+        height: 100%; //? для перевірки
+        padding: 0;
+        text-align: center;
+        // ! міксін outline
+        @include outline($type: dashed, $color: red);
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // line-height: 3.33;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px, 3.33);
+        // text-align: center;
+    }
+
+    &__title::after {
+        content: "";
+        display: block;
+        height: 283px;
+        // margin-bottom: 10px;
+        // margin-left: 3px;
+        border-radius: 5px;
+        background-image: url(../images/04_about_background-sm.svg);
+        background-size: auto auto; //? ТИМЧАСОВО
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color:getColor("background-card-image"); //? ТИМЧАСОВО
+    }
+    
+    // &__item:nth-child(1)::before {
+    //     // height: 608px; //? для перевірки
+    //     background-image: url(../images/03-1_skills_speaking-sm.svg);
+    //     // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
+    //     background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
+    // }
+
+    &__text {
+        margin-bottom: 29px;
+        // font-family: getFont("main-family");
+        // font-weight: 400;
+        font-size: 13px;
+        line-height: 1.54;
+        text-align: center;
+        // color: getColor("text");
+        @include outline($type: dotted, $color: blue);
+    }
+
+    &-list {
+        @include outline($type: dashed, $color: darkgrey);
+
+        // &__item {
+        //     background-color: bisque;
+        //     @include outline($type: dashed, $color: black);
+        // }
+
+        &__item:not(:last-child) {
+            margin-bottom: 26px;
+        }
+
+        &__quantity {
+            margin-bottom: 5px;
+            //? ++++++++++++ Replaced by mixin ++++++++++++
+            // // font-family: getFont("main-family");
+            // font-weight: 600;
+            // font-size: 24px;
+            // line-height: 3.33;
+            // color: getColor('dark');
+            //? ____________ Replaced by mixin ____________
+            @include title(24px);
+            color: getColor('title-second');
+        }
+
+        &__description {
+            // font-family: getFont("main-family");
+            // font-weight: 400;
+            font-size: 13px;
+            line-height: 1.54;
+            text-align: center;
+            // color: getColor("text");
+            @include outline($type: dotted, $color: blue);
+        }
+    }
+
 }

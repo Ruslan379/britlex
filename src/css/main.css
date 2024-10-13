@@ -184,6 +184,7 @@ body {
   font-size: 24px;
   line-height: 1.5;
   color: #000000;
+  outline: 1px dotted green;
 }
 .hero .container .hero__text {
   padding-bottom: 35px;
@@ -212,6 +213,7 @@ body {
   font-size: 24px;
   line-height: 3.33;
   color: #000000;
+  outline: 1px dotted green;
   text-align: center;
 }
 .skills .container .skills-list__item {
@@ -257,6 +259,7 @@ body {
   font-size: 18px;
   line-height: 4.44;
   color: #000000;
+  outline: 1px dotted green;
   color: #263238;
 }
 .skills .container .skills-list__text {
@@ -275,8 +278,62 @@ body {
 }
 
 .about {
-  height: 200px;
-  background-color: #afb7ff;
+  height: 959px;
+  background-color: #d4d9ff;
+  padding-bottom: 50px;
+}
+.about .container {
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  outline: 1px dashed red;
+}
+.about__title {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 3.33;
+  color: #000000;
+  outline: 1px dotted green;
+}
+.about__title::after {
+  content: "";
+  display: block;
+  height: 283px;
+  border-radius: 5px;
+  background-image: url(../images/04_about_background-sm.svg);
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #dbdbdb;
+}
+.about__text {
+  margin-bottom: 29px;
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: center;
+  outline: 1px dotted blue;
+}
+.about-list {
+  outline: 1px dashed darkgrey;
+}
+.about-list__item:not(:last-child) {
+  margin-bottom: 26px;
+}
+.about-list__quantity {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000000;
+  outline: 1px dotted green;
+  color: #2a3246;
+}
+.about-list__description {
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: center;
+  outline: 1px dotted blue;
 }
 
 .pricing {
