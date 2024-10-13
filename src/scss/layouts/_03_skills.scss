@@ -45,7 +45,7 @@
                 padding-top: 231px;
                 background-image: url(../images/03-1_skills_speaking-sm.svg);
                 background-position: center top 8px;
-                background-size: 213px 213px;
+                background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
             &__item:nth-child(2) {
@@ -54,7 +54,7 @@
                 padding-top: 231px;
                 background-image: url(../images/03-2_skills_writing-sm.svg);
                 background-position: center top 16px;
-                background-size: 204px 204px;
+                background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
             &__item:nth-child(3) {
@@ -63,7 +63,7 @@
                 padding-top: 206px;
                 background-image: url(../images/03-3_skills_reading-sm.svg);
                 background-position: center top 29px;
-                background-size: 236px 157px;
+                background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
             &__item:nth-child(4) {
@@ -72,7 +72,7 @@
                 padding-top: 206px;
                 background-image: url(../images/03-4_skills_listening-sm.svg);
                 background-position: center top 33px;
-                background-size: 232px 154px;
+                background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
 
             &__title {
