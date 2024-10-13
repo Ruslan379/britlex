@@ -1,10 +1,10 @@
 .about {
     height: 959px; //? для перевірки
-    background-color: #d4d9ff;
+    background-color: #dee2ff;
     padding-bottom: 50px;
 
     .container {
-        height: 100%; //? для перевірки
+        // height: 100%; //? для перевірки
         padding: 0;
         text-align: center;
         // ! міксін outline
@@ -23,7 +23,7 @@
         @include title(24px, 3.33);
         // text-align: center;
     }
-
+    
     &__title::after {
         content: "";
         display: block;
@@ -37,13 +37,6 @@
         background-position: center;
         background-color:getColor("background-card-image"); //? ТИМЧАСОВО
     }
-    
-    // &__item:nth-child(1)::before {
-    //     // height: 608px; //? для перевірки
-    //     background-image: url(../images/03-1_skills_speaking-sm.svg);
-    //     // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
-    //     background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
-    // }
 
     &__text {
         margin-bottom: 29px;

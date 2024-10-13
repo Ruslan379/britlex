@@ -279,11 +279,10 @@ body {
 
 .about {
   height: 959px;
-  background-color: #d4d9ff;
+  background-color: #dee2ff;
   padding-bottom: 50px;
 }
 .about .container {
-  height: 100%;
   padding: 0;
   text-align: center;
   outline: 1px dashed red;
