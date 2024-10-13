@@ -218,17 +218,35 @@ body {
   text-align: center;
 }
 .skills .container .skills-list__item {
-  padding-top: 231px;
   padding-left: 13px;
   padding-bottom: 45px;
   margin-bottom: 21px;
   border-radius: 5px;
   background-color: #f5f5f5;
-  background-image: url(../images/03-1_skills_speaking-sm.svg);
   background-repeat: no-repeat;
+  outline: 1px dotted #1100ff;
+}
+.skills .container .skills-list__item:nth-child(1) {
+  padding-top: 231px;
+  background-image: url(../images/03-1_skills_speaking-sm.svg);
   background-position: center top 8px;
-  background-size: 213px 213px;
-  outline: 1px dotted violet;
+}
+.skills .container .skills-list__item:nth-child(2) {
+  padding-top: 231px;
+  background-image: url(../images/03-2_skills_writing-sm.svg);
+  background-position: center top 16px;
+}
+.skills .container .skills-list__item:nth-child(3) {
+  padding-top: 206px;
+  background-image: url(../images/03-3_skills_reading-sm.svg);
+  background-position: center top 29px;
+  background-size: 236px 157px;
+}
+.skills .container .skills-list__item:nth-child(4) {
+  padding-top: 206px;
+  background-image: url(../images/03-4_skills_listening-sm.svg);
+  background-position: center top 33px;
+  background-size: 232px 154px;
 }
 .skills .container .skills-list__title {
   margin-bottom: -18px;
@@ -240,7 +258,7 @@ body {
   color: #263238;
 }
 .skills .container .skills-list__text {
-  margin-left: 3px;
+  margin-left: 0px;
   margin-bottom: 32px;
   font-size: 13px;
   line-height: 1.54;
