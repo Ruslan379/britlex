@@ -1,5 +1,5 @@
 .skills {
-    // height: 2244px; //? для перевірки
+    // height: 2337px; //? для перевірки
     background-color: rgb(255, 210, 193);
     padding-bottom: 50px;
 
@@ -27,17 +27,12 @@
             // @include outline($type: solid, $color: black);
             
             &__item {
-                // padding-top: 231px;
-                padding-left: 13px;
+                padding-top: 16px;
                 padding-right: 16px;
                 padding-bottom: 45px;
-                // margin-bottom: 21px; //? тимчасово
+                padding-left: 13px;
                 border-radius: 5px;
                 background-color: getColor("background-card");
-                // background-image: url(../images/03-1_skills_speaking-sm.svg);
-                background-repeat: no-repeat;
-                // background-position: center top 8px;
-                // background-size: 213px 213px;
                 // @include outline($type: dotted, $color: #1100ff);
             }
             
@@ -45,39 +40,45 @@
                 margin-bottom: 21px;
             }
             
-            &__item:nth-child(1) {
-                // height: 600px; //? для перевірки
-                padding-top: 231px;
+            &__item::before {
+                content: "";
+                display: block;
+                // margin: 0 auto 0px;
+                // width: 213px; 
+                height: 213px;
+                margin-bottom: 10px;
+                margin-left: 3px;
+                border-radius: 5px;
+                background-size: auto auto; //? ТИМЧАСОВО
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color:getColor("background-card-image"); //? ТИМЧАСОВО
+            }
+            
+            &__item:nth-child(1)::before {
+                // height: 608px; //? для перевірки
                 background-image: url(../images/03-1_skills_speaking-sm.svg);
-                background-position: center top 8px;
-                background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
-            &__item:nth-child(2) {
-                // height: 473px; //? var.-Макет для перевірки
-                // height: 500px; //? var.-My для перевірки
-                padding-top: 231px;
+            &__item:nth-child(2)::before {
+                // height: 508px; //? для перевірки
                 background-image: url(../images/03-2_skills_writing-sm.svg);
-                background-position: center top 16px;
-                background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-position: center top 16px;
+                // background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-size: 213px 213px; //? для збыльшення розмірів
             }
             
-            &__item:nth-child(3) {
-                // height: 473px; //? var.-Макет для перевірки
-                // height: 455px; //? var.-My для перевірки
-                padding-top: 206px;
+            &__item:nth-child(3)::before {
+                // height: 508px; //? для перевірки
                 background-image: url(../images/03-3_skills_reading-sm.svg);
-                background-position: center top 29px;
-                background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
-            &__item:nth-child(4) {
-                // height: 473px; //? var.-Макет для перевірки
-                // height: 480px; //? var.-My для перевірки
-                padding-top: 206px;
+            &__item:nth-child(4)::before {
+                // height: 488px; //? для перевірки
                 background-image: url(../images/03-4_skills_listening-sm.svg);
-                background-position: center top 33px;
-                background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
 
             &__title {
