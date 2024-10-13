@@ -8,7 +8,7 @@
         padding: 0 15px;
         // text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: red);
+        // @include outline($type: dashed, $color: red);
         
         .skills__title {
             padding-bottom: 32px;
@@ -29,15 +29,20 @@
             &__item {
                 // padding-top: 231px;
                 padding-left: 13px;
+                padding-right: 16px;
                 padding-bottom: 45px;
-                margin-bottom: 21px; //? тимчасово
+                // margin-bottom: 21px; //? тимчасово
                 border-radius: 5px;
                 background-color: getColor("background-card");
                 // background-image: url(../images/03-1_skills_speaking-sm.svg);
                 background-repeat: no-repeat;
                 // background-position: center top 8px;
                 // background-size: 213px 213px;
-                @include outline($type: dotted, $color: #1100ff);
+                // @include outline($type: dotted, $color: #1100ff);
+            }
+            
+            &__item:not(:last-child) {
+                margin-bottom: 21px;
             }
             
             &__item:nth-child(1) {
@@ -50,7 +55,7 @@
             
             &__item:nth-child(2) {
                 // height: 473px; //? var.-Макет для перевірки
-                // height: 480px; //? var.-My для перевірки
+                // height: 500px; //? var.-My для перевірки
                 padding-top: 231px;
                 background-image: url(../images/03-2_skills_writing-sm.svg);
                 background-position: center top 16px;
@@ -59,7 +64,7 @@
             
             &__item:nth-child(3) {
                 // height: 473px; //? var.-Макет для перевірки
-                // height: 480px; //? var.-My для перевірки
+                // height: 455px; //? var.-My для перевірки
                 padding-top: 206px;
                 background-image: url(../images/03-3_skills_reading-sm.svg);
                 background-position: center top 29px;
@@ -82,18 +87,18 @@
             }
 
             &__text {
-                // margin-left: 3px;
-                margin-left: 0px; //? nth-child(2)
+                margin-left: 3px;
+                // margin-left: 0px; //? for nth-child(2)
                 margin-bottom: 32px;
                 // font-family: getFont("main-family");
                 // font-weight: 400;
                 font-size: 13px;
-                // font-size: 12px; //? nth-child(2)
+                // font-size: 12px; //? for nth-child(2)
                 line-height: 1.54;
-                // line-height: 1.5; //? nth-child(2)
+                // line-height: 1.5; //? for nth-child(2)
                 // text-align: center;
                 // color: getColor("text");
-                @include outline($type: dotted, $color: blue);
+                // @include outline($type: dotted, $color: blue);
             }
 
             &__button {
