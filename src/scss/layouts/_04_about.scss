@@ -1,18 +1,18 @@
 .about {
-    height: 959px; //? для перевірки
+    // height: 959px; //? для перевірки
     background-color: #dee2ff;
-    padding-bottom: 50px;
+    padding-bottom: 84px;
 
     .container {
         // height: 100%; //? для перевірки
         padding: 0;
         text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: red);
+        // @include outline($type: dashed, $color: red);
     }
 
     &__title {
-        margin-bottom: 24px;
+        margin-bottom: 23px;
         //? ++++++++++++ Replaced by mixin ++++++++++++
         // // font-family: getFont("main-family");
         // font-weight: 600;
@@ -28,39 +28,41 @@
         content: "";
         display: block;
         height: 283px;
-        // margin-bottom: 10px;
-        // margin-left: 3px;
+        margin-top: 24px;
+        margin-right: 15px;
+        margin-left: 15px;
         border-radius: 5px;
         background-image: url(../images/04_about_background-sm.svg);
-        background-size: auto auto; //? ТИМЧАСОВО
+        // background-size: auto auto; //? ТИМЧАСОВО
+        // background-size: 283px 283px; //? ТИМЧАСОВО, для візуалізації розмірів
         background-repeat: no-repeat;
         background-position: center;
         background-color:getColor("background-card-image"); //? ТИМЧАСОВО
     }
 
     &__text {
-        margin-bottom: 29px;
+        margin-bottom: 30px;
         // font-family: getFont("main-family");
         // font-weight: 400;
         font-size: 13px;
         line-height: 1.54;
         text-align: center;
         // color: getColor("text");
-        @include outline($type: dotted, $color: blue);
+        // @include outline($type: dotted, $color: blue);
     }
 
     &-list {
-        @include outline($type: dashed, $color: darkgrey);
-
+        // @include outline($type: dashed, $color: darkgrey);
+        
         // &__item {
         //     background-color: bisque;
         //     @include outline($type: dashed, $color: black);
         // }
-
+        
         &__item:not(:last-child) {
-            margin-bottom: 26px;
+            margin-bottom: 46px;
         }
-
+        
         &__quantity {
             margin-bottom: 5px;
             //? ++++++++++++ Replaced by mixin ++++++++++++
@@ -73,16 +75,15 @@
             @include title(24px);
             color: getColor('title-second');
         }
-
+        
         &__description {
             // font-family: getFont("main-family");
             // font-weight: 400;
             font-size: 13px;
             line-height: 1.54;
-            text-align: center;
+            // text-align: center;
             // color: getColor("text");
-            @include outline($type: dotted, $color: blue);
+            // @include outline($type: dotted, $color: blue);
         }
     }
-
 }
