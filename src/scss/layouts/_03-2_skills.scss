@@ -58,7 +58,8 @@
             &__item:nth-child(1)::before {
                 // height: 608px; //? для перевірки
                 background-image: url(../images/03-1_skills_speaking-sm.svg);
-                // background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
+                background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
             }
             
             &__item:nth-child(2)::before {

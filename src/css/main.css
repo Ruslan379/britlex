@@ -239,6 +239,7 @@ body {
 }
 .skills .container .skills-list__item:nth-child(1)::before {
   background-image: url(../images/03-1_skills_speaking-sm.svg);
+  background-size: 213px 213px;
 }
 .skills .container .skills-list__item:nth-child(2)::before {
   background-image: url(../images/03-2_skills_writing-sm.svg);
