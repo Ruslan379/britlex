@@ -1,4 +1,39 @@
 .pricing {
-    height: 200px;
+    height: 1578px; //? для перевірки
     background-color: #eaffaf;
+    padding-bottom: 72px;
+
+    .container {
+        height: 100%; //? для перевірки
+        padding: 0 15px;
+        text-align: center;
+        // ! міксін outline
+        @include outline($type: dashed, $color: red);
+    }
+
+    &__title {
+        margin-bottom: 49px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // line-height: 3.33;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px, 3.33);
+        // text-align: center;
+    }
+
+    &-list {
+        @include outline($type: dotted, $color: black);
+        
+        &__item {
+            background-color: bisque;
+            @include outline($type: dashed, $color: darkgrey);
+        }
+        
+        &__item:not(:last-child) {
+            margin-bottom: 63px;
+        }
+    }
 }
