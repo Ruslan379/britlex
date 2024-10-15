@@ -1,0 +1,29 @@
+//! utils/reset
+@import './base/reset';
+// @import './utils/fonts';
+@import './utils/variables';
+@import './utils/breakpoints';
+// @import './utils/function';
+@import './utils/mixins';
+
+//! base
+@import './base/common';
+
+//! components
+@import './components/container';
+@import './components/main-logo';
+
+//! layouts
+@import './layouts/01_header';
+@import './layouts/02_hero';
+// @import './layouts/03-1_skills_w-o-before';
+@import './layouts/03-2_skills';
+@import './layouts/04_about';
+@import './layouts/05_pricing';
+@import './layouts/06_contacts';
+@import './layouts/07_footer';
+
+//! тимчасово
+.menu-container {
+    display: none;
+}

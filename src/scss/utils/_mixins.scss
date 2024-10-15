@@ -1,0 +1,146 @@
+//! -------------------- outline --------------------
+//todo var.1 
+// @mixin outline($size: 1px, $type: solid, $color) {
+//     outline: $size $type $color;
+// }
+
+//todo var.2 
+@mixin outline($size: 1px, $type: solid, $color: tomato) {
+    outline: $size $type $color;
+}
+
+
+//! -------------------- Breakpoints --------------------
+@mixin media($breakpoint) {
+	@if $breakpoint == 'sm' {
+		@media screen and (min-width: 320px) {
+			@content;
+		}
+	} @else if $breakpoint == 'md' {
+		@media screen and (min-width: 575px) {
+			@content;
+		}
+	} @else if $breakpoint == 'lg' {
+		@media screen and (min-width: 767px) {
+			@content;
+		}
+	} @else if $breakpoint == 'xl' {
+		@media screen and (min-width: 992px) {
+			@content;
+		}
+	} @else if $breakpoint == 'xxl' {
+		@media screen and (min-width: 1330px) {
+			@content;
+		}
+	}
+}
+
+
+//! ----------- SASS-flex-властивості (flex-контейнери-міксіни) -----------
+@mixin flex_JCcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin flex_AIcen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex_JCcen-AIcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_JCsb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flex_JCsb-AIcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex_FDcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex_FDcol-AIcen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex_FWw {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@mixin flex_JCsb-FWw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+//! -------------------- Анімація --------------------
+@mixin transition($property) {
+	transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+//! ----------- SASS: Загальні стилі Заголовків -----------
+@mixin title($ont-size: 30px, $line-height: 1.5) {
+	// font-family: getFont("main-family");
+	font-weight: 600;
+	font-size: $ont-size;
+	line-height: $line-height;
+	// text-align: center;
+	color: getColor('dark');
+	// ! міксін outline
+	// @include outline($size: 1px, $type: dotted, $color: green);
+}
+
+
+//! ----------- SASS: Загальні стилі Kнопок -----------
+@mixin button($width: 178px, $height: 50px) {
+	width: $width;
+	height: $height;
+	border-radius: 5px;
+	color: getColor("light");
+    background-color: getColor("title-first");
+	// ! міксін outline
+	// @include outline($size: 1px, $type: dotted, $color: red);
+}
+
+@mixin buttons-menu-toggle {
+    // width: 44px;
+	// height: 36px;
+	width: 34px;
+	height: 19px;
+    padding: 0;
+    @include flex_JCcen-AIcen;
+    cursor: pointer;
+    // border: none; //? in reset.css
+	// border-radius: 5px;
+    // outline: none; //? in reset.css
+    background-color: transparent;
+	// ! міксін outline
+	// @include outline($size: 1px, $type: dashed, $color: blue);
+    
+	// &:focus,
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}

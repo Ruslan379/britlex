@@ -1,0 +1,39 @@
+.container {
+	width: 100%;
+    min-width: 320px;
+    padding: 0 10px;
+    margin: 0 auto;
+	// ! міксін outline
+	@include outline();
+
+	@media (min-width: getBreakPoint('sm')) {
+		// max-width: 320px;
+		max-width: getBreakPoint('sm');
+		// ! міксін outline
+		@include outline($color: teal);
+	}
+	@media (min-width: getBreakPoint('md')) {
+		// max-width: 575px;
+		max-width: getBreakPoint('md');
+		// ! міксін outline
+		@include outline($color: violet);
+	}
+	@media (min-width: getBreakPoint('lg')) {
+		// max-width: 767px;
+		max-width: getBreakPoint('lg');
+		// ! міксін outline
+		@include outline($color: green);
+	}
+	@media (min-width: getBreakPoint('xl')) {
+		// max-width: 992px;
+		max-width: getBreakPoint('xl');
+		// ! міксін outline
+		@include outline($color: orange);
+	}
+	@media (min-width: getBreakPoint('xxl')) {
+		// max-width: 1330px;
+		max-width: getBreakPoint('xxl');
+		// ! міксін outline
+		@include outline($color: blue);
+	}
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--! Назва вкладки -->
+		<title>My Britlex</title>
+		<!--! Завантаження іконки до назви сторінки (вкладки) title -->
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<link
+			href="https://img.icons8.com/external-lineal-color-zulfa-mahendra/16/external-languages-online-study-lineal-color-zulfa-mahendra.png"
+			rel="icon"
+			type="image/svg+xml"
+		/>
+		<!--! Завантаження шрифтів: 'Poppins' 400, 500, 600 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+		<!--! Завантаження modern-normalize -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+		/>
+		<!--! Підкючення файла стилів SASS-->
+		<!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+		<!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
+		<link rel="stylesheet" href="./scss/main.scss" />
+	</head>
+
+	<body>
+		<!-- ❗️❗️❗️ -->
+		<!--! Додайте такі часткові елементи (паршали – partials) для кожної секції -->
+		<load ="./partials/01_header.html" />
+		<main>
+			<load ="./partials/02_hero.html" />
+			<load ="./partials/03_skills.html" />
+			<load ="./partials/04_about.html" />
+			<load ="./partials/05_pricing.html" />
+			<load ="./partials/06_contacts.html" />
+		</main>
+		<load ="./partials/07_footer.html" />
+
+		<!--? Контейнер для Бургер-меню -->
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<!--? Кнопка Бургер-меню_(close)-->
+			<button class="button-menu-toggle js-close-menu">
+				<svg
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+						clip-rule="evenodd"
+					>
+					</path>
+				</svg>
+			</button>
+			<!--? Список для Бургер-меню -->
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./lifestyle.html">LIFESTYLE</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./photodiary.html">PHOTODIARY</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./music.html">MUSIC</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link" href="./travel.html">TRAVEL</a>
+				</li>
+			</ul>
+		</div>
+		<!--? Скрипт для блокування вертикальної смуги прокрутки  -->
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		>
+		</script>
+		<!--? Скрипт для Бургер-меню -->
+		<script defer src="js/mobile-menu.js"></script>
+	</body>
+</html>
