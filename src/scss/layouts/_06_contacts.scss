@@ -1,4 +1,79 @@
 .contacts {
-    height: 200px;
+    height: 684px; //? для перевірки
+    padding: 0 15px;
     background-color: #afffba;
+    // padding-bottom: 26px; //! відсутній
+
+    .container {
+        height: 100%; //? для перевірки
+        padding: 0 15px 57px;
+        text-align: center;
+        border-bottom: 1px solid getColor("border-contacts");
+        // ! міксін outline
+        // @include outline($type: dashed, $color: red);
+    }
+
+    &__title {
+        margin-bottom: 38px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // line-height: 3.33;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px, 3.33);
+        // text-align: center;
+    }
+    
+    &__title::after {
+        content: "";
+        display: block;
+        height: 228px;
+        margin-top: 38px;
+        border-radius: 5px;
+        background-image: url(../images/06_contacts_background-sm.svg);
+        // background-size: auto auto; //? ТИМЧАСОВО
+        // background-size: 253px 228px; //? ТИМЧАСОВО, для візуалізації розмірів
+        background-repeat: no-repeat;
+        background-position: 29px center;
+        background-color:getColor("background-image"); //? ТИМЧАСОВО
+    }
+
+    &__text {
+        margin-bottom: 31px;
+        // font-family: getFont("main-family");
+        // font-weight: 400;
+        font-size: 14px;
+        // line-height: 1.5;
+        text-align: center;
+        // color: getColor("text");
+        // @include outline($type: dotted, $color: blue);
+    }
+
+    &-form {
+        width: 100%;
+        // margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 17px;
+        @include outline($type: dotted, $color: blue);
+
+        &__input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid getColor("text");
+            border-radius: 5px;
+        }
+
+        &__button {
+            @include button(100%, 60px);
+            // font-family: getFont("main-family");
+            font-weight: 500;
+            font-size: 14px;
+            // color: getColor("light");
+        }
+    }
 }
