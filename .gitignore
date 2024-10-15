@@ -20,3 +20,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#! This folder is not necessary in the VITE builder, since your stylesheet file is: 
+#! link rel="stylesheet" href="./scss/main.scss" />
+css
