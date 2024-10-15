@@ -1,5 +1,5 @@
 .pricing {
-    height: 1578px; //? для перевірки
+    // height: 1578px; //? для перевірки
     background-color: #efffc3;
     padding-bottom: 72px;
 
@@ -41,13 +41,13 @@
         }
         
         &__item:nth-child(2) {
-            height: 353px; //? для перевірки
+            // height: 353px; //? для перевірки
             margin-bottom: 72px; 
         }
         
-        &__item:nth-child(3) {
-            height: 403px; //? для перевірки
-        }
+        // &__item:nth-child(3) {
+        //     height: 403px; //? для перевірки
+        // }
         
         &__item::before {
             content: "";

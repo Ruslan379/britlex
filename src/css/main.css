@@ -323,7 +323,6 @@ body {
 }
 
 .pricing {
-  height: 1578px;
   background-color: #efffc3;
   padding-bottom: 72px;
 }
@@ -347,11 +346,7 @@ body {
   margin-bottom: 63px;
 }
 .pricing-list__item:nth-child(2) {
-  height: 353px;
   margin-bottom: 72px;
-}
-.pricing-list__item:nth-child(3) {
-  height: 403px;
 }
 .pricing-list__item::before {
   content: "";
