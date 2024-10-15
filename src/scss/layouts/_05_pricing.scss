@@ -1,6 +1,6 @@
 .pricing {
     height: 1578px; //? для перевірки
-    background-color: #eaffaf;
+    background-color: #efffc3;
     padding-bottom: 72px;
 
     .container {
@@ -25,15 +25,54 @@
     }
 
     &-list {
-        @include outline($type: dotted, $color: black);
+        // @include outline($type: dotted, $color: black);
         
         &__item {
             background-color: bisque;
-            @include outline($type: dashed, $color: darkgrey);
+            // @include outline($type: dashed, $color: darkgrey);
         }
         
         &__item:not(:last-child) {
-            margin-bottom: 63px;
+            margin-bottom: 63px; //? first margin-bottom
+            // margin-bottom: 72px; //? second margin-bottom
+        }
+        
+        &__item::before {
+            content: "";
+            display: block;
+            height: 248px;
+            // margin-bottom: 28px; //? first image
+            // margin-bottom: 12px; //? second image
+            // margin-bottom: 7px; //? third image
+            // margin-left: 3px;
+            border-radius: 5px;
+            background-size: auto auto; //? ТИМЧАСОВО
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color:getColor("background-image"); //? ТИМЧАСОВО
+        }
+        
+        &__item:nth-child(1)::before {
+            // height: 608px; //? для перевірки
+            margin-bottom: 28px;
+            background-image: url(../images/05-1_pricing-sm.svg);
+            // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
+            // background-size: 248px 248px; //? ТИМЧАСОВО, для візуалізації розмірів
+        }
+        
+        &__item:nth-child(2)::before {
+            // height: 508px; //? для перевірки
+            margin-bottom: 12px;
+            background-image: url(../images/05-2_pricing-sm.svg);
+            // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+            // background-size: 213px 213px; //? для збільшення розмірів
+        }
+        
+        &__item:nth-child(3)::before {
+            // height: 508px; //? для перевірки
+            margin-bottom: 7px;
+            background-image: url(../images/05-2_pricing-sm.svg);
+            // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
         
     }

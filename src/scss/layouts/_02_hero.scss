@@ -15,37 +15,35 @@
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
-        
-        .hero__title {
-            margin-bottom: 20px;
-            //? ++++++++++++ Replaced by mixin ++++++++++++
-            // // font-family: getFont("main-family");
-            // font-weight: 600;
-            // font-size: 24px;
-            // // line-height: 1.5;
-            // // text-align: center;
-            // color: getColor('dark');
-            //? ____________ Replaced by mixin ____________
-            @include title(24px);
-        }
-        
-        .hero__text {
-            padding-bottom: 35px;
-            // font-family: getFont("main-family");
-            // font-weight: 400;
-            // font-size: 14px;
-            // line-height: 1.5;
-            // text-align: center;
-            // color: getColor("text");
-        }
+    }
 
-        .hero__button {
-            @include button(289px, 60px);
-            // font-family: getFont("main-family");
-            font-weight: 500;
-            font-size: 18px;
-            // color: getColor("light");
-        }
+    &__title {
+        margin-bottom: 20px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // // line-height: 1.5;
+        // // text-align: center;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px);
+    }
+    &__text {
+        padding-bottom: 35px;
+        // font-family: getFont("main-family");
+        // font-weight: 400;
+        // font-size: 14px;
+        // line-height: 1.5;
+        // text-align: center;
+        // color: getColor("text");
+    }
+    &__button {
+        @include button(289px, 60px);
+        // font-family: getFont("main-family");
+        font-weight: 500;
+        font-size: 18px;
+        // color: getColor("light");
     }
 }
 

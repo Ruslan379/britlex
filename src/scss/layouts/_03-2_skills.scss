@@ -9,105 +9,109 @@
         // text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
+    }
+
+    &__title {
+        padding-bottom: 32px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // line-height: 3.33;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px, 3.33);
+        text-align: center;
+    }
+
+    &-list {
+        // @include outline($type: solid, $color: black);
         
-        .skills__title {
-            padding-bottom: 32px;
+        &__item {
+            padding-top: 16px;
+            padding-right: 16px;
+            padding-bottom: 45px;
+            padding-left: 13px;
+            border-radius: 5px;
+            background-color: getColor("background-card");
+            // @include outline($type: dotted, $color: #1100ff);
+        }
+        
+        &__item:not(:last-child) {
+            margin-bottom: 21px;
+        }
+        
+        &__item::before {
+            content: "";
+            display: block;
+            height: 213px;
+            margin-bottom: 10px;
+            margin-left: 3px;
+            border-radius: 5px;
+            // background-size: auto auto; //? ТИМЧАСОВО
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color:getColor("background-image"); //? ТИМЧАСОВО
+        }
+        
+        &__item:nth-child(1)::before {
+            // height: 608px; //? для перевірки
+            background-image: url(../images/03-1_skills_speaking-sm.svg);
+            // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
+            // background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
+        }
+        
+        &__item:nth-child(2)::before {
+            // height: 508px; //? для перевірки
+            background-image: url(../images/03-2_skills_writing-sm.svg);
+            // background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
+            background-size: 213px 213px; //? для збільшення розмірів
+        }
+        
+        &__item:nth-child(3)::before {
+            // height: 508px; //? для перевірки
+            background-image: url(../images/03-3_skills_reading-sm.svg);
+            // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
+        }
+        
+        &__item:nth-child(4)::before {
+            // height: 488px; //? для перевірки
+            background-image: url(../images/03-4_skills_listening-sm.svg);
+            // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
+        }
+        &__title {
+            margin-bottom: -18px;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
-            // font-size: 24px;
-            // line-height: 3.33;
-            // color: getColor('dark');
-            //? ____________ Replaced by mixin ____________
-            @include title(24px, 3.33);
-            text-align: center;
+            // font-size: 18px;
+            // // line-height: 4.44;
+            // // text-align: center;
+            // color: getColor('title-first');
+        //? ____________ Replaced by mixin ____________
+            @include title(18px, 4.44);
+            color: getColor("title-first");
         }
-
-        .skills-list {
-            // @include outline($type: solid, $color: black);
-            
-            &__item {
-                padding-top: 16px;
-                padding-right: 16px;
-                padding-bottom: 45px;
-                padding-left: 13px;
-                border-radius: 5px;
-                background-color: getColor("background-card");
-                // @include outline($type: dotted, $color: #1100ff);
-            }
-            
-            &__item:not(:last-child) {
-                margin-bottom: 21px;
-            }
-            
-            &__item::before {
-                content: "";
-                display: block;
-                height: 213px;
-                margin-bottom: 10px;
-                margin-left: 3px;
-                border-radius: 5px;
-                background-size: auto auto; //? ТИМЧАСОВО
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color:getColor("background-image"); //? ТИМЧАСОВО
-            }
-            
-            &__item:nth-child(1)::before {
-                // height: 608px; //? для перевірки
-                background-image: url(../images/03-1_skills_speaking-sm.svg);
-                // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
-                background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
-            }
-            
-            &__item:nth-child(2)::before {
-                // height: 508px; //? для перевірки
-                background-image: url(../images/03-2_skills_writing-sm.svg);
-                // background-position: center top 16px;
-                // background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-size: 213px 213px; //? для збыльшення розмірів
-            }
-            
-            &__item:nth-child(3)::before {
-                // height: 508px; //? для перевірки
-                background-image: url(../images/03-3_skills_reading-sm.svg);
-                // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
-            }
-            
-            &__item:nth-child(4)::before {
-                // height: 488px; //? для перевірки
-                background-image: url(../images/03-4_skills_listening-sm.svg);
-                // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
-            }
-
-            &__title {
-                margin-bottom: -18px;
-                @include title(18px, 4.44);
-                color: getColor("title-first");
-            }
-
-            &__text {
-                margin-left: 3px;
-                // margin-left: 0px; //? for nth-child(2)
-                margin-bottom: 32px;
-                // font-family: getFont("main-family");
-                // font-weight: 400;
-                font-size: 13px;
-                // font-size: 12px; //? for nth-child(2)
-                line-height: 1.54;
-                // line-height: 1.5; //? for nth-child(2)
-                // text-align: center;
-                // color: getColor("text");
-                // @include outline($type: dotted, $color: blue);
-            }
-
-            &__button {
-                @include button();
-                // font-family: getFont("main-family");
-                font-weight: 500;
-                // font-size: 14px;
-                // color: getColor("light");
-            }
+        &__text {
+            margin-left: 3px;
+            // margin-left: 0px; //? for nth-child(2)
+            margin-bottom: 32px;
+            // font-family: getFont("main-family");
+            // font-weight: 400;
+            font-size: 13px;
+            // font-size: 12px; //? for nth-child(2)
+            line-height: 1.54;
+            // line-height: 1.5; //? for nth-child(2)
+            // text-align: center;
+            // color: getColor("text");
+            // @include outline($type: dotted, $color: blue);
+        }
+        &__button {
+            @include button();
+            // font-family: getFont("main-family");
+            font-weight: 500;
+            // font-size: 14px;
+            // color: getColor("light");
         }
     }
 }

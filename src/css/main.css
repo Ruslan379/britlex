@@ -178,17 +178,17 @@ body {
   padding-left: 11px;
   text-align: center;
 }
-.hero .container .hero__title {
+.hero__title {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
   color: #000000;
 }
-.hero .container .hero__text {
+.hero__text {
   padding-bottom: 35px;
 }
-.hero .container .hero__button {
+.hero__button {
   width: 289px;
   height: 60px;
   border-radius: 5px;
@@ -206,7 +206,7 @@ body {
   height: 100%;
   padding: 0 15px;
 }
-.skills .container .skills__title {
+.skills__title {
   padding-bottom: 32px;
   font-weight: 600;
   font-size: 24px;
@@ -214,7 +214,7 @@ body {
   color: #000000;
   text-align: center;
 }
-.skills .container .skills-list__item {
+.skills-list__item {
   padding-top: 16px;
   padding-right: 16px;
   padding-bottom: 45px;
@@ -222,36 +222,34 @@ body {
   border-radius: 5px;
   background-color: #f5f5f5;
 }
-.skills .container .skills-list__item:not(:last-child) {
+.skills-list__item:not(:last-child) {
   margin-bottom: 21px;
 }
-.skills .container .skills-list__item::before {
+.skills-list__item::before {
   content: "";
   display: block;
   height: 213px;
   margin-bottom: 10px;
   margin-left: 3px;
   border-radius: 5px;
-  background-size: auto auto;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #e2e2e2;
 }
-.skills .container .skills-list__item:nth-child(1)::before {
+.skills-list__item:nth-child(1)::before {
   background-image: url(../images/03-1_skills_speaking-sm.svg);
-  background-size: 213px 213px;
 }
-.skills .container .skills-list__item:nth-child(2)::before {
+.skills-list__item:nth-child(2)::before {
   background-image: url(../images/03-2_skills_writing-sm.svg);
   background-size: 213px 213px;
 }
-.skills .container .skills-list__item:nth-child(3)::before {
+.skills-list__item:nth-child(3)::before {
   background-image: url(../images/03-3_skills_reading-sm.svg);
 }
-.skills .container .skills-list__item:nth-child(4)::before {
+.skills-list__item:nth-child(4)::before {
   background-image: url(../images/03-4_skills_listening-sm.svg);
 }
-.skills .container .skills-list__title {
+.skills-list__title {
   margin-bottom: -18px;
   font-weight: 600;
   font-size: 18px;
@@ -259,13 +257,13 @@ body {
   color: #000000;
   color: #263238;
 }
-.skills .container .skills-list__text {
+.skills-list__text {
   margin-left: 3px;
   margin-bottom: 32px;
   font-size: 13px;
   line-height: 1.54;
 }
-.skills .container .skills-list__button {
+.skills-list__button {
   width: 178px;
   height: 50px;
   border-radius: 5px;
@@ -275,7 +273,7 @@ body {
 }
 
 .about {
-  background-color: #dee2ff;
+  background-color: #e8ebff;
   padding-bottom: 84px;
 }
 .about .container {
@@ -326,7 +324,7 @@ body {
 
 .pricing {
   height: 1578px;
-  background-color: #eaffaf;
+  background-color: #efffc3;
   padding-bottom: 72px;
 }
 .pricing .container {
@@ -342,15 +340,33 @@ body {
   line-height: 3.33;
   color: #000000;
 }
-.pricing-list {
-  outline: 1px dotted black;
-}
 .pricing-list__item {
   background-color: bisque;
-  outline: 1px dashed darkgrey;
 }
 .pricing-list__item:not(:last-child) {
   margin-bottom: 63px;
+}
+.pricing-list__item::before {
+  content: "";
+  display: block;
+  height: 248px;
+  border-radius: 5px;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e2e2e2;
+}
+.pricing-list__item:nth-child(1)::before {
+  margin-bottom: 28px;
+  background-image: url(../images/05-1_pricing-sm.svg);
+}
+.pricing-list__item:nth-child(2)::before {
+  margin-bottom: 12px;
+  background-image: url(../images/05-2_pricing-sm.svg);
+}
+.pricing-list__item:nth-child(3)::before {
+  margin-bottom: 7px;
+  background-image: url(../images/05-2_pricing-sm.svg);
 }
 
 .contacts {
