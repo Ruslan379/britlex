@@ -341,11 +341,9 @@ body {
   color: #000000;
 }
 .pricing-list__item {
-  background-color: bisque;
   outline: 1px dashed darkgrey;
 }
 .pricing-list__item:nth-child(1) {
-  height: 451px;
   margin-bottom: 63px;
 }
 .pricing-list__item:nth-child(2) {
@@ -405,6 +403,24 @@ body {
 .pricing-list__text {
   font-size: 13px;
   line-height: 1.54;
+}
+.pricing-list-price {
+  width: 170px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px 15px 5px 12px;
+  font-size: 18px;
+  color: #263238;
+  border-radius: 5px;
+  background-color: #eee;
+}
+.pricing-list-price__time-period {
+  width: 78px;
+  margin-left: auto;
+  font-size: 14px;
+  color: #546269;
 }
 
 .contacts {

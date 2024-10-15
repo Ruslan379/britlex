@@ -31,12 +31,12 @@
             // height: 451x; //? first item
             // height: 353px; //? second item
             // height: 403px; //? third item
-            background-color: bisque;
+            // background-color: bisque;
             @include outline($type: dashed, $color: darkgrey);
         }
         
         &__item:nth-child(1) {
-            height: 451px; //? для перевірки
+            // height: 451px; //? для перевірки
             margin-bottom: 63px;
         }
         
@@ -136,6 +136,28 @@
             // @include outline($type: dotted, $color: blue);
         }
 
+        &-price {
+            width: 170px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding: 5px 15px 5px 12px;
+            // font-family: getFont("main-family");
+            // font-weight: 400;
+            font-size: 18px;
+            // text-align: left;
+            color: getColor("title-first");
+            border-radius: 5px;
+            background-color: getColor("background-price");
 
+            &__time-period {
+                width: 78px;
+                margin-left: auto;
+                font-size: 14px;
+                color: getColor("gray-second");
+                // @include outline($type: dotted, $color: blue);
+            }
+        }
     }
 }
