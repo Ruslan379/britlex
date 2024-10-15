@@ -327,10 +327,8 @@ body {
   padding-bottom: 72px;
 }
 .pricing .container {
-  height: 100%;
   padding: 0 15px;
   text-align: center;
-  outline: 1px dashed red;
 }
 .pricing__title {
   margin-bottom: 49px;
@@ -338,9 +336,6 @@ body {
   font-size: 24px;
   line-height: 3.33;
   color: #000000;
-}
-.pricing-list__item {
-  outline: 1px dashed darkgrey;
 }
 .pricing-list__item:nth-child(1) {
   margin-bottom: 63px;
@@ -351,7 +346,6 @@ body {
 .pricing-list__item::before {
   content: "";
   display: block;
-  height: 248px;
   border-radius: 5px;
   background-size: auto auto;
   background-repeat: no-repeat;
@@ -359,16 +353,19 @@ body {
   background-color: #e2e2e2;
 }
 .pricing-list__item:nth-child(1)::before {
+  height: 248px;
   margin-bottom: 28px;
   background-image: url(../images/05-1_pricing-sm.svg);
 }
 .pricing-list__item:nth-child(2)::before {
+  height: 197px;
   margin-bottom: 12px;
   background-image: url(../images/05-2_pricing-sm.svg);
 }
 .pricing-list__item:nth-child(3)::before {
+  height: 241px;
   margin-bottom: 7px;
-  background-image: url(../images/05-2_pricing-sm.svg);
+  background-image: url(../images/05-3_pricing-sm.svg);
 }
 .pricing-list__item:nth-child(1) .pricing-list__title {
   margin-bottom: 17px;

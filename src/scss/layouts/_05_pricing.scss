@@ -4,11 +4,11 @@
     padding-bottom: 72px;
 
     .container {
-        height: 100%; //? для перевірки
+        // height: 100%; //? для перевірки
         padding: 0 15px;
         text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: red);
+        // @include outline($type: dashed, $color: red);
     }
 
     &__title {
@@ -26,14 +26,14 @@
 
     &-list {
         // @include outline($type: dotted, $color: black);
-
-        &__item {
-            // height: 451x; //? first item
-            // height: 353px; //? second item
-            // height: 403px; //? third item
-            // background-color: bisque;
-            @include outline($type: dashed, $color: darkgrey);
-        }
+        
+        // &__item {
+        //     // height: 451x; //? first item
+        //     // height: 353px; //? second item
+        //     // height: 403px; //? third item
+        //     // background-color: bisque;
+        //     @include outline($type: dashed, $color: darkgrey);
+        // }
         
         &__item:nth-child(1) {
             // height: 451px; //? для перевірки
@@ -41,18 +41,20 @@
         }
         
         &__item:nth-child(2) {
-            // height: 353px; //? для перевірки
+            // height: 370px; //? для перевірки
             margin-bottom: 72px; 
         }
         
         // &__item:nth-child(3) {
-        //     height: 403px; //? для перевірки
+        //     height: 421px; //? для перевірки
         // }
-        
+
         &__item::before {
             content: "";
+            // height: 248px; //? first image
+            // height: 197px; //? second image
+            // height: 241px; //? third image
             display: block;
-            height: 248px;
             // margin-bottom: 28px; //? first image
             // margin-bottom: 12px; //? second image
             // margin-bottom: 7px; //? third image
@@ -65,6 +67,7 @@
         }
         
         &__item:nth-child(1)::before {
+            height: 248px;
             margin-bottom: 28px;
             background-image: url(../images/05-1_pricing-sm.svg);
             // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
@@ -72,6 +75,7 @@
         }
         
         &__item:nth-child(2)::before {
+            height: 197px;
             margin-bottom: 12px;
             background-image: url(../images/05-2_pricing-sm.svg);
             // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -79,8 +83,9 @@
         }
         
         &__item:nth-child(3)::before {
+            height: 241px;
             margin-bottom: 7px;
-            background-image: url(../images/05-2_pricing-sm.svg);
+            background-image: url(../images/05-3_pricing-sm.svg);
             // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
 
