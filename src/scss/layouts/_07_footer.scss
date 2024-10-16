@@ -1,15 +1,38 @@
 .footer {
-    // height: 684px; //? для перевірки
-    background-color: #afecff;
+    height: 140px; //? для перевірки
+    background-color: #c9f2ff;
     padding-top: 26px;
-    padding-bottom: 57px; 
+    padding-bottom: 47px; 
 
     .container {
         // height: 100%; //? для перевірки
         padding: 0 15px;
         text-align: center;
-        border-bottom: 1px solid getColor("border-contacts");
         // ! міксін outline
         @include outline($type: dashed, $color: red);
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    &-list {
+        display: flex;
+        @include outline($type: dotted, $color: black);
+        
+        &__item {
+            // background-color: bisque;
+            @include outline($type: dashed, $color: darkgrey);
+        }
+        
+        &__link {
+            display: flex;
+            // font-family: getFont("main-family");
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 1.55;
+            color: getColor("text");
+            @include outline($type: dashed, $color: orange);
+        }
     }
 }
