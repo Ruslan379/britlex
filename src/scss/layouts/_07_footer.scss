@@ -1,4 +1,15 @@
 .footer {
-    height: 100px;
+    // height: 684px; //? для перевірки
     background-color: #afecff;
+    padding-top: 26px;
+    padding-bottom: 57px; 
+
+    .container {
+        // height: 100%; //? для перевірки
+        padding: 0 15px;
+        text-align: center;
+        border-bottom: 1px solid getColor("border-contacts");
+        // ! міксін outline
+        @include outline($type: dashed, $color: red);
+    }
 }
