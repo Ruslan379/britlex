@@ -4,13 +4,13 @@
     padding: 0 10px;
     margin: 0 auto;
 	// ! міксін outline
-	// @include outline();
+	@include outline();
 
 	@media (min-width: getBreakPoint('sm')) {
 		// max-width: 320px;
 		max-width: getBreakPoint('sm');
 		// ! міксін outline
-		// @include outline($color: teal);
+		@include outline($color: teal);
 	}
 	@media (min-width: getBreakPoint('md')) {
 		// max-width: 575px;
