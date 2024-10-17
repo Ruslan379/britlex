@@ -63,7 +63,7 @@
             background-size: auto auto; //? ТИМЧАСОВО
             background-repeat: no-repeat;
             background-position: center;
-            background-color:getColor("background-image"); //? ТИМЧАСОВО
+            // background-color:getColor("background-image"); //? ТИМЧАСОВО
         }
         
         &__item:nth-child(1)::before {

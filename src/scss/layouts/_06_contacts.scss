@@ -1,14 +1,12 @@
 .contacts {
     // height: 684px; //? для перевірки
-    background-color: #afffba;
     // padding-bottom: 57px; //! відсутній
+    background-color: #afffba;
 
     .container {
         // height: 100%; //? для перевірки
-        // padding: 0 15px;
-        padding: 0 15px 57px;
+        padding: 0 15px;
         text-align: center;
-        border-bottom: 1px solid getColor("border-contacts");
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
     }
@@ -37,7 +35,7 @@
         // background-size: 253px 228px; //? ТИМЧАСОВО, для візуалізації розмірів
         background-repeat: no-repeat;
         background-position: 29px center;
-        background-color:getColor("background-image"); //? ТИМЧАСОВО
+        // background-color:getColor("background-image"); //? ТИМЧАСОВО
     }
 
     &__text {
@@ -54,9 +52,11 @@
     &-form {
         width: 100%;
         margin: 0 auto;
+        padding-bottom: 57px;
         display: flex;
         flex-direction: column;
         gap: 17px;
+        border-bottom: 1px solid getColor("border-contacts");
         // @include outline($type: dotted, $color: blue);
         
         &__input {
