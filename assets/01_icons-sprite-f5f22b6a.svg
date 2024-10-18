@@ -5,23 +5,23 @@
     overflow="hidden"
 >
     <defs>
-        <!--! 01-1 header button-burger-menu sm -->
-        <symbol id="button-burger-sm" viewBox="0 0 34 19">
+        <!--! 01-1 header button-burger-menu (sm) -->
+        <symbol id="button-burger-sm" viewBox="0 0 30 17">
+            <rect width="30" height="3" rx="1" fill="#39515E" />
+            <rect y="7" width="30" height="3" rx="1" fill="#39515E" />
+            <rect y="14" width="21.2195" height="3" rx="1" fill="#39515E" />        
+        </symbol>
+        <!--! 01-2 header button-burger-menu (md) -->
+        <symbol id="button-burger-md" viewBox="0 0 34 19">
             <rect width="33.5294" height="3.35294" rx="1" fill="#39515E" />
             <rect y="7.82353" width="33.5294" height="3.35294" rx="1" fill="#39515E" />
             <rect y="15.6471" width="23.7159" height="3.35294" rx="1" fill="#39515E" />
         </symbol>
-        <!--! 01-2 header button-burger-menu md -->
-        <symbol id="button-burger-md" viewBox="0 0 43 24">
+        <!--! 01-3 header button-burger-menu (lg) -->
+        <symbol id="button-burger-lg" viewBox="0 0 43 24">
             <rect width="42.3529" height="4.23529" rx="1" fill="#39515E" />
             <rect y="9.88235" width="42.3529" height="4.23529" rx="1" fill="#39515E" />
             <rect y="19.7647" width="29.957" height="4.23529" rx="1" fill="#39515E" />
-        </symbol>
-        <!--! 01-3 header button-burger-menu lg -->
-        <symbol id="button-burger-lg" viewBox="0 0 30 17">
-            <rect width="30" height="3" rx="1" fill="#39515E" />
-            <rect y="7" width="30" height="3" rx="1" fill="#39515E" />
-            <rect y="14" width="21.2195" height="3" rx="1" fill="#39515E" />        
         </symbol>
     </defs>
 </svg>
