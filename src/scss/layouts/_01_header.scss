@@ -94,18 +94,29 @@
                 }
             }
 
-            // ? LOGO  - moved to scss/components
-            // .logo {
-            //     // font-family: getFont("main-family");
-            //     // font-weight: 400;
-            //     font-size: 24px;
-            //     // line-height: 1.5;
-            //     color: getColor("dark");
+            //? LOGO
+            .logo {
+                //? LOGO-sm  - moved to scss/components
+                // // font-family: getFont("main-family");
+                // // font-weight: 400;
+                // font-size: 30px;
+                // // line-height: 1.5;
+                // color: getColor("dark");
                 
-            //     &__light {
-            //         color: getColor("gray-first");
-            //     }
-            // }
+                // &__light {
+                //     color: getColor("gray-first");
+                // }
+                
+                //! Медіа-запити
+                //* До 574px
+                @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+                    font-size: 24px;
+                }
+                //* Від 1330px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    font-size: 36px;
+                }
+            }
 
             //? Кнопка Бургер-меню_(open)
             .button-menu-toggle {
