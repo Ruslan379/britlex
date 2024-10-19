@@ -55,24 +55,24 @@
         }
         
         &__item:nth-child(1)::before {
-            background-image: url(../images/03-1_skills_speaking-sm.svg);
+            background-image: url(../images/03_1-1_skills_speaking-sm.svg);
             // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
             // background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
         
         &__item:nth-child(2)::before {
-            background-image: url(../images/03-2_skills_writing-sm.svg);
+            background-image: url(../images/03_1-2_skills_writing-sm.svg);
             // background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
             background-size: 213px 213px; //? для збільшення розмірів
         }
         
         &__item:nth-child(3)::before {
-            background-image: url(../images/03-3_skills_reading-sm.svg);
+            background-image: url(../images/03_1-3_skills_reading-sm.svg);
             // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
         
         &__item:nth-child(4)::before {
-            background-image: url(../images/03-4_skills_listening-sm.svg);
+            background-image: url(../images/03_1-4_skills_listening-sm.svg);
             // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
         &__title {

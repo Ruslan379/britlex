@@ -69,7 +69,7 @@
         &__item:nth-child(1)::before {
             height: 248px;
             margin-bottom: 28px;
-            background-image: url(../images/05-1_pricing-sm.svg);
+            background-image: url(../images/05_1-1_pricing-sm.svg);
             // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
             // background-size: 248px 248px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
@@ -77,7 +77,7 @@
         &__item:nth-child(2)::before {
             height: 197px;
             margin-bottom: 12px;
-            background-image: url(../images/05-2_pricing-sm.svg);
+            background-image: url(../images/05_1-2_pricing-sm.svg);
             // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-size: 213px 213px; //? для збільшення розмірів
         }
@@ -85,7 +85,7 @@
         &__item:nth-child(3)::before {
             height: 241px;
             margin-bottom: 7px;
-            background-image: url(../images/05-3_pricing-sm.svg);
+            background-image: url(../images/05_1-3_pricing-sm.svg);
             // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
         }
 
