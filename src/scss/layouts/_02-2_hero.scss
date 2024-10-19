@@ -33,7 +33,7 @@
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
-
+        
         //! Медіа-запити
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
@@ -47,7 +47,7 @@
         // text-align: center;
         // ! міксін outline
         @include outline($type: dashed, $color: orange);
-
+        
         &::after {
             display: none;
         }
@@ -69,6 +69,20 @@
             &::before {
                 display: none;
             }
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            width: 421px;
+            padding-top: 13px;
+            padding-top: 25px;
+        }
+        
+        //* Від 1330px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            width: 520px;
+            padding-top: 50px;
+            padding-top: 44px;
         }
 
         &::before,
@@ -102,7 +116,7 @@
                 width: 352px;
                 height: 352px;
                 top: 0px;
-                right: calc(-23px - 352px); //? 375px
+                right: calc(-23px - 352px); //? -375px
                 margin-bottom: 0;
                 background-image: url(../images/02_3_hero_background-lg.svg);
                 // background-size: 352px 352px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -112,12 +126,28 @@
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
-                // height: 299px;
+                width: 460px;
+                height: 460px;
+                top: 0px;
+                right: calc(-57px - 460px); //? -517px
+                margin-bottom: 0;
+                background-image: url(../images/02_4_hero_background-xl.svg);
+                // background-size: 460px 460px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
             
             //* Від 1330px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                // height: 299px;
+                width: 661px;
+                height: 661px;
+                top: 0px;
+                right: calc(-169px - 661px); //? -830px
+                margin-bottom: 0;
+                background-image: url(../images/02_5_hero_background-xxl.svg);
+                // background-size: 661px 661px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
         }
     }
