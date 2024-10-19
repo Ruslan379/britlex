@@ -1,0 +1,77 @@
+.hero {
+    // height: 616px; //? для перевірки
+    padding-bottom: 51px;
+    background-color: #ccffaf;
+    //todo old variant
+    // // background-image: url(../images/learning-languages-bro-1.png);
+    // background-image: url(../images/02_hero_background-sm.svg);
+    //     background-repeat: no-repeat;
+    //     background-position: center top 0;
+    //     background-size: 299px 299px;
+
+    .container {
+        // height: 100%; //? для перевірки
+        // padding-top: 315px; //todo old variant
+        padding-left: 11px;
+        text-align: center;
+        // ! міксін outline
+        // @include outline($type: dashed, $color: red);
+    }
+
+    .сontents-container {
+        // height: 100%; //? для перевірки
+        // padding-top: 315px; //todo old variant
+        // padding-left: 11px;
+        // text-align: center;
+        // ! міксін outline
+        @include outline($type: dashed, $color: red);
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // // line-height: 1.5;
+        // // text-align: center;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px);
+        
+        &::before {
+            content: "";
+            display: block;
+            height: 299px;
+            margin-bottom: 16px;
+            border-radius: 5px;
+            // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
+            // background-image: url(../images/02_1_hero_background-sm.png);
+            background-image: url(../images/02_1_hero_background-sm.svg);
+            // background-size: auto auto; //? ТИМЧАСОВО
+            // background-size: 299px 299px; //? ТИМЧАСОВО, для візуалізації розмірів
+            background-repeat: no-repeat;
+            // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+            // background-color:getColor("background-image"); //? ТИМЧАСОВО
+        }
+    }
+
+    &__text {
+        padding-bottom: 35px;
+        // font-family: getFont("main-family");
+        // font-weight: 400;
+        // font-size: 14px;
+        // line-height: 1.5;
+        // text-align: center;
+        // color: getColor("text");
+    }
+
+    &__button {
+        @include button(289px, 60px);
+        // font-family: getFont("main-family");
+        font-weight: 500;
+        font-size: 18px;
+        // color: getColor("light");
+    }
+}
+

@@ -29,23 +29,23 @@
         // color: getColor('dark');
         //? ____________ Replaced by mixin ____________
         @include title(24px);
+        
+        &::before {
+            content: "";
+            display: block;
+            height: 299px;
+            margin-bottom: 16px;
+            border-radius: 5px;
+            // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
+            // background-image: url(../images/02_1_hero_background-sm.png);
+            background-image: url(../images/02_1_hero_background-sm.svg);
+            // background-size: auto auto; //? ТИМЧАСОВО
+            // background-size: 299px 299px; //? ТИМЧАСОВО, для візуалізації розмірів
+            background-repeat: no-repeat;
+            // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+            // background-color:getColor("background-image"); //? ТИМЧАСОВО
+        }
     }
-
-    &__title::before {
-        content: "";
-        display: block;
-        height: 299px;
-        margin-bottom: 16px;
-        border-radius: 5px;
-        // background-image: url(../images/02_1_hero_background-sm.png);
-        background-image: url(../images/02_1_hero_background-sm.svg);
-        // background-size: auto auto; //? ТИМЧАСОВО
-        // background-size: 299px 299px; //? ТИМЧАСОВО, для візуалізації розмірів
-        background-repeat: no-repeat;
-        // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-        // background-color:getColor("background-image"); //? ТИМЧАСОВО
-    }
-
 
     &__text {
         padding-bottom: 35px;
