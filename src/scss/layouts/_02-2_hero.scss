@@ -41,10 +41,31 @@
         // text-align: center;
         // ! міксін outline
         @include outline($type: dashed, $color: orange);
+
+        &::after {
+            display: none;
+        }
         
         &::before {
-            content: "";
             display: block;
+        }
+
+        //! Медіа-запити
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            &::after {
+                display: block;
+            }
+            
+            &::before {
+                display: none;
+            }
+        }
+        
+        &::before,
+        &::after {
+            content: "";
+            // display: block;
             height: 299px;
             margin-bottom: 16px;
             border-radius: 5px;
@@ -56,8 +77,7 @@
             background-repeat: no-repeat;
             // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
-            
-            //! Медіа-запити
+
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 height: 424px;
