@@ -24,7 +24,7 @@
     
     //* Від 1600px
     @media screen and (min-width: getBreakPoint('xxl')) {
-        height: 764px; //? для перевірки - xxl
+        // height: 764px; //? для перевірки - xxl
         padding-bottom: 103px;
     }
 
@@ -80,9 +80,9 @@
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 520px;
+            width: 521px;
             padding-top: 50px;
-            padding-top: 44px;
+            padding-bottom: 44px;
         }
 
         &::before,
@@ -229,8 +229,21 @@
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // width: 220px;
-            // margin-bottom: 20px;
+            width: 386px;
+            // height: 240px; //? для перевірки
+            margin: 0 0 40px;
+            // margin-bottom: 40px;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            //? ++++++++++++ Replaced by mixin ++++++++++++
+            // // font-family: getFont("main-family");
+            // font-weight: 600;
+            // font-size: 64px;
+            // line-height: 1.25;
+            // color: getColor('dark');
+            //? ____________ Replaced by mixin ____________
+            @include title(64px, 1.25);
+            // text-align: initial;
         }
     }
 
@@ -282,8 +295,8 @@
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // margin-bottom: 37px;
-            // font-size: 16px;
+            margin-bottom: 61px;
+            font-size: 24px;
         }
     }
 
@@ -318,9 +331,10 @@
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // @include button(305px, 75px);
-            // font-weight: 500;
-            // font-size: 18px;
+            @include button(438px, 118px);
+            font-weight: 400;
+            font-size: 36px;
+            border-radius: 15px;
         }
     }
 }
