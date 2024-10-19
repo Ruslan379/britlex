@@ -1,43 +1,46 @@
 .hero {
-    // height: 616px; //? для перевірки
+    // height: 616px; //? для перевірки - sm
     padding-bottom: 51px;
     background-color: #ccffaf;
-    //todo old variant
-    // // background-image: url(../images/learning-languages-bro-1.png);
-    // background-image: url(../images/02_hero_background-sm.svg);
-    //     background-repeat: no-repeat;
-    //     background-position: center top 0;
-    //     background-size: 299px 299px;
+    
+    //! Медіа-запити
+    //* Від 575px
+    @media screen and (min-width: getBreakPoint('md')) {
+        // height: 768px; //? для перевірки - md
+        padding-bottom: 96px;
+    }
+    
+    //* Від 767px
+    @media screen and (min-width: getBreakPoint('lg')) {
+        height: 418px; //? для перевірки - lg
+        padding-bottom: 56px;
+    }
+    
+    //* Від 992px
+    @media screen and (min-width: getBreakPoint('xl')) {
+        // height: 507px; //? для перевірки - xl
+        padding-bottom: 47px;
+    }
+    
+    //* Від 1330px
+    @media screen and (min-width: getBreakPoint('xxl')) {
+        // height: 764px; //? для перевірки - xxl
+        padding-bottom: 103px;
+    }
 
     .container {
         // height: 100%; //? для перевірки
-        // padding-top: 315px; //todo old variant
-        padding-left: 11px;
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
     }
 
+    //? Додатковий контейнер для всього контенту (крім зображення)
     .сontents-container {
         // height: 100%; //? для перевірки
-        // padding-top: 315px; //todo old variant
-        // padding-left: 11px;
         // text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: red);
-    }
-
-    &__title {
-        margin-bottom: 20px;
-        //? ++++++++++++ Replaced by mixin ++++++++++++
-        // // font-family: getFont("main-family");
-        // font-weight: 600;
-        // font-size: 24px;
-        // // line-height: 1.5;
-        // // text-align: center;
-        // color: getColor('dark');
-        //? ____________ Replaced by mixin ____________
-        @include title(24px);
+        @include outline($type: dashed, $color: orange);
         
         &::before {
             content: "";
@@ -53,25 +56,161 @@
             background-repeat: no-repeat;
             // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            
+            //! Медіа-запити
+            //* Від 575px
+            @media screen and (min-width: getBreakPoint('md')) {
+                height: 424px;
+                margin-bottom: 17px;
+                background-image: url(../images/02_2_hero_background-md.svg);
+                // background-size: 424px 424px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            //* Від 767px
+            @media screen and (min-width: getBreakPoint('lg')) {
+                height: 299px;
+            }
+            
+            //* Від 992px
+            @media screen and (min-width: getBreakPoint('xl')) {
+                height: 299px;
+            }
+            
+            //* Від 1330px
+            @media screen and (min-width: getBreakPoint('xxl')) {
+                height: 299px;
+            }
+        }
+    }
+
+    &__title {
+        width: 220px;
+        margin: 0 auto 20px;
+        // margin-bottom: 20px;
+        @include flex_FDcol;
+        //? ++++++++++++ Replaced by mixin ++++++++++++
+        // // font-family: getFont("main-family");
+        // font-weight: 600;
+        // font-size: 24px;
+        // // line-height: 1.5;
+        // // text-align: center;
+        // color: getColor('dark');
+        //? ____________ Replaced by mixin ____________
+        @include title(24px);
+        // text-align: center;
+        // ! міксін outline
+        @include outline($type: dashed, $color: blue);
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            width: 100%;
+            margin-bottom: 26px;
+            // flex-direction: row;
+            // justify-content: center;
+            @include flex_JCcen;
+            //? ++++++++++++ Replaced by mixin ++++++++++++
+            // // font-family: getFont("main-family");
+            // font-weight: 600;
+            // font-size: 34px;
+            // line-height: 1.32;
+            // color: getColor('dark');
+            //? ____________ Replaced by mixin ____________
+            @include title(34px, 1.32);
+            text-align: center;
+        }
+
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            // width: 220px;
+            // margin-bottom: 20px;
+        }
+
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            // width: 220px;
+            // margin-bottom: 20px;
+        }
+
+        //* Від 1330px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            // width: 220px;
+            // margin-bottom: 20px;
         }
     }
 
     &__text {
-        padding-bottom: 35px;
+        margin-bottom: 35px;
         // font-family: getFont("main-family");
         // font-weight: 400;
         // font-size: 14px;
         // line-height: 1.5;
         // text-align: center;
         // color: getColor("text");
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            margin-bottom: 37px;
+            font-size: 16px;
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            // margin-bottom: 37px;
+            // font-size: 16px;
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            // margin-bottom: 37px;
+            // font-size: 16px;
+        }
+        
+        //* Від 1330px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            // margin-bottom: 37px;
+            // font-size: 16px;
+        }
     }
 
     &__button {
         @include button(289px, 60px);
         // font-family: getFont("main-family");
-        font-weight: 500;
-        font-size: 18px;
+        // font-weight: 500;
+        // font-size: 16px;
         // color: getColor("light");
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            @include button(305px, 75px);
+            // font-weight: 500;
+            font-size: 18px;
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            @include button(305px, 75px);
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            @include button(305px, 75px);
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        //* Від 1330px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            @include button(305px, 75px);
+            font-weight: 500;
+            font-size: 18px;
+        }
     }
 }
 

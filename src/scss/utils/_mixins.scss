@@ -117,6 +117,8 @@
 @mixin button($width: 178px, $height: 50px) {
 	width: $width;
 	height: $height;
+	font-weight: 500;
+    font-size: 16px;
 	border-radius: 5px;
 	color: getColor("light");
     background-color: getColor("title-first");
