@@ -36,7 +36,7 @@
 	}
 	@media (min-width: getBreakPoint('xxl')) {
 		padding: 0 132px;
-		// max-width: 1330px;
+		// max-width: 1600px;
 		max-width: getBreakPoint('xxl');
 		// ! міксін outline
 		@include outline($color: blue);

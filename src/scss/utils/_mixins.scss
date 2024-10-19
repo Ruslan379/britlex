@@ -29,7 +29,7 @@
 			@content;
 		}
 	} @else if $breakpoint == 'xxl' {
-		@media screen and (min-width: 1330px) {
+		@media screen and (min-width: 1600px) {
 			@content;
 		}
 	}
