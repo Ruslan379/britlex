@@ -7,6 +7,7 @@
 	@include outline();
 
 	@media (min-width: getBreakPoint('sm')) {
+		padding: 0 14px;
 		// max-width: 320px;
 		max-width: getBreakPoint('sm');
 		// ! міксін outline
@@ -20,18 +21,21 @@
 		@include outline($color: violet);
 	}
 	@media (min-width: getBreakPoint('lg')) {
+		padding: 0 40px;
 		// max-width: 767px;
 		max-width: getBreakPoint('lg');
 		// ! міксін outline
 		@include outline($color: green);
 	}
 	@media (min-width: getBreakPoint('xl')) {
+		padding: 0 32px;
 		// max-width: 992px;
 		max-width: getBreakPoint('xl');
 		// ! міксін outline
 		@include outline($color: orange);
 	}
 	@media (min-width: getBreakPoint('xxl')) {
+		padding: 0 132px;
 		// max-width: 1330px;
 		max-width: getBreakPoint('xxl');
 		// ! міксін outline

@@ -35,7 +35,7 @@
 
     .container {
         // height: 100%; //? для перевірки
-        padding: 0 15px;
+        // padding: 0 15px;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
         
@@ -47,17 +47,17 @@
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            padding: 0 50px;
+            // padding: 0 50px;
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            padding: 0 70px;
+            // padding: 0 70px;
         }
         
         //* Від 1330px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            padding: 0 90px;
+            // padding: 0 90px;
         }
     }
 
@@ -104,7 +104,7 @@
             
             //* Від 1330px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                gap: 48px;
+                gap: 40px;
             }
             
             &__link {
