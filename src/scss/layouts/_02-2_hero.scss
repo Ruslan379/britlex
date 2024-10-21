@@ -46,7 +46,7 @@
         // height: 100%; //? для перевірки
         // text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: orange);
+        // @include outline($type: dashed, $color: darkgrey);
         
         &::after {
             display: none;
@@ -170,7 +170,7 @@
         @include title(24px);
         // text-align: center;
         // ! міксін outline
-        @include outline($type: dashed, $color: blue);
+        // @include outline($type: dashed, $color: blue);
         
         //! Медіа-запити
         //* Від 575px
@@ -258,12 +258,12 @@
         @media screen and (min-width: getBreakPoint('lg')) {
             position: relative;
             display: flex;
-
+            
             //? Додаємо зображення лампочки
             &::after {
                 content: "";
-                width: 51px; 
-                height: 51px;
+                // width: 51px; 
+                // height: 51px;
                 //? Для вірного позиціонування
                 width: 72px;
                 height: 72px;
@@ -279,10 +279,43 @@
                 // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
                 background-repeat: no-repeat;
                 background-position: center; 
-                background-color:getColor("background-image"); //? ТИМЧАСОВО
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // width: 59px; 
+                    // height: 59px;
+                    //? Для вірного позиціонування
+                    width: 82px;
+                    height: 82px;
+                    top: 90px;
+                    left: calc(100% + 12px) ;
+                    background-image: url(../images/02_4_hero_light-bulb-xl.svg);
+                    // background-size: auto auto; //? ТИМЧАСОВО
+                    // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    background-repeat: no-repeat;
+                    background-position: center; 
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // width: 85px; 
+                    // height: 85px;
+                    //? Для вірного позиціонування
+                    width: 120px;
+                    height: 120px;
+                    top: 92px;
+                    left: calc(100% + 38px) ;
+                    background-image: url(../images/02_5_hero_light-bulb-xxl.svg);
+                    // background-size: auto auto; //? ТИМЧАСОВО
+                    // background-size: 120px 120px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    background-repeat: no-repeat;
+                    background-position: center; 
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
         }
     }
+
     &__title--sm-md  {
         //! Медіа-запит
         //* Від 767px
