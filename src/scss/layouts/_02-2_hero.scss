@@ -93,7 +93,7 @@
             margin-bottom: 16px;
             border-radius: 5px;
             // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
-            // background-image: url(../images/02_1_hero_background-sm.png);
+            // background-image: url(../images/02_5_hero_background-xxl.svg);
             background-image: url(../images/02_1_hero_background-sm.svg);
             // background-size: auto auto; //? ТИМЧАСОВО
             // background-size: 299px 299px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -256,7 +256,31 @@
         //! Медіа-запит
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
+            position: relative;
             display: flex;
+
+            //? Додаємо зображення лампочки
+            &::after {
+                content: "";
+                width: 51px; 
+                height: 51px;
+                //? Для вірного позиціонування
+                width: 72px;
+                height: 72px;
+                // transform: rotate(-38.44deg);
+                position: absolute;
+                top: 67px;
+                left: 100%;
+                // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
+                // background-image: url(../images/02_4_hero_light-bulb-xl.svg);
+                // background-image: url(../images/02_3_hero_light-bulb-lg_full.svg);
+                background-image: url(../images/02_3_hero_light-bulb-lg.svg);
+                // background-size: auto auto; //? ТИМЧАСОВО
+                // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-repeat: no-repeat;
+                background-position: center; 
+                background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
         }
     }
     &__title--sm-md  {
