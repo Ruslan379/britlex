@@ -39,15 +39,11 @@
     //? Додатковий контейнер для всього контенту (крім зображення)
     .сontents-container- {
         // height: 100%; //? для перевірки
-        // text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: darkgrey);
         
         &::after {
             display: none;
-        }
-        &::before {
-            display: block;
         }
         
         //! Медіа-запити
@@ -60,9 +56,6 @@
             &::after {
                 position: absolute;
                 display: block;
-            }
-            &::before {
-                display: none;
             }
         }
         
@@ -80,7 +73,6 @@
             padding-bottom: 44px;
         }
 
-        &::before,
         &::after {
             content: "";
             // display: block;
@@ -176,6 +168,11 @@
         background-repeat: no-repeat;
         background-position: center;
         // background-color:getColor("background-image"); //? ТИМЧАСОВО
+
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            display: none;
+        }
     }
 
     &__text {
