@@ -75,7 +75,8 @@
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 510px; 
+            width: 635px;
+            font-size: 20px;
         }
         
     }
@@ -93,6 +94,11 @@
         //* Від 992px до 1599px
         @media screen and (min-width: getBreakPoint('xl')) {
             display: inline;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            display: none;
         }
     }
 
