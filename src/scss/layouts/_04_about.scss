@@ -41,14 +41,59 @@
     }
 
     &__text {
-        margin-bottom: 30px;
+        width: 295px;
+        // margin-bottom: 30px;
+        margin: 0 auto 30px;
         // font-family: getFont("main-family");
         // font-weight: 400;
         font-size: 13px;
         line-height: 1.54;
-        text-align: center;
+        // text-align: center;
         // color: getColor("text");
         // @include outline($type: dotted, $color: blue);
+
+        //! Медіа-запит
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            width: 510px; 
+            width: 496px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            width: 321px;
+            text-align: left;
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            width: 525px;
+            font-size: 16px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            width: 510px; 
+        }
+        
+    }
+
+    &__space-sm {
+        //! Медіа-запит
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            display: none;
+        }
+    }
+    &__space-xl {
+        display: none;
+        //! Медіа-запит
+        //* Від 992px до 1599px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            display: inline;
+        }
     }
 
     &-list {
