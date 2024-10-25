@@ -6,26 +6,28 @@
     //! Медіа-запити
     //* Від 575px
     @media screen and (min-width: getBreakPoint('md')) {
-        // height: 768px; //? для перевірки - md
-        // padding-bottom: 96px;
+        height: 819px; //? для перевірки - md
+        padding-bottom: 131px;
     }
     
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        // height: 413px; //? для перевірки - lg
-        // padding-bottom: 56px;
+        // height: 424px; //? для перевірки - lg
+        // padding-bottom: 88px;
     }
     
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
-        // height: 507px; //? для перевірки - xl
-        // padding-bottom: 47px;
+        // height: 466px; //? для перевірки - xl
+        // padding-bottom: 101px; //? до зображення
+        // padding-bottom: 125px; //? до сontents-container
     }
     
     //* Від 1600px
     @media screen and (min-width: getBreakPoint('xxl')) {
-        // height: 764px; //? для перевірки - xxl
-        // padding-bottom: 103px;
+        // height: 688px; //? для перевірки - xxl
+        // padding-bottom: 188px; //? до зображення
+        // padding-bottom: 229px; //? до сontents-container
     }
 
     .container {
