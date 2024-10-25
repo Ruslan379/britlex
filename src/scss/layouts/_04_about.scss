@@ -58,7 +58,8 @@
                 width: 295px;
                 height: 295px;
                 top: 36px;
-                left: calc(324px + 75px); //? 399px
+                // left: calc(324px + 75px); //? 399px
+                left: calc(100% + 75px); //? 399px
                 background-image: url(../images/04_3_about_background-lg.svg);
                 // background-size: auto auto; //? ТИМЧАСОВО
                 // background-size: 295px 295px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -71,8 +72,9 @@
                 @media screen and (min-width: getBreakPoint('xl')) {
                     width: 336px;
                     height: 336px;
-                    // top: 36px;
-                    // left: calc(324px + 75px); //? 399px
+                    top: 29px;
+                    // left: calc(525px + 78px); //? 603px
+                    left: calc(100% + 78px); //? 603px
                     background-image: url(../images/04_4_about_background-xl.svg);
                     // background-size: 336px 336px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -83,8 +85,9 @@
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     width: 500px;
                     height: 500px;
-                    // top: 36px;
-                    // left: calc(324px + 75px); //? 399px
+                    top: 0;
+                    // left: calc(635px + 194px); //? 829px
+                    left: calc(100% + 194px); //? 829px
                     background-image: url(../images/04_5_about_background-xxl.svg);
                     // background-size: 500px 500px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -95,13 +98,13 @@
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            // width: 324px;
+            width: 525px;
             // padding-top: 0px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // width: 324px;
+            width: 635px;
             // padding-top: 0px;
         }
     }
@@ -210,14 +213,16 @@
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            width: 525px;
+            // width: 525px;
+            width: 100%;
             font-size: 16px;
             // margin-bottom: 29px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 635px;
+            // width: 635px;
+            width: 100%;
             font-size: 20px;
             // margin-bottom: 29px;
         }

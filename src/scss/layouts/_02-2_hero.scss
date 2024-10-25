@@ -115,7 +115,10 @@
                 width: 352px;
                 height: 352px;
                 top: 0px;
-                right: calc(-352px - 23px); //? -375px
+                // right: calc(-352px - 23px); //? -375px
+                //? або:
+                // left: calc(337px + 23px); //? 360px
+                left: calc(100% + 23px); //? 360px
                 background-image: url(../images/02_3_hero_background-lg.svg);
                 // background-size: 352px 352px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -126,11 +129,14 @@
             @media screen and (min-width: getBreakPoint('xl')) {
                 width: 460px;
                 height: 460px;
-                right: calc(-460px - 57px); //? -517px
+                // right: calc(-460px - 57px); //? -517px
+                //? або:
+                // left: calc(421px + 57px); //? 478px
+                left: calc(100% + 57px); //? 478px
                 background-image: url(../images/02_4_hero_background-xl.svg);
                 // background-size: 460px 460px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                background-color:getColor("background-ima.ge"); //? ТИМЧАСОВО
             }
             
             //* Від 1600px
@@ -139,7 +145,8 @@
                 height: 661px;
                 // right: calc(-661px - 169px); //? -830px
                 //? або:
-                left: calc(521px + 169px); //? 690px
+                // left: calc(521px + 169px); //? 690px
+                left: calc(100% + 169px); //? 690px
                 background-image: url(../images/02_5_hero_background-xxl.svg);
                 // background-size: 661px 661px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
