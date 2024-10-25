@@ -7,7 +7,7 @@
     //* Від 575px
     @media screen and (min-width: getBreakPoint('md')) {
         height: 819px; //? для перевірки - md
-        padding-bottom: 131px;
+        padding-bottom: 130px;
     }
     
     //* Від 767px
@@ -154,26 +154,64 @@
         //? ____________ Replaced by mixin ____________
         @include title(24px, 3.33);
         // text-align: center;
-    }
-    
-    &__title::after {
-        content: "";
-        display: block;
-        height: 283px;
-        margin-top: 24px;
-        margin-right: 15px;
-        margin-left: 15px;
-        border-radius: 5px;
-        background-image: url(../images/04_1_about_background-sm.svg);
-        // background-size: auto auto; //? ТИМЧАСОВО
-        // background-size: 283px 283px; //? ТИМЧАСОВО, для візуалізації розмірів
-        background-repeat: no-repeat;
-        background-position: center;
-        // background-color:getColor("background-image"); //? ТИМЧАСОВО
-
+        
+        &::after {
+            content: "";
+            display: block;
+            height: 283px;
+            margin-top: 24px;
+            margin-right: 15px; //? ТИМЧАСОВО
+            margin-left: 15px; //? ТИМЧАСОВО
+            border-radius: 5px; //? ТИМЧАСОВО
+            background-image: url(../images/04_1_about_background-sm.svg);
+            // background-size: auto auto; //? ТИМЧАСОВО
+            background-size: 283px 283px; //? ТИМЧАСОВО, для візуалізації розмірів
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color:getColor("background-image"); //? ТИМЧАСОВО
+            
+            //! Медіа-запити
+            //* Від 575px
+            @media screen and (min-width: getBreakPoint('md')) {
+                height: 352px;
+                width: 372px; //? ТИМЧАСОВО, для background-color
+                margin: 0 auto; //? ТИМЧАСОВО, для background-color
+                margin-top: 23px;
+                border-radius: 10px; //? ТИМЧАСОВО
+                background-image: url(../images/04_2_about_background-md.svg);
+                // background-size: 352px 352px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            //* Від 767px
+            @media screen and (min-width: getBreakPoint('lg')) {
+                display: none;
+            }
+        }
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            margin-bottom: 25px;
+            @include title(30px, 2.67);
+        }
+        
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            display: none;
+            // margin-bottom: 25px;
+            // @include title(30px, 2.67);
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            // margin-bottom: 25px;
+            // @include title(30px, 2.67);
+        }
+
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            // margin-bottom: 25px;
+            // @include title(30px, 2.67);
         }
     }
 
@@ -194,6 +232,7 @@
         @media screen and (min-width: getBreakPoint('md')) {
             // width: 510px; //? так в макеті
             width: 496px;
+            margin-bottom: 42px;
             font-size: 14px;
             line-height: 1.5;
         }
@@ -240,17 +279,40 @@
     }
 
     &-list {
+        // ! міксін outline
         // @include outline($type: dashed, $color: darkgrey);
         
-        // &__item {
-        //     background-color: bisque;
-        //     @include outline($type: dashed, $color: black);
-        // }
-        
-        &__item:not(:last-child) {
-            margin-bottom: 46px;
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            display: flex;
+            justify-content: center;
+            gap: 76px;
         }
-        
+
+        &__item {
+            background-color: bisque;
+            @include outline($type: dashed, $color: black);
+            
+            &:not(:last-child) {
+                margin-bottom: 46px;
+                
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin-bottom: 0;
+                }
+            }
+            
+            //! Медіа-запити
+            //* Від 575px
+            @media screen and (min-width: getBreakPoint('md')) {
+                &:first-child {
+                    margin-right: 29px;
+                }
+            }
+        }
+
         &__quantity {
             margin-bottom: 5px;
             //? ++++++++++++ Replaced by mixin ++++++++++++
@@ -263,7 +325,7 @@
             @include title(24px);
             color: getColor('title-second');
         }
-        
+
         &__description {
             // font-family: getFont("main-family");
             // font-weight: 400;
