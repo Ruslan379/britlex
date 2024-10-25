@@ -18,16 +18,16 @@
     
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
-        height: 466px; //? для перевірки - xl
+        // height: 466px; //? для перевірки - xl
         // padding-bottom: 101px; //? до зображення
-        // padding-bottom: 125px; //? до сontents-container
+        padding-bottom: 125px; //? до сontents-container
     }
     
     //* Від 1600px
     @media screen and (min-width: getBreakPoint('xxl')) {
         // height: 688px; //? для перевірки - xxl
         // padding-bottom: 188px; //? до зображення
-        // padding-bottom: 229px; //? до сontents-container
+        padding-bottom: 227px; //? до сontents-container
     }
 
     .container {
@@ -42,7 +42,7 @@
     .сontents-container {
         // height: 100%; //? для перевірки
         // ! міксін outline
-        @include outline($type: dashed, $color: darkgrey);
+        // @include outline($type: dashed, $color: darkgrey);
         
         //! Медіа-запити
         //* Від 767px
@@ -78,7 +78,7 @@
                     background-image: url(../images/04_4_about_background-xl.svg);
                     // background-size: 336px 336px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                    background-color:getColor("background-image"); //? ТИМЧАСОВО
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
                 
                 //* Від 1600px
@@ -99,13 +99,12 @@
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             width: 525px;
-            // padding-top: 0px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             width: 635px;
-            // padding-top: 0px;
+            padding-top: 30px;
         }
     }
 
@@ -171,14 +170,14 @@
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            // margin-bottom: 25px;
-            // @include title(30px, 2.67);
+            margin-bottom: 13px;
+            @include title(36px, 2.22);
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // margin-bottom: 25px;
-            // @include title(30px, 2.67);
+            margin-bottom: 23px;
+            @include title(48px, 1.67);
         }
     }
 
@@ -192,6 +191,7 @@
         line-height: 1.54;
         // text-align: center;
         // color: getColor("text");
+        // ! міксін outline
         // @include outline($type: dotted, $color: blue);
         
         //! Медіа-запит
@@ -216,7 +216,7 @@
             // width: 525px;
             width: 100%;
             font-size: 16px;
-            // margin-bottom: 29px;
+            margin-bottom: 25px;
         }
         
         //* Від 1600px
@@ -224,7 +224,7 @@
             // width: 635px;
             width: 100%;
             font-size: 20px;
-            // margin-bottom: 29px;
+            margin-bottom: 36px;
         }
     }
 
@@ -340,16 +340,21 @@
             @media screen and (min-width: getBreakPoint('lg')) {
                 margin-bottom: 12px;
                 @include title(22px);
+                color: getColor('title-second');
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
-                
+                margin-bottom: 10px;
+                @include title(30px);
+                color: getColor('title-second');
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                
+                // margin-bottom: 10px;
+                @include title(48px);
+                color: getColor('title-second');
             }
         }
 
@@ -378,12 +383,13 @@
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
-                
+                font-size: 16px;
+                line-height: 1.5;
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                
+                font-size: 20px;
             }
         }
     }
