@@ -12,13 +12,13 @@
     
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        height: 424px; //? для перевірки - lg
-        padding-bottom: 88px;
+        // height: 424px; //? для перевірки - lg
+        padding-bottom: 84px;
     }
     
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
-        // height: 466px; //? для перевірки - xl
+        height: 466px; //? для перевірки - xl
         // padding-bottom: 101px; //? до зображення
         // padding-bottom: 125px; //? до сontents-container
     }
@@ -32,7 +32,7 @@
 
     .container {
         // height: 100%; //? для перевірки
-        padding-right: 34px;
+        // padding-right: 34px; //? так в макеті, для перевірки
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
@@ -64,7 +64,7 @@
                 // background-size: 295px 295px; //? ТИМЧАСОВО, для візуалізації розмірів
                 background-repeat: no-repeat;
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-color:getColor("background-image"); //? ТИМЧАСОВО
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 
                 //! Медіа-запити
                 //* Від 992px
@@ -72,11 +72,11 @@
                     width: 336px;
                     height: 336px;
                     // top: 36px;
-                    // left: calc(521px + 169px); //? 690px
+                    // left: calc(324px + 75px); //? 399px
                     background-image: url(../images/04_4_about_background-xl.svg);
                     // background-size: 336px 336px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                    background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
                 
                 //* Від 1600px
@@ -84,7 +84,7 @@
                     width: 500px;
                     height: 500px;
                     // top: 36px;
-                    // left: calc(521px + 169px); //? 690px
+                    // left: calc(324px + 75px); //? 399px
                     background-image: url(../images/04_5_about_background-xxl.svg);
                     // background-size: 500px 500px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -205,7 +205,7 @@
         @media screen and (min-width: getBreakPoint('lg')) {
             width: 321px;
             // text-align: left;
-            margin-bottom: 29px;
+            margin-bottom: 28px;
         }
         
         //* Від 992px
@@ -295,7 +295,7 @@
                     margin-right: 29px;
                 }
             }
-
+            
             //! Медіа-запити
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
@@ -333,7 +333,7 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                margin-bottom: 14px;
+                margin-bottom: 12px;
                 @include title(22px);
             }
             
