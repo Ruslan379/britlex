@@ -230,14 +230,14 @@
     }
 
     //? Додаткові налаштування для вірнрго розташування тексту в усіх breakpoints
-    &__space-sm {
+    &__break-sm {
         //! Медіа-запит
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             display: none;
         }
     }
-    &__space-xl {
+    &__break-xl {
         display: none;
         //! Медіа-запит
         //* Від 992px до 1599px
