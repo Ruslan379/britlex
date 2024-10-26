@@ -35,6 +35,25 @@
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
         
+        //! Медіа-запити
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            padding-top: 28px;
+            text-align: initial;
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            padding-top: 13px;
+            padding-bottom: 25px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            padding-top: 50px;
+            padding-bottom: 44px;
+        }
+        
         &::before {
             content: "";
             display: block;
@@ -50,6 +69,7 @@
             background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
             
+            //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 height: 424px;
@@ -97,34 +117,35 @@
         }
     }
 
-    //? Додатковий контейнер для всього контенту (крім зображення)
-    .сontents-container {
-        // height: 100%; //? для перевірки
-        // ! міксін outline
-        // @include outline($type: dashed, $color: darkgrey);
+    //! Не використовується
+    //? Додатковий контейнер для всього контенту (крім зображення) 
+    // .сontents-container {
+    //     // height: 100%; //? для перевірки
+    //     // ! міксін outline
+    //     // @include outline($type: dashed, $color: darkgrey);
         
-        //! Медіа-запити
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            width: 337px;
-            padding-top: 28px;
-            text-align: left;
-        }
+    //     //! Медіа-запити
+    //     //* Від 767px
+    //     @media screen and (min-width: getBreakPoint('lg')) {
+    //         width: 337px;
+    //         padding-top: 28px;
+    //         text-align: left;
+    //     }
         
-        //* Від 992px
-        @media screen and (min-width: getBreakPoint('xl')) {
-            width: 421px;
-            padding-top: 13px;
-            padding-bottom: 25px;
-        }
+    //     //* Від 992px
+    //     @media screen and (min-width: getBreakPoint('xl')) {
+    //         width: 421px;
+    //         padding-top: 13px;
+    //         padding-bottom: 25px;
+    //     }
         
-        //* Від 1600px
-        @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 521px;
-            padding-top: 50px;
-            padding-bottom: 44px;
-        }
-    }
+    //     //* Від 1600px
+    //     @media screen and (min-width: getBreakPoint('xxl')) {
+    //         width: 521px;
+    //         padding-top: 50px;
+    //         padding-bottom: 44px;
+    //     }
+    // }
 
     &__title {
         width: 220px;
@@ -309,18 +330,21 @@
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
+            width: 337px;
             margin-bottom: 32px;
             // font-size: 16px;
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
+            width: 421px;
             margin-bottom: 33px;
             font-size: 20px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
+            width: 521px;
             margin-bottom: 61px;
             font-size: 24px;
         }

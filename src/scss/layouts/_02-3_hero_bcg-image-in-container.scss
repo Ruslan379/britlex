@@ -50,6 +50,7 @@
             background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
             
+            //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 height: 424px;
