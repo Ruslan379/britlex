@@ -47,6 +47,25 @@
         }
     }
 
+    //? Приховуємо або відображаємо один з двох варіантів верстки h1
+    //? в залежності від типу точок перелому
+    &__title--lg-xl-xxl {
+        display: none;
+        //! Медіа-запит
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            display: flex;
+        }
+    }
+    
+    &__title--sm-md  {
+        //! Медіа-запит
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            display: none;
+        }
+    }
+
     &__text {
         padding-bottom: 35px;
         // font-family: getFont("main-family");

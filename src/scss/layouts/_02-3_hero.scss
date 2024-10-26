@@ -33,12 +33,6 @@
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
-        
-        //! Медіа-запити
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            text-align: left;
-        }
     }
 
     //? Додатковий контейнер для всього контенту (крім зображення)
@@ -47,50 +41,12 @@
         // ! міксін outline
         // @include outline($type: dashed, $color: darkgrey);
         
-        &::after {
-            display: none;
-        }
         &::before {
-            display: block;
-        }
-        
-        //! Медіа-запити
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            position: relative;
-            width: 337px;
-            padding-top: 28px;
-            
-            &::after {
-                position: absolute;
-                display: block;
-            }
-            &::before {
-                display: none;
-            }
-        }
-        
-        //* Від 992px
-        @media screen and (min-width: getBreakPoint('xl')) {
-            width: 421px;
-            padding-top: 13px;
-            padding-bottom: 25px;
-        }
-        
-        //* Від 1600px
-        @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 521px;
-            padding-top: 50px;
-            padding-bottom: 44px;
-        }
-
-        &::before,
-        &::after {
             content: "";
-            // display: block;
+            display: block;
             height: 299px;
             margin-bottom: 16px;
-            border-radius: 5px;
+            // border-radius: 5px; //? ТИМЧАСОВО, для background-color
             // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
             // background-image: url(../images/02_5_hero_background-xxl.svg);
             background-image: url(../images/02_1_hero_background-sm.svg);
@@ -112,6 +68,7 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
+                position: absolute;
                 width: 352px;
                 height: 352px;
                 top: 0px;
@@ -153,8 +110,31 @@
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
         }
+        
+        //! Медіа-запити
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            position: relative;
+            width: 337px;
+            padding-top: 28px;
+            text-align: left;
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            width: 421px;
+            padding-top: 13px;
+            padding-bottom: 25px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            width: 521px;
+            padding-top: 50px;
+            padding-bottom: 44px;
+        }
     }
-    
+
     &__title {
         width: 220px;
         margin: 0 auto 20px;
@@ -173,13 +153,68 @@
         // ! міксін outline
         // @include outline($type: dashed, $color: blue);
         
+        //? Зображення лампочки
+        &::after {
+            //! Медіа-запити
+            //* Від 767px
+            @media screen and (min-width: getBreakPoint('lg')) {
+                content: "";
+                // width: 51px; 
+                // height: 51px;
+                // transform: rotate(-38.44deg);
+                //? Для вірного позиціонування
+                width: 72px;
+                height: 72px;
+                position: absolute;
+                top: 67px;
+                left: 100%;
+                // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
+                // background-image: url(../images/02_4_hero_light-bulb-xl.svg);
+                // background-image: url(../images/02_3_hero_light-bulb-lg_full.svg);
+                background-image: url(../images/02_3_hero_light-bulb-lg.svg);
+                // background-size: auto auto; //? ТИМЧАСОВО
+                // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-repeat: no-repeat;
+                background-position: center; 
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            //* Від 992px
+            @media screen and (min-width: getBreakPoint('xl')) {
+                // width: 59px; 
+                // height: 59px;
+                //? Для вірного позиціонування
+                width: 82px;
+                height: 82px;
+                top: 90px;
+                left: calc(100% + 12px);
+                background-image: url(../images/02_4_hero_light-bulb-xl.svg);
+                // background-size: auto auto; //? ТИМЧАСОВО
+                // background-size: 82px 82px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            //* Від 1600px
+            @media screen and (min-width: getBreakPoint('xxl')) {
+                // width: 85px; 
+                // height: 85px;
+                //? Для вірного позиціонування
+                width: 120px;
+                height: 120px;
+                top: 92px;
+                left: calc(100% + 38px);
+                background-image: url(../images/02_5_hero_light-bulb-xxl.svg);
+                // background-size: auto auto; //? ТИМЧАСОВО
+                // background-size: 120px 120px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+        }
+        
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             width: 100%;
             margin-bottom: 26px;
-            // flex-direction: row;
-            // justify-content: center;
             @include flex_JCcen;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
@@ -194,12 +229,12 @@
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
+            position: relative;
             width: 217px;
             // height: 135px; //? для перевірки
             margin: 0 0 25px;
             // margin-bottom: 25px;
-            flex-direction: column;
-            justify-content: flex-start;
+            @include flex_FDcol_JCfs;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
@@ -217,8 +252,6 @@
             // height: 192px; //? для перевірки
             margin: 0 0 27px;
             // margin-bottom: 27px;
-            // flex-direction: column;
-            // justify-content: flex-start;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
@@ -236,8 +269,6 @@
             // height: 240px; //? для перевірки
             margin: 0 0 40px;
             // margin-bottom: 40px;
-            // flex-direction: column;
-            // justify-content: flex-start;
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
@@ -257,66 +288,10 @@
         //! Медіа-запит
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            position: relative;
             display: flex;
-            
-            //? Додаємо зображення лампочки
-            &::after {
-                content: "";
-                // width: 51px; 
-                // height: 51px;
-                //? Для вірного позиціонування
-                width: 72px;
-                height: 72px;
-                // transform: rotate(-38.44deg);
-                position: absolute;
-                top: 67px;
-                left: 100%;
-                // ? Приклад відсутності значних відмінностей у якості між зображеннями різного розміру
-                // background-image: url(../images/02_4_hero_light-bulb-xl.svg);
-                // background-image: url(../images/02_3_hero_light-bulb-lg_full.svg);
-                background-image: url(../images/02_3_hero_light-bulb-lg.svg);
-                // background-size: auto auto; //? ТИМЧАСОВО
-                // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-repeat: no-repeat;
-                background-position: center; 
-                // background-color:getColor("background-image"); //? ТИМЧАСОВО
-                
-                @media screen and (min-width: getBreakPoint('xl')) {
-                    // width: 59px; 
-                    // height: 59px;
-                    //? Для вірного позиціонування
-                    width: 82px;
-                    height: 82px;
-                    top: 90px;
-                    left: calc(100% + 12px) ;
-                    background-image: url(../images/02_4_hero_light-bulb-xl.svg);
-                    // background-size: auto auto; //? ТИМЧАСОВО
-                    // background-size: 72px 72px; //? ТИМЧАСОВО, для візуалізації розмірів
-                    background-repeat: no-repeat;
-                    background-position: center; 
-                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
-                }
-                
-                @media screen and (min-width: getBreakPoint('xxl')) {
-                    // width: 85px; 
-                    // height: 85px;
-                    //? Для вірного позиціонування
-                    width: 120px;
-                    height: 120px;
-                    top: 92px;
-                    left: calc(100% + 38px) ;
-                    background-image: url(../images/02_5_hero_light-bulb-xxl.svg);
-                    // background-size: auto auto; //? ТИМЧАСОВО
-                    // background-size: 120px 120px; //? ТИМЧАСОВО, для візуалізації розмірів
-                    background-repeat: no-repeat;
-                    background-position: center; 
-                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
-                }
-            }
         }
     }
-
+    
     &__title--sm-md  {
         //! Медіа-запит
         //* Від 767px

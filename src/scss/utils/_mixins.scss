@@ -74,6 +74,12 @@
     flex-direction: column;
 }
 
+@mixin flex_FDcol_JCfs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 @mixin flex_FDcol-AIcen {
     display: flex;
     flex-direction: column;
