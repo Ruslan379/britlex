@@ -140,7 +140,7 @@
         width: 220px;
         margin: 0 auto 20px;
         // margin-bottom: 20px;
-        @include flex_FDcol;
+        // @include flex_FDcol; //? не обов'язково
         //? ++++++++++++ Replaced by mixin ++++++++++++
         // // font-family: getFont("main-family");
         // font-weight: 600;
@@ -216,7 +216,7 @@
         @media screen and (min-width: getBreakPoint('md')) {
             width: 100%;
             margin-bottom: 26px;
-            @include flex_JCcen;
+            @include flex_JCcen; //todo var.3
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
