@@ -29,17 +29,11 @@
     }
 
     .container {
+        position: relative;
         // height: 100%; //? для перевірки
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
-    }
-
-    //? Додатковий контейнер для всього контенту (крім зображення)
-    .сontents-container {
-        // height: 100%; //? для перевірки
-        // ! міксін outline
-        // @include outline($type: dashed, $color: darkgrey);
         
         &::before {
             content: "";
@@ -53,7 +47,7 @@
             // background-size: auto auto; //? ТИМЧАСОВО
             // background-size: 299px 299px; //? ТИМЧАСОВО, для візуалізації розмірів
             background-repeat: no-repeat;
-            // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+            background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
             
             //* Від 575px
@@ -62,34 +56,28 @@
                 margin-bottom: 17px;
                 background-image: url(../images/02_2_hero_background-md.svg);
                 // background-size: 424px 424px; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                position: absolute;
                 width: 352px;
                 height: 352px;
+                position: absolute;
                 top: 0px;
-                // right: calc(-352px - 23px); //? -375px
-                //? або:
-                // left: calc(337px + 23px); //? 360px
-                left: calc(100% + 23px); //? 360px
+                right: 16px; 
                 background-image: url(../images/02_3_hero_background-lg.svg);
                 // background-size: 352px 352px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 width: 460px;
                 height: 460px;
-                // right: calc(-460px - 57px); //? -517px
-                //? або:
-                // left: calc(421px + 57px); //? 478px
-                left: calc(100% + 57px); //? 478px
+                right: 16px;
                 background-image: url(../images/02_4_hero_background-xl.svg);
                 // background-size: 460px 460px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -100,21 +88,24 @@
             @media screen and (min-width: getBreakPoint('xxl')) {
                 width: 661px;
                 height: 661px;
-                // right: calc(-661px - 169px); //? -830px
-                //? або:
-                // left: calc(521px + 169px); //? 690px
-                left: calc(100% + 169px); //? 690px
+                right: 123px;
                 background-image: url(../images/02_5_hero_background-xxl.svg);
                 // background-size: 661px 661px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
         }
+    }
+
+    //? Додатковий контейнер для всього контенту (крім зображення)
+    .сontents-container {
+        // height: 100%; //? для перевірки
+        // ! міксін outline
+        // @include outline($type: dashed, $color: darkgrey);
         
         //! Медіа-запити
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            position: relative;
             width: 337px;
             padding-top: 28px;
             text-align: left;
