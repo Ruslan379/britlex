@@ -99,7 +99,7 @@
     }
 
     //? Додатковий контейнер для всього контенту (крім зображення)
-    .сontents-container {
+    &__сontents-container {
         // height: 100%; //? для перевірки
         // ! міксін outline
         // @include outline($type: dashed, $color: darkgrey);
