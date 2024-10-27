@@ -125,10 +125,12 @@
             content: "";
             display: block;
             height: 283px;
+            // width: 283px; //? ТИМЧАСОВО, для background-color
+            // margin: 0 auto; //? ТИМЧАСОВО, для background-color
             margin-top: 24px;
             // margin-right: 15px; //? ТИМЧАСОВО, для background-color
             // margin-left: 15px; //? ТИМЧАСОВО, для background-color
-            // border-radius: 5px; //? ТИМЧАСОВО, для background-color
+            // border-radius: 10px; //? ТИМЧАСОВО, для background-color
             background-image: url(../images/04_1_about_background-sm.svg);
             // background-size: auto auto; //? ТИМЧАСОВО
             // background-size: 283px 283px; //? ТИМЧАСОВО, для візуалізації розмірів

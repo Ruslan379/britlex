@@ -25,15 +25,13 @@
     }
 
     .container {
-        // position: relative;
         // height: 100%; //? для перевірки
-        // padding-bottom: 58px;
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
         
+        //? Нижня лінія – межа секції
         &::after {
-            // position: absolute;
             content: "";
             display: block;
             width: 100%;
@@ -139,14 +137,61 @@
             content: "";
             display: block;
             height: 228px;
+            // width: 253px; //? ТИМЧАСОВО, для background-color
+            // margin: 0 auto; //? ТИМЧАСОВО, для background-color
             margin-top: 38px;
-            border-radius: 5px;
+            // border-radius: 10px; //? ТИМЧАСОВО, для background-color
             background-image: url(../images/06_1_contacts_background-sm.svg);
             // background-size: auto auto; //? ТИМЧАСОВО
             // background-size: 253px 228px; //? ТИМЧАСОВО, для візуалізації розмірів
             background-repeat: no-repeat;
-            background-position: 29px center;
+            background-position: 30px center;
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            
+            //! Медіа-запити
+            //* Від 575px
+            @media screen and (min-width: getBreakPoint('md')) {
+                height: 322px;
+                // width: 358px; //? ТИМЧАСОВО, для background-color
+                // margin: 0 auto; //? ТИМЧАСОВО, для background-color
+                margin-top: 83px;
+                // border-radius: 10px; //? ТИМЧАСОВО, для background-color
+                background-image: url(../images/06_2_contacts_background-md.svg);
+                // background-size: auto auto; //? ТИМЧАСОВО
+                // background-size: 358px 322px; //? ТИМЧАСОВО, для візуалізації розмірів
+                background-position: 83px center;
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            //* Від 767px
+            @media screen and (min-width: getBreakPoint('lg')) {
+                display: none;
+            }
+        }
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            margin-bottom: 34px;
+            @include title(30px, 2.67);
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            margin-bottom: -9px;
+            // @include title(30px, 2.67);
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            margin-bottom: 3px;
+            @include title(36px, 2.22);
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            margin-bottom: 37px;
+            @include title(48px, 1.67);
         }
     }
 
