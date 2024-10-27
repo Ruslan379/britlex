@@ -1,5 +1,5 @@
 .footer {
-    // height: 140px; //? для перевірки
+    // height: 140px; //? для перевірки - sm
     background-color: #c9f2ff;
     padding-top: 26px;
     padding-bottom: 47px; 
@@ -14,6 +14,7 @@
 
     .logo {
         margin-bottom: 14px;
+        font-size: 24px;
     }
 
     &-list {
