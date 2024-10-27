@@ -55,16 +55,6 @@
             font-size: 24px;
         }
         
-        // //* Від 767px
-        // @media screen and (min-width: getBreakPoint('lg')) {
-        //     // height: 78px; //? для перевірки - lg
-        // }
-        
-        // //* Від 992px
-        // @media screen and (min-width: getBreakPoint('xl')) {
-        //     // height: 91px; //? для перевірки - xl
-        // }
-        
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             font-size: 36px;
@@ -74,44 +64,44 @@
     &-list {
         // width: 100%;
         display: flex;
-        // justify-content: space-between;
         // @include outline($type: dotted, $color: black);
         
         &__item {
             display: flex;
             // @include outline($type: dashed, $color: darkgrey);
-        }
-        
-        &__item:nth-child(2)::before,
-        &__item:nth-child(2):after {
-            content: "•";
-            // height: 17px;
-            height: 100%;
-            margin: -2px 2px;
-            // background-color:getColor("background-image"); //? ТИМЧАСОВО
             
-            //! Медіа-запити
-            //* Від 575px
-            @media screen and (min-width: getBreakPoint('md')) {
-                margin: -1px 3px;
-            }
-            
-            //* Від 767px
-            @media screen and (min-width: getBreakPoint('lg')) {
-                // height: 78px; //? для перевірки - lg
-                margin: -1px 4px;
-            }
-            
-            //* Від 992px
-            @media screen and (min-width: getBreakPoint('xl')) {
-                // height: 91px; //? для перевірки - xl
-                margin: 1px 7px;
-            }
-            
-            //* Від 1600px
-            @media screen and (min-width: getBreakPoint('xxl')) {
-                // height: 149px; //? для перевірки - xxl
-                margin: -1px 13px;
+            &:nth-child(2)::before,
+            &:nth-child(2):after {
+                content: "•";
+                height: 100%;
+                margin: 0 2px;
+                font-size: 11px;
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin: 0 3px;
+                    font-size: 12px;
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    margin: 0 4px;
+                    font-size: 13px;
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    margin: 0 7px;
+                    font-size: 16px;
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    margin: 0 13px;
+                    font-size: 24px;
+                }
             }
         }
         
