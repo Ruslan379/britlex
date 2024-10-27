@@ -2,19 +2,76 @@
     // height: 140px; //? для перевірки - sm
     background-color: #c9f2ff;
     padding-top: 26px;
-    padding-bottom: 47px; 
+    padding-bottom: 47px;
+    
+    //! Медіа-запити
+    //* Від 575px
+    @media screen and (min-width: getBreakPoint('md')) {
+        // height: 95px; //? для перевірки - md
+        padding-top: 24px;
+        padding-bottom: 26px;
+    }
+    
+    //* Від 767px
+    @media screen and (min-width: getBreakPoint('lg')) {
+        // height: 78px; //? для перевірки - lg
+        padding-top: 18px;
+        padding-bottom: 15px;
+    }
+    
+    //* Від 992px
+    @media screen and (min-width: getBreakPoint('xl')) {
+        // height: 91px; //? для перевірки - xl
+        padding-top: 22px;
+        padding-bottom: 24px;
+    }
+    
+    //* Від 1600px
+    @media screen and (min-width: getBreakPoint('xxl')) {
+        // height: 149px; //? для перевірки - xxl
+        padding-top: 31px;
+        // padding-bottom: 58px;
+        padding-bottom: 64px;
+    }
 
     .container {
         // height: 100%; //? для перевірки
-        padding: 0 14px;
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            @include flex_JCsb-AIcen;
+        }
     }
 
     .logo {
-        margin-bottom: 14px;
-        font-size: 24px;
+        //! Медіа-запити
+        //* До 574px
+        @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+            margin-bottom: 14px;
+            font-size: 24px;
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            // height: 78px; //? для перевірки - lg
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            // height: 91px; //? для перевірки - xl
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            font-size: 36px;
+        }
     }
 
     &-list {
