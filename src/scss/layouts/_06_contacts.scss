@@ -39,6 +39,9 @@
     }
 
     &__text {
+        // width: 260px; //! не працює
+        // white-space: pre-line; //! додає зайву висоту
+        // white-space: initial; //!
         margin-bottom: 31px;
         // font-family: getFont("main-family");
         // font-weight: 400;
