@@ -1,6 +1,6 @@
 .contacts {
-    // height: 684px; //? для перевірки
-    // padding-bottom: 57px; //! відсутній, заданий у сontents-container
+    // height: 684px; //? для перевірки - sm
+    // padding-bottom: 57px; //! відсутні, задані у сontents-container
     background-color: #afffba;
     
     //! Медіа-запити
@@ -11,7 +11,7 @@
     
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        height: 352px; //? для перевірки - lg
+        // height: 352px; //? для перевірки - lg
     }
     
     //* Від 992px
@@ -36,8 +36,8 @@
             display: block;
             width: 100%;
             height: 1px;
-            background-color: red; //? ТИМЧАСОВО
-            // background-color:getColor("border-contacts");
+            // background-color: red; //? ТИМЧАСОВО
+            background-color:getColor("border-contacts");
         }
     }
 
@@ -46,18 +46,18 @@
         // height: 100%; //? для перевірки
         margin-bottom: 57px;
         // ! міксін outline
-        @include outline($type: dashed, $color: darkgrey);
+        // @include outline($type: dashed, $color: darkgrey);
         
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             margin-bottom: 144px;
         }
-
+        
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             position: relative;
-            width: 435px;
+            width: 434px;
             margin-left: auto;
             margin-bottom: 141px;
             text-align: left;
@@ -69,14 +69,14 @@
                 width: 233px;
                 height: 210px;
                 top: 29px;
-                right: calc(100% + 36px); //?
+                right: calc(100% + 36px);
                 // border-radius: 5px; //? ТИМЧАСОВО, для background-color
                 background-image: url(../images/06_3_contacts_background-lg.svg);
                 // background-size: auto auto; //? ТИМЧАСОВО
                 // background-size: 233px 210px; //? ТИМЧАСОВО, для візуалізації розмірів
                 background-repeat: no-repeat;
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-color:getColor("background-image"); //? ТИМЧАСОВО
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 
                 //! Медіа-запити
                 //* Від 992px
@@ -84,8 +84,9 @@
                     width: 312px;
                     height: 281px;
                     top: 5px;
-                    right: calc(100% + 109px); //? 
-                    background-image: url(../images/04_4_contacts_background-xl.svg);
+                    // right: calc(100% + 109px); //? так в макеті
+                    right: calc(100% + 60px);
+                    background-image: url(../images/06_4_contacts_background-xl.svg);
                     // background-size: 312px 281px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -96,8 +97,8 @@
                     width: 477px;
                     height: 429px;
                     top: 0;
-                    right: calc(100% + 112px); //? 
-                    background-image: url(../images/04_5_contacts_background-xxl.svg);
+                    right: calc(100% + 112px);
+                    background-image: url(../images/06_5_contacts_background-xxl.svg);
                     // background-size: 477px 429px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -107,15 +108,15 @@
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            width: 525px;
+            width: 530px;
             margin-bottom: 194px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            width: 635px;
+            width: 776px;
             margin-bottom: 220px;
-            padding-top: 30px;
+            padding-top: 33px;
         }
     }
 
@@ -204,7 +205,7 @@
         text-align: center;
         // color: getColor("text");
         // ! міксін outline
-        @include outline($type: dotted, $color: blue);
+        // @include outline($type: dotted, $color: blue);
         
         //! Медіа-запити
         //* Від 575px
@@ -222,24 +223,22 @@
             text-align: left;
             // margin-bottom: 26px;
             // margin-left: 2px;
-            margin: 0 0 26px 2px ;
+            margin: 0 0 26px 2px;
             font-size: 14px;
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            // width: 525px;
-            width: 100%;
+            width: 448px;
             font-size: 16px;
-            margin-bottom: 25px;
+            margin-bottom: 34px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            // width: 635px;
-            width: 100%;
+            width:761px;
             font-size: 20px;
-            margin-bottom: 36px;
+            margin-bottom: 52px;
         }
     }
 
@@ -255,9 +254,6 @@
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             height: 60px;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // align-items: center;
             @include flex_JCsb-AIcen;
             gap: initial;
             border: 1px solid getColor("text");
@@ -271,18 +267,17 @@
             height: 50px;
             border: none;
             border-radius: 0;
-            // background-color: gray; //? ТИМЧАСОВО
             background-color:initial;
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            
+            height: 60px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            
+            height: 80px;
         }
         
         &__input {
@@ -335,7 +330,6 @@
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
                 width: 283px;
-                // height: 100%;
                 padding-left: 24px;
                 border: 1px solid getColor("text");
                 border-radius: 5px;
@@ -343,12 +337,15 @@
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
-                
+                width: 323px;
+                padding-left: 38px;
+                border-radius: 10px;
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                
+                width: 450px;
+                padding-left: 33px;
             }
         }
         
