@@ -51,10 +51,16 @@
         @include outline($type: dashed, $color: darkgrey);
         
         //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            margin-bottom: 144px;
+        }
+
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             position: relative;
             width: 324px;
+            margin-bottom: 141px;
             text-align: left;
             
             &::after {
@@ -106,11 +112,13 @@
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             width: 525px;
+            margin-bottom: 194px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             width: 635px;
+            margin-bottom: 220px;
             padding-top: 30px;
         }
     }
