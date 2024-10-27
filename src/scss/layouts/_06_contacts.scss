@@ -11,12 +11,12 @@
     
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        // height: 352px; //? для перевірки - lg
+        height: 352px; //? для перевірки - lg
     }
     
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
-        height: 444px; //? для перевірки - xl
+        // height: 444px; //? для перевірки - xl
     }
     
     //* Від 1600px
@@ -46,7 +46,7 @@
         // height: 100%; //? для перевірки
         margin-bottom: 57px;
         // ! міксін outline
-        // @include outline($type: dashed, $color: darkgrey);
+        @include outline($type: dashed, $color: darkgrey);
         
         //! Медіа-запити
         //* Від 575px
@@ -57,50 +57,48 @@
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             position: relative;
-            width: 324px;
+            width: 435px;
+            margin-left: auto;
             margin-bottom: 141px;
             text-align: left;
             
-            &::after {
+            &::before {
                 position: absolute;
                 content: "";
-                display: block;
-                width: 295px;
-                height: 295px;
-                top: 36px;
-                // left: calc(324px + 75px); //? 399px
-                left: calc(100% + 75px); //? 399px
+                // display: block;
+                width: 233px;
+                height: 210px;
+                top: 29px;
+                right: calc(100% + 36px); //?
                 // border-radius: 5px; //? ТИМЧАСОВО, для background-color
-                background-image: url(../images/04_3_about_background-lg.svg);
+                background-image: url(../images/06_3_contacts_background-lg.svg);
                 // background-size: auto auto; //? ТИМЧАСОВО
-                // background-size: 295px 295px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-size: 233px 210px; //? ТИМЧАСОВО, для візуалізації розмірів
                 background-repeat: no-repeat;
                 // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
-                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                background-color:getColor("background-image"); //? ТИМЧАСОВО
                 
                 //! Медіа-запити
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    width: 336px;
-                    height: 336px;
-                    top: 29px;
-                    // left: calc(525px + 78px); //? 603px
-                    left: calc(100% + 78px); //? 603px
-                    background-image: url(../images/04_4_about_background-xl.svg);
-                    // background-size: 336px 336px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    width: 312px;
+                    height: 281px;
+                    top: 5px;
+                    right: calc(100% + 109px); //? 
+                    background-image: url(../images/04_4_contacts_background-xl.svg);
+                    // background-size: 312px 281px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    width: 500px;
-                    height: 500px;
+                    width: 477px;
+                    height: 429px;
                     top: 0;
-                    // left: calc(635px + 194px); //? 829px
-                    left: calc(100% + 194px); //? 829px
-                    background-image: url(../images/04_5_about_background-xxl.svg);
-                    // background-size: 500px 500px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    right: calc(100% + 112px); //? 
+                    background-image: url(../images/04_5_contacts_background-xxl.svg);
+                    // background-size: 477px 429px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-position: center center; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
@@ -220,9 +218,12 @@
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            width: 321px;
-            // text-align: left;
-            margin-bottom: 28px;
+            width: 392px;
+            text-align: left;
+            // margin-bottom: 26px;
+            // margin-left: 2px;
+            margin: 0 0 26px 2px ;
+            font-size: 14px;
         }
         
         //* Від 992px
@@ -254,18 +255,24 @@
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             height: 60px;
-            flex-direction: row;
-            gap: 0;
+            // flex-direction: row;
+            // justify-content: space-between;
+            // align-items: center;
+            @include flex_JCsb-AIcen;
+            gap: initial;
             border: 1px solid getColor("text");
             border-radius: 10px;
             // background-color: gray; //? ТИМЧАСОВО
             background-color: getColor("light");
-            
         }
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            
+            height: 50px;
+            border: none;
+            border-radius: 0;
+            // background-color: gray; //? ТИМЧАСОВО
+            background-color:initial;
         }
         
         //* Від 992px
@@ -282,7 +289,7 @@
             // width: 100%;
             height: 50px;
             padding-left: 41px;
-            border: 2px solid getColor("text");
+            border: 1px solid getColor("text");
             border-radius: 5px;
             
             //? Стилі ПЛЕЙСХОЛДЕРА
@@ -327,7 +334,11 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                
+                width: 283px;
+                // height: 100%;
+                padding-left: 24px;
+                border: 1px solid getColor("text");
+                border-radius: 5px;
             }
             
             //* Від 992px
@@ -351,25 +362,29 @@
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
-                @include button(193px, 60px);
-                margin-top: -1px;
                 margin-right: -1px;
-                margin-left: auto;
+                @include button(193px, 60px);
+                border-radius: 10px;
             }
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                
+                margin-right: 0;
+                @include button(145px);
+                font-size: 13px;
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
-                
+                @include button(193px, 60px);
+                border-radius: 10px;
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                
+                @include button(264px, 80px);
+                font-size: 20px;
+                border-radius: 10px;
             }
         }
     }
