@@ -195,7 +195,7 @@
         // text-align: center;
         // color: getColor("text");
         // ! міксін outline
-        @include outline($type: dotted, $color: blue);
+        // @include outline($type: dotted, $color: blue);
         
         //! Медіа-запити
         //* Від 575px
