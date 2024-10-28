@@ -33,154 +33,171 @@
         padding-bottom: 51px;
     }
 
-    // .container {
-    //     height: 100%; //? для перевірки
+    .container {
+        // height: 100%; //? для перевірки
+        @include flex_JCsb;
+        // ! міксін outline
+        // @include outline($type: dashed, $color: red);
         
-    //     // ! міксін outline
-    //     @include outline($type: dashed, $color: red);
-    // }
+        //! Медіа-запити
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            gap: 110px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            gap: 205px;
+        }
+    }
 
-    .navigation {
-        @include flex_JCsb-AIcen;
+    &__navigation {
         // ! міксін outline
         // @include outline($size: 2px, $type: dashed, $color: red);
+        
+        //! Медіа-запити
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            @include flex_JCsb-AIcen;
+            flex-grow: 1;
+        }
+    }
 
-        //? LOGO
-        .logo {
-            //? LOGO-sm  - moved to scss/components
-            // // font-family: getFont("main-family");
-            // // font-weight: 400;
-            // font-size: 30px;
-            // // line-height: 1.5;
-            // color: getColor("dark");
-            
-            // &__light {
-            //     color: getColor("gray-first");
-            // }
+    //? LOGO
+    .logo {
+        //? LOGO-sm  - moved to scss/components
+        // // font-family: getFont("main-family");
+        // // font-weight: 400;
+        // font-size: 30px;
+        // // line-height: 1.5;
+        // color: getColor("dark");
+        
+        // &__light {
+        //     color: getColor("gray-first");
+        // }
+        
+        //! Медіа-запити
+        //* До 574px
+        @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+            font-size: 24px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            font-size: 36px;
+        }
+    }
+
+    // ? Список
+    &-list {
+        //? Прихований до 991px (sm, md, lg)
+        display: none;
+        
+        //! Медіа-запити
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            //? Відображаємо від 992px (xl, xxl)
+            display: flex;
+            gap: 36px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            gap: 40px;
+        }
+        
+        &__link {
+            // font-family: getFont('main-family');
+            font-weight: 500;
+            font-size: 16px;
+            color: getColor("title-first");
             
             //! Медіа-запити
-            //* До 574px
-            @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
-                font-size: 24px;
-            }
-            
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                font-size: 36px;
+                font-size: 20px;
             }
         }
+    }
 
-        // ? Список
-        &-list {
-            //? Прихований до 991px (sm, md, lg)
-            display: none;
-            
-            //! Медіа-запити
-            //* Від 992px
-            @media screen and (min-width: getBreakPoint('xl')) {
-                //? Відображаємо від 992px (xl, xxl)
-                display: flex;
-                gap: 36px;
-            }
-            
-            //* Від 1600px
-            @media screen and (min-width: getBreakPoint('xxl')) {
-                gap: 40px;
-            }
-            
-            &__link {
-                // font-family: getFont('main-family');
-                font-weight: 500;
-                font-size: 16px;
-                color: getColor("title-first");
-                
-                //! Медіа-запити
-                //* Від 1600px
-                @media screen and (min-width: getBreakPoint('xxl')) {
-                    font-size: 20px;
-                }
-            }
+    // ? Кнопка "Let’s Talk"
+    &__button {
+        //? Прихована до 991px (sm, md, lg)
+        display: none;
+        
+        //! Медіа-запити
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            //? Відображаємо від 992px (xl, xxl)
+            display: block;
+            width: 160px;
+            height: 50px;
+            // font-family: getFont('main-family');
+            // font-weight: 400;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 2px solid getColor("title-first");
+            color: getColor("dark");
+            background-color: transparent;
         }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            width: 220px;
+            height: 70px;
+            font-size: 24px;
+        }
+    }
 
-        // ? Кнопка Let’s Talk
-        &__button {
-            //? Прихована до 991px (sm, md, lg)
+    //? Кнопка "Бургер-меню"
+    .button-menu-toggle {
+        @include buttons-menu-toggle;
+        // &:focus,
+        // &:hover {
+        //     color: getColor('hover');
+        // }
+        
+        //? Приховуємо SVG-іконки md та lg
+        //? Відображається тільки SVG-іконка sm
+        &__md {
             display: none;
-            
-            //! Медіа-запити
-            //* Від 992px
-            @media screen and (min-width: getBreakPoint('xl')) {
-                //? Відображаємо від 992px (xl, xxl)
+        }
+        
+        &__lg {
+            display: none;
+        }
+        
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            //? Відображаємо SVG-іконку md
+            &__md {
                 display: block;
-                width: 160px;
-                height: 50px;
-                // font-family: getFont('main-family');
-                // font-weight: 400;
-                font-size: 18px;
-                border-radius: 5px;
-                border: 2px solid getColor("title-first");
-                color: getColor("dark");
-                background-color: transparent;
             }
-            
-            //* Від 1600px
-            @media screen and (min-width: getBreakPoint('xxl')) {
-                width: 220px;
-                height: 70px;
-                font-size: 24px;
+            //? Приховуємо SVG-іконку sm
+            //?  SVG-іконка lg прихована раніше
+            &__sm {
+                display: none;
             }
         }
-
-        //? Кнопка Бургер-меню_(open)
-        .button-menu-toggle {
-            @include buttons-menu-toggle;
-            // &:focus,
-            // &:hover {
-            //     color: getColor('hover');
-            // }
-            
-            //? Приховуємо SVG-іконки md та lg
-            //? Відображається тільки SVG-іконка sm
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            //? Відображаємо SVG-іконку lg
+            &__lg {
+                display: block;
+            }
+            //? Приховуємо SVG-іконку md
+            //?  SVG-іконка sm прихована раніше
             &__md {
                 display: none;
             }
-            
-            &__lg {
-                display: none;
-            }
-            
-            //! Медіа-запити
-            //* Від 575px
-            @media screen and (min-width: getBreakPoint('md')) {
-                //? Відображаємо SVG-іконку md
-                &__md {
-                    display: block;
-                }
-                //? Приховуємо SVG-іконку sm
-                //?  SVG-іконка lg прихована раніше
-                &__sm {
-                    display: none;
-                }
-            }
-            
-            //* Від 767px
-            @media screen and (min-width: getBreakPoint('lg')) {
-                //? Відображаємо SVG-іконку lg
-                &__lg {
-                    display: block;
-                }
-                //? Приховуємо SVG-іконку md
-                //?  SVG-іконка sm прихована раніше
-                &__md {
-                    display: none;
-                }
-            }
-            
-            //* Від 992px
-            @media screen and (min-width: getBreakPoint('xl')) {
-                //? Приховуємо кнопку Бургер-меню
-                display: none;
-            }
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            //? Приховуємо кнопку Бургер-меню
+            display: none;
         }
     }
 }
