@@ -25,7 +25,7 @@
 		<!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 		<!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
 		
-		<link rel="stylesheet" href="/britlex/assets/index-f27e5a91.css">
+		<link rel="stylesheet" href="/britlex/assets/index-3a4bf589.css">
 	</head>
 
 	<body>
@@ -33,76 +33,76 @@
 		<!--! Додайте такі часткові елементи (паршали – partials) для кожної секції -->
 		<header class="header">
     <div class="container">
-        <nav class="navigation">
+        <nav class="header__navigation">
             <!-- ? LOGO  - moved to partials/components -->
             <!-- <a class="logo" href="#">Brit<span class="logo__light">lex</span></a> -->
             <a class="logo" href="/index.html">Brit<span class="logo__light">lex</span></a>
 
             <!--? Список (прихований в sm, md, lg)-->
-            <ul class="navigation-list">
-                <li class="navigation-list__item">
-                    <a class="navigation-list__link" href="/index.html">Home</a>
+            <ul class="header-list">
+                <li class="header-list__item">
+                    <a class="header-list__link" href="/index.html">Home</a>
                 </li>
-                <li class="navigation-list__item">
-                    <a class="navigation-list__link" href="#skills">Skills</a>
+                <li class="header-list__item">
+                    <a class="header-list__link" href="#skills">Skills</a>
                 </li>
-                <li class="navigation-list__item">
-                    <a class="navigation-list__link" href="#about">About Us</a>
+                <li class="header-list__item">
+                    <a class="header-list__link" href="#about">About Us</a>
                 </li>
-                <li class="navigation-list__item">
-                    <a class="navigation-list__link" href="#pricing">Pricing</a>
+                <li class="header-list__item">
+                    <a class="header-list__link" href="#pricing">Pricing</a>
                 </li>
-                <li class="navigation-list__item">
-                    <a class="navigation-list__link" href="#contacts">Contacts</a>
+                <li class="header-list__item">
+                    <a class="header-list__link" href="#contacts">Contacts</a>
                 </li>
             </ul>
-            <!--? Кнопка Let’s Talk -->
-            <button class="navigation__button">Let’s Talk</button>
-            <!--? Кнопка Бургер-меню_(open)-->
-            <button
-                class="button-menu-toggle js-open-menu"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-                <!--? Using inline SVG -->
-                <!-- <svg 
-                    width="34" 
-                    height="19" 
-                    viewBox="0 0 34 19" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <rect width="33.5294" height="3.35294" rx="1" fill="#39515E" />
-                    <rect y="7.82353" width="33.5294" height="3.35294" rx="1" fill="#39515E" />
-                    <rect y="15.6471" width="23.7159" height="3.35294" rx="1" fill="#39515E" />
-                </svg> -->
-                <!--? Using SVG-sprite -->
-                <!--! sm -->
-                <svg
-                    class="button-menu-toggle__sm" 
-                    width="30" 
-                    height="17"
-                >
-                    <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-sm"></use>
-                </svg>
-                <!--! md -->
-                <svg
-                    class="button-menu-toggle__md" 
-                    width="34" 
-                    height="19"
-                >
-                    <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-md"></use>
-                </svg>
-                <!--! lg -->
-                <svg
-                    class="button-menu-toggle__lg" 
-                    width="43" 
-                    height="24"
-                >
-                    <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-lg"></use>
-                </svg>
-            </button>
         </nav>
+        <!--? Кнопка "Let’s Talk" -->
+        <button class="header__button">Let’s Talk</button>
+        <!--? Кнопка "Бургер-меню" -->
+        <button
+            class="button-menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+            <!--? Using inline SVG -->
+            <!-- <svg 
+                width="34" 
+                height="19" 
+                viewBox="0 0 34 19" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect width="33.5294" height="3.35294" rx="1" fill="#39515E" />
+                <rect y="7.82353" width="33.5294" height="3.35294" rx="1" fill="#39515E" />
+                <rect y="15.6471" width="23.7159" height="3.35294" rx="1" fill="#39515E" />
+            </svg> -->
+            <!--? Using SVG-sprite -->
+            <!--! sm -->
+            <svg
+                class="button-menu-toggle__sm" 
+                width="30" 
+                height="17"
+            >
+                <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-sm"></use>
+            </svg>
+            <!--! md -->
+            <svg
+                class="button-menu-toggle__md" 
+                width="34" 
+                height="19"
+            >
+                <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-md"></use>
+            </svg>
+            <!--! lg -->
+            <svg
+                class="button-menu-toggle__lg" 
+                width="43" 
+                height="24"
+            >
+                <use href="/britlex/assets/01_icons-sprite-f5f22b6a.svg#button-burger-lg"></use>
+            </svg>
+        </button>
     </div>
 </header>
 		<main>
