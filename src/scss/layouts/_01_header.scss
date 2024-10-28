@@ -33,38 +33,18 @@
         padding-bottom: 51px;
     }
 
-    .container {
-        // height: 100%; //? для перевірки
-        // padding: 0 15px;
-        // ! міксін outline
-        // @include outline($type: dashed, $color: red);
+    // .container {
+    //     height: 100%; //? для перевірки
         
-        //! Медіа-запити
-        //* Від 575px
-        @media screen and (min-width: getBreakPoint('md')) {
-            // padding: 0 40px;
-        }
-        
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            // padding: 0 50px;
-        }
-        
-        //* Від 992px
-        @media screen and (min-width: getBreakPoint('xl')) {
-            // padding: 0 70px;
-        }
-        
-        //* Від 1600px
-        @media screen and (min-width: getBreakPoint('xxl')) {
-            // padding: 0 90px;
-        }
-    }
+    //     // ! міксін outline
+    //     @include outline($type: dashed, $color: red);
+    // }
 
     .navigation {
         @include flex_JCsb-AIcen;
         // ! міксін outline
         // @include outline($size: 2px, $type: dashed, $color: red);
+
         //? LOGO
         .logo {
             //? LOGO-sm  - moved to scss/components
@@ -89,6 +69,7 @@
                 font-size: 36px;
             }
         }
+
         // ? Список
         &-list {
             //? Прихований до 991px (sm, md, lg)
@@ -120,6 +101,7 @@
                 }
             }
         }
+
         // ? Кнопка Let’s Talk
         &__button {
             //? Прихована до 991px (sm, md, lg)
@@ -148,6 +130,7 @@
                 font-size: 24px;
             }
         }
+
         //? Кнопка Бургер-меню_(open)
         .button-menu-toggle {
             @include buttons-menu-toggle;
