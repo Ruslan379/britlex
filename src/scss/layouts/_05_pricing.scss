@@ -1,14 +1,19 @@
 .pricing {
-    // height: 1578px; //? для перевірки
+    // height: 1578px; //? для перевірки - sm
     background-color: #efffc3;
     padding-bottom: 72px;
 
     .container {
         // height: 100%; //? для перевірки
-        padding: 0 15px;
         text-align: center;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
+    
+        //! Медіа-запити
+        //todo До 574px
+        // @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+        //     padding: 0 15px; //? для правильного форматування тексту
+        // }
     }
 
     &__title {
@@ -25,98 +30,94 @@
     }
 
     &-list {
+        // ! міксін outline
         // @include outline($type: dotted, $color: black);
+    
+        &__item {
+            // height: 451x; //? first item
+            // height: 353px; //? second item
+            // height: 403px; //? third item
+            // background-color: bisque;
+            // ! міксін outline
+            @include outline($type: dashed, $color: darkgrey);
         
-        // &__item {
-        //     // height: 451x; //? first item
-        //     // height: 353px; //? second item
-        //     // height: 403px; //? third item
-        //     // background-color: bisque;
-        //     @include outline($type: dashed, $color: darkgrey);
-        // }
+            &:nth-child(1) {
+                // height: 451px; //? для перевірки
+                margin-bottom: 63px;
+            }
+            
+            &:nth-child(2) {
+                // height: 370px; //? для перевірки
+                margin-bottom: 72px; 
+            }
+            
+            // &__item:nth-child(3) {
+            //     height: 421px; //? для перевірки
+            // }
         
-        &__item:nth-child(1) {
-            // height: 451px; //? для перевірки
-            margin-bottom: 63px;
-        }
+            &::before {
+                content: "";
+                display: block;
+                // margin-left: 3px;
+                // border-radius: 5px; //? ТИМЧАСОВО, для background-color
+                // background-size: auto auto; //? ТИМЧАСОВО
+                background-repeat: no-repeat;
+                background-position: center;
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            &:nth-child(1)::before {
+                height: 248px;
+                margin-bottom: 28px;
+                background-image: url(../images/05_1-1_pricing-sm.svg);
+                // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
+                // background-size: 248px 248px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            &:nth-child(2)::before {
+                height: 197px;
+                margin-bottom: 12px;
+                background-image: url(../images/05_1-2_pricing-sm.svg);
+                // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-size: 213px 213px; //? ТИМЧАСОВО, для збільшення розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
+            
+            &:nth-child(3)::before {
+                height: 241px;
+                margin-bottom: 7px;
+                background-image: url(../images/05_1-3_pricing-sm.svg);
+                // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
+                // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            }
         
-        &__item:nth-child(2) {
-            // height: 370px; //? для перевірки
-            margin-bottom: 72px; 
-        }
+            &:nth-child(1) .pricing-list__title  {
+                margin-bottom: 17px;
+            }
+            
+            &:nth-child(2) .pricing-list__title  {
+                margin-bottom: 25px;
+            }
+            
+            &:nth-child(3) .pricing-list__title  {
+                margin-bottom: 30px;
+            }
         
-        // &__item:nth-child(3) {
-        //     height: 421px; //? для перевірки
-        // }
-
-        &__item::before {
-            content: "";
-            // height: 248px; //? first image
-            // height: 197px; //? second image
-            // height: 241px; //? third image
-            display: block;
-            // margin-bottom: 28px; //? first image
-            // margin-bottom: 12px; //? second image
-            // margin-bottom: 7px; //? third image
-            // margin-left: 3px;
-            border-radius: 5px;
-            background-size: auto auto; //? ТИМЧАСОВО
-            background-repeat: no-repeat;
-            background-position: center;
-            // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            &:nth-child(1) .pricing-list__text  {
+                margin-bottom: 33px;
+            }
+            
+            &:nth-child(2) .pricing-list__text  {
+                margin-bottom: 31px;
+            }
+            
+            &:nth-child(3) .pricing-list__text  {
+                margin-bottom: 38px;
+            }
         }
-        
-        &__item:nth-child(1)::before {
-            height: 248px;
-            margin-bottom: 28px;
-            background-image: url(../images/05_1-1_pricing-sm.svg);
-            // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
-            // background-size: 248px 248px; //? ТИМЧАСОВО, для візуалізації розмірів
-        }
-        
-        &__item:nth-child(2)::before {
-            height: 197px;
-            margin-bottom: 12px;
-            background-image: url(../images/05_1-2_pricing-sm.svg);
-            // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
-            // background-size: 213px 213px; //? для збільшення розмірів
-        }
-        
-        &__item:nth-child(3)::before {
-            height: 241px;
-            margin-bottom: 7px;
-            background-image: url(../images/05_1-3_pricing-sm.svg);
-            // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
-        }
-
-        &__item:nth-child(1) &__title  {
-            margin-bottom: 17px;
-        }
-        
-        &__item:nth-child(2) &__title  {
-            margin-bottom: 25px;
-        }
-        
-        &__item:nth-child(3) &__title  {
-            margin-bottom: 30px;
-        }
-
-        &__item:nth-child(1) &__text  {
-            margin-bottom: 33px;
-        }
-        
-        &__item:nth-child(2) &__text  {
-            margin-bottom: 31px;
-        }
-        
-        &__item:nth-child(3) &__text  {
-            margin-bottom: 38px;
-        }
-
+    
         &__title {
-            // margin-bottom: 17px; //? first title
-            // margin-bottom: 25px; //? second title
-            // margin-bottom: 30px; //? third title
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
             // font-weight: 600;
@@ -127,40 +128,40 @@
             @include title(18px, 1.56);
             color: getColor("title-first");
         }
-
+    
         &__text {
-            // margin-bottom: 33px; //? first title
-            // margin-bottom: 31px; //? second title
-            // margin-bottom: 38px; //? third title
+            width: 290px; //? для правильного форматування тексту
             // font-family: getFont("main-family");
             // font-weight: 400;
             font-size: 13px;
             line-height: 1.54;
             // text-align: center;
             // color: getColor("text");
+            // ! міксін outline
             // @include outline($type: dotted, $color: blue);
         }
-
-        &-price {
-            width: 170px;
-            height: 37px;
+    
+        &__price {
+            width: 170px; //?
+            height: 37px; //?
             display: flex;
             align-items: center;
             margin: 0 auto;
             padding: 5px 15px 5px 12px;
             // font-family: getFont("main-family");
             // font-weight: 400;
-            font-size: 18px;
+            font-size: 18px; //?
             // text-align: left;
             color: getColor("title-first");
             border-radius: 5px;
             background-color: getColor("background-price");
-
-            &__time-period {
-                width: 78px;
+            
+            .pricing-list__time-period {
+                // width: 78px;
                 margin-left: auto;
-                font-size: 14px;
+                font-size: 14px; //?
                 color: getColor("gray-second");
+                // ! міксін outline
                 // @include outline($type: dotted, $color: blue);
             }
         }
