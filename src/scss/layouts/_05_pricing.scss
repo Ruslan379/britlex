@@ -2,6 +2,31 @@
     // height: 1578px; //? для перевірки - sm
     background-color: #efffc3;
     padding-bottom: 72px;
+    
+    //! Медіа-запити
+    //* Від 575px
+    @media screen and (min-width: getBreakPoint('md')) {
+        height: 1790px; //? для перевірки - md
+        padding-bottom: 72px;
+    }
+    
+    //* Від 767px
+    @media screen and (min-width: getBreakPoint('lg')) {
+        // height: 619px; //? для перевірки - lg
+        padding-bottom: 65px;
+    }
+    
+    //* Від 992px
+    @media screen and (min-width: getBreakPoint('xl')) {
+        // height: 675px; //? для перевірки - xl
+        padding-bottom: 135px;
+    }
+    
+    //* Від 1600px
+    @media screen and (min-width: getBreakPoint('xxl')) {
+        // height: 980px; //? для перевірки - xxl
+        padding-bottom: 260px;
+    }
 
     .container {
         // height: 100%; //? для перевірки
@@ -70,9 +95,45 @@
                 height: 248px;
                 margin-bottom: 28px;
                 background-image: url(../images/05_1-1_pricing-sm.svg);
-                // background-image: url(../images/05-1_pricing-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
                 // background-size: 248px 248px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    height: 291px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_2-1_pricing-md.svg);
+                    // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    height: 197px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_3-1_pricing-lg.svg);
+                    // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    height: 222px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_4-1_pricing-xl.svg);
+                    // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    height: 311px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_5-1_pricing-xxl.svg);
+                    // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
             
             &:nth-child(2)::before {
@@ -80,8 +141,44 @@
                 margin-bottom: 12px;
                 background-image: url(../images/05_1-2_pricing-sm.svg);
                 // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
-                // background-size: 213px 213px; //? ТИМЧАСОВО, для збільшення розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    height: 241px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_2-2_pricing-md.svg);
+                    // background-size: 314px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    height: 168px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_3-2_pricing-lg.svg);
+                    // background-size: 219px 168px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    height: 195px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_4-2_pricing-xl.svg);
+                    // background-size: 267px 195px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    height: 283px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_5-2_pricing-xxl.svg);
+                    // background-size: 391px 283px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
             
             &:nth-child(3)::before {
@@ -90,6 +187,43 @@
                 background-image: url(../images/05_1-3_pricing-sm.svg);
                 // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    height: 253px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_2-3_pricing-md.svg);
+                    // background-size: 253px 253px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    height: 210px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_3-3_pricing-lg.svg);
+                    // background-size: 210px 210px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    height: 242px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_4-3_pricing-xl.svg);
+                    // background-size: 242px 242px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    height: 340px;
+                    // margin-bottom: 28px;
+                    background-image: url(../images/05_5-3_pricing-xxl.svg);
+                    // background-size: 340px 340px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
         
             &:nth-child(1) .pricing-list__title  {
