@@ -24,7 +24,7 @@
     
     //* Від 1600px
     @media screen and (min-width: getBreakPoint('xxl')) {
-        height: 980px; //? для перевірки - xxl
+        // height: 980px; //? для перевірки - xxl
         padding-bottom: 260px;
     }
 
@@ -88,7 +88,7 @@
             // width: 100%;
             // background-color: bisque;
             // ! міксін outline
-            @include outline($type: dashed, $color: darkgrey);
+            // @include outline($type: dashed, $color: darkgrey);
         
             //! Медіа-запити
             //* Від 767px
@@ -103,7 +103,7 @@
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
-                width: 391px; 
+                width: 418px; 
             }
         
             &:nth-child(1) {
@@ -142,6 +142,11 @@
                 @media screen and (min-width: getBreakPoint('xl')) {
                     padding-left: 18px;
                 }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    padding-left: 5px;
+                }
             } 
             
             &:nth-child(3) {
@@ -151,6 +156,11 @@
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     padding-left: 18px;
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    padding-left: 5px;
                 }
             }
         
@@ -334,7 +344,7 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    margin-bottom: 20px;
+                    margin-bottom: 19px;
                 }
             }
             
@@ -361,7 +371,7 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    margin-bottom: 20px;
+                    margin-bottom: 19px;
                 }
             }
             
@@ -388,7 +398,7 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    margin-bottom: 20px;
+                    margin-bottom: 19px;
                 }
             }
         
@@ -444,6 +454,7 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
+                    width: 100%;
                     margin-bottom: 20px;
                 }
             }
@@ -471,6 +482,7 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
+                    width: 100%;
                     margin-bottom: 20px;
                 }
             }
@@ -530,7 +542,6 @@
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 width: 393px; //? для правильного форматування тексту
-                // margin-bottom: 31px; //! так не працює
                 font-size: 14px;
                 line-height: 1.5;
             }
@@ -541,7 +552,6 @@
                 height: 84px;
                 margin-left: 0;
                 margin-right: 0;
-                // margin-bottom: 31px;
                 text-align: left;
             }
             
@@ -555,7 +565,7 @@
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 // width: 100%;
-                // margin-bottom: 31px;
+                height: 90px;
                 font-size: 20px;
             }
         }
