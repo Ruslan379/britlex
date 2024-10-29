@@ -18,7 +18,7 @@
     
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
-        // height: 675px; //? для перевірки - xl
+        height: 675px; //? для перевірки - xl
         padding-bottom: 135px;
     }
     
@@ -364,7 +364,7 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    width: 100%;
+                    width: 196px;
                     margin-bottom: 23px;
                 }
             }
@@ -397,7 +397,7 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    width: 100%;
+                    width: 101%;
                     margin-bottom: 23px;
                 }
             }
