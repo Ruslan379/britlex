@@ -7,7 +7,7 @@
     //* Від 575px
     @media screen and (min-width: getBreakPoint('md')) {
         height: 1790px; //? для перевірки - md
-        padding-bottom: 72px;
+        padding-bottom: 162px;
     }
     
     //* Від 767px
@@ -125,6 +125,11 @@
                 margin-bottom: 63px;
             
                 //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin-bottom: 71px;
+                }
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     margin-bottom: 0;
@@ -136,6 +141,11 @@
                 margin-bottom: 72px;
                 
                 //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin-bottom: 71px;
+                }
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     margin-bottom: 0;
@@ -168,7 +178,7 @@
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
                     height: 291px;
-                    // margin-bottom: 28px;
+                    margin-bottom: 29px;
                     background-image: url(../images/05_2-1_pricing-md.svg);
                     // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -213,7 +223,7 @@
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
                     height: 241px;
-                    // margin-bottom: 28px;
+                    margin-bottom: 21px;
                     background-image: url(../images/05_2-2_pricing-md.svg);
                     // background-size: 314px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -258,7 +268,7 @@
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
                     height: 253px;
-                    // margin-bottom: 28px;
+                    margin-bottom: 15px;
                     background-image: url(../images/05_2-3_pricing-md.svg);
                     // background-size: 253px 253px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -326,7 +336,7 @@
             //? pricing-list__text
             &:nth-child(1) .pricing-list__text  {
                 margin-bottom: 33px;
-                
+            
                 //! Медіа-запити
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
@@ -413,6 +423,7 @@
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 width: 393px; //? для правильного форматування тексту
+                margin-bottom: 31px;
                 font-size: 14px;
                 line-height: 1.5;
             }
@@ -422,18 +433,21 @@
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
+                // margin-bottom: 31px;
                 text-align: left;
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 // width: 100%;
+                // margin-bottom: 31px;
                 font-size: 16px;
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 // width: 100%;
+                // margin-bottom: 31px;
                 font-size: 20px;
             }
         }
