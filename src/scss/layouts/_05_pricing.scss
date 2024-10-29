@@ -6,13 +6,13 @@
     //! Медіа-запити
     //* Від 575px
     @media screen and (min-width: getBreakPoint('md')) {
-        height: 1790px; //? для перевірки - md
+        // height: 1790px; //? для перевірки - md
         padding-bottom: 162px;
     }
     
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        // height: 619px; //? для перевірки - lg
+        height: 619px; //? для перевірки - lg
         padding-bottom: 65px;
     }
     
@@ -83,7 +83,6 @@
         //! Медіа-запити
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
-            margin-bottom: 0;
             display: flex;
             justify-content: space-between;
         }
@@ -127,6 +126,7 @@
                 //! Медіа-запити
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
+                    // height: 489px; //? для перевірки - md
                     margin-bottom: 71px;
                 }
                 
@@ -159,14 +159,13 @@
             &::before {
                 content: "";
                 display: block;
-                // margin-left: 3px;
                 // border-radius: 5px; //? ТИМЧАСОВО, для background-color
                 // background-size: auto auto; //? ТИМЧАСОВО
                 background-repeat: no-repeat;
                 background-position: center;
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
             }
-            
+        
             &:nth-child(1)::before {
                 height: 248px;
                 margin-bottom: 28px;
@@ -183,7 +182,7 @@
                     // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 197px;
@@ -192,7 +191,7 @@
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     height: 222px;
@@ -201,7 +200,7 @@
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     height: 311px;
@@ -211,14 +210,14 @@
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
             }
-            
+        
             &:nth-child(2)::before {
                 height: 197px;
                 margin-bottom: 12px;
                 background-image: url(../images/05_1-2_pricing-sm.svg);
                 // background-size: 257px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
-                
+            
                 //! Медіа-запити
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
@@ -228,7 +227,7 @@
                     // background-size: 314px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 168px;
@@ -237,7 +236,7 @@
                     // background-size: 219px 168px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     height: 195px;
@@ -246,7 +245,7 @@
                     // background-size: 267px 195px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     height: 283px;
@@ -256,14 +255,14 @@
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
             }
-            
+        
             &:nth-child(3)::before {
                 height: 241px;
                 margin-bottom: 7px;
                 background-image: url(../images/05_1-3_pricing-sm.svg);
                 // background-size: 241px 241px; //? ТИМЧАСОВО, для візуалізації розмірів
                 // background-color:getColor("background-image"); //? ТИМЧАСОВО
-                
+            
                 //! Медіа-запити
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
@@ -273,7 +272,7 @@
                     // background-size: 253px 253px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 210px;
@@ -282,7 +281,7 @@
                     // background-size: 210px 210px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     height: 242px;
@@ -291,7 +290,7 @@
                     // background-size: 242px 242px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-            
+                
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     height: 340px;
@@ -325,7 +324,7 @@
             
             &:nth-child(3) .pricing-list__title  {
                 margin-bottom: 30px;
-                
+            
                 //! Медіа-запити
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
@@ -338,6 +337,11 @@
                 margin-bottom: 33px;
             
                 //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin-bottom: 31px;
+                }
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     width: 100%;
@@ -363,6 +367,11 @@
                 margin-bottom: 38px;
             
                 //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    margin-bottom: 31px;
+                }
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     width: 100%;
@@ -423,7 +432,7 @@
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 width: 393px; //? для правильного форматування тексту
-                margin-bottom: 31px;
+                // margin-bottom: 31px; //! так не працює
                 font-size: 14px;
                 line-height: 1.5;
             }
@@ -502,8 +511,6 @@
             }
         
             .pricing-list__time-period {
-                // width: 78px;
-                // margin-left: auto;
                 font-size: 14px; 
                 color: getColor("gray-second");
                 // ! міксін outline
@@ -514,16 +521,6 @@
                 @media screen and (min-width: getBreakPoint('md')) {
                     font-size: 16px;
                 }
-                
-                // //* Від 767px
-                // @media screen and (min-width: getBreakPoint('lg')) {
-                //     font-size: 16px;
-                // }
-                
-                // //* Від 992px
-                // @media screen and (min-width: getBreakPoint('xl')) {
-                //     font-size: 16px;
-                // }
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
