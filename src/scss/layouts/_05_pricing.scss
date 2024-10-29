@@ -186,7 +186,8 @@
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 197px;
-                    // margin-bottom: 28px;
+                    margin-top: 5px;
+                    margin-bottom: 23px;
                     background-image: url(../images/05_3-1_pricing-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -231,7 +232,8 @@
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 168px;
-                    // margin-bottom: 28px;
+                    margin-top: 35px;
+                    margin-bottom: 22px;
                     background-image: url(../images/05_3-2_pricing-lg.svg);
                     // background-size: 219px 168px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -276,7 +278,8 @@
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 210px;
-                    // margin-bottom: 28px;
+                    margin-top: 0;
+                    margin-bottom: 15px;
                     background-image: url(../images/05_3-3_pricing-lg.svg);
                     // background-size: 210px 210px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -310,6 +313,11 @@
                 @media screen and (min-width: getBreakPoint('md')) {
                     margin-bottom: 23px;
                 }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    margin-bottom: 15px;
+                }
             }
             
             &:nth-child(2) .pricing-list__title  {
@@ -320,6 +328,12 @@
                 @media screen and (min-width: getBreakPoint('md')) {
                     margin-bottom: 19px;
                 }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    width: 112px;
+                    margin-bottom: 15px;
+                }
             }
             
             &:nth-child(3) .pricing-list__title  {
@@ -329,6 +343,12 @@
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
                     margin-bottom: 21px;
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    width: 94px;
+                    margin-bottom: 15px;
                 }
             }
         
@@ -400,6 +420,7 @@
             @media screen and (min-width: getBreakPoint('lg')) {
                 margin-bottom: 15px;
                 @include title(20px, 1.40);
+                text-align: left;
             }
             
             //* Від 992px
