@@ -418,7 +418,9 @@
                 @media screen and (min-width: getBreakPoint('lg')) {
                     display: block;
                     height: 134px;
-                    margin-top: 59px; //? изменить
+                    // margin-top: 59px; //? изменить
+                    margin-top: 40px;
+                    // align-self: center;
                     margin-left: 0px;
                     background-image: url(../images/03_3-4_skills_listening-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -428,7 +430,8 @@
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     height: 169px;
-                    margin-top: 33px; //? изменить
+                    // margin-top: 33px; //? изменить
+                    margin-top: 18px; 
                     // margin-left: 0px;
                     background-image: url(../images/03_4-4_skills_listening-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -438,7 +441,8 @@
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     height: 255px;
-                    margin-top: 44px; //? изменить
+                    // margin-top: 44px; //? изменить
+                    margin-top: 15px;
                     margin-left: 0px;
                     background-image: url(../images/03_5-4_skills_listening-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -481,11 +485,26 @@
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     grid-area: fourth;
+                    padding-top: 0;
                     //? Додаткові Grid-властивості для для стилізації, що відрізняється
                     display: grid;
-                    // gap: 10px;
+                    gap: 0px;
                     // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    grid-template-columns: 1fr 202px;
+                    
+                    
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    gap: 25px;
+                    grid-template-columns: 1fr 254px;
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    gap: 102px;
+                    grid-template-columns: 1fr 382px;
                 }
             }
         }
