@@ -1,5 +1,6 @@
 .skills {
-    // height: 2337px; //? для перевірки -sm
+    // height: 2244px; //? так в макеті - sm
+    // height: 2337px; //? MY- для перевірки - sm
     padding-bottom: 50px;
     background-color: rgb(255, 210, 193);
     
@@ -79,21 +80,24 @@
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
-            display: flex;
-            flex-wrap: wrap;
+            //! Flexbox
+            // display: flex;
+            // flex-wrap: wrap;
+            
             gap: 30px;
             
-            //! CSS Grid - ?????????????
-            // display: grid;
-            // grid-template-columns: repeat(2, 1fr);
-            
+            //! CSS Grid
+            display: grid;
+            //* Встановлюємо колонки контейнера
+            //? 2 (дві) колонки з однаковою шириною
+            grid-template-columns: repeat(2, 1fr);
         }
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             display: grid;
-            gap: 10px;
-            // gap: 9px;
+            // gap: 10px;
+            gap: 9px;
             
             // * Встановлюємо сітку контейнера
             // ? 3 (три) колонки з однаковою шириною
@@ -153,7 +157,7 @@
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
-                width: 240px;
+                // width: 240px;
                 // height: 534px; //? для перевірки - md
                 display: flex;
                 flex-direction: column;
@@ -161,7 +165,7 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                width: auto;
+                // width: auto;
                 // height: 534px;
                 border-radius: 10px;
             }
@@ -232,8 +236,8 @@
                     // margin-bottom: 10px; 
                 }
             }
-
-            //? Це Зображення з'явиться потім тільки на nth-child(4) і тільки Від 767px 
+            
+            //? Це Зображення з'явиться потім, тільки на nth-child(4) і тільки Від 767px 
             &::after {
                 display: none;
             }
@@ -395,7 +399,7 @@
                 }
             }
             
-             //? Це Зображення з'являється тільки на nth-child(4) і тільки Від 767px 
+            //? Це Зображення з'являється тільки на nth-child(4) і тільки Від 767px 
             &:nth-child(4)::after {
                 background-image: url(../images/03_1-4_skills_listening-sm.svg);
                 // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -456,7 +460,11 @@
             }
             
             &:nth-child(3) {
-                grid-area: third;
+                //! Медіа-запити
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    grid-area: third;
+                }
             }
             
             &:nth-child(4) {
