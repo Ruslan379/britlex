@@ -78,6 +78,24 @@
         // @include outline($type: dotted, $color: black);
     
         //! Медіа-запити
+        //! Від 575px - це з _03-2_skills.scss
+        @media screen and (min-width: getBreakPoint('md')) {
+            // display: flex;
+            // flex-wrap: wrap;
+            // gap: 30px;
+            
+            // CSS Grid
+            // display: grid;
+            //* Встановлюємо колонки контейнера
+            //? 2 (дві) колонки з однаковою шириною
+            // grid-template-columns: repeat(2, 1fr);
+            // grid-template-columns: repeat(2, auto);
+            // grid-template-columns:  auto;
+            // 2 (два) додаткових рядка з висотою 400px 100px 
+            // grid-auto-rows: auto;
+            // grid-auto-flow: row;
+        }
+
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             display: flex;
