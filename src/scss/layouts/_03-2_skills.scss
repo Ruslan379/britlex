@@ -172,7 +172,7 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                padding: 15px 15px 37px 12px;
+                padding: 16px 16px 37px 13px;
                 // width: auto;
                 // height: 534px;
                 border-radius: 10px;
@@ -484,6 +484,7 @@
                     //? Додаткові Grid-властивості для для стилізації, що відрізняється
                     display: grid;
                     // gap: 10px;
+                    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 }
             }
@@ -603,6 +604,7 @@
             @media screen and (min-width: getBreakPoint('xl')) {
                 @include button(196px, 57px);
                 font-size: 18px;
+                margin: 0;
             }
             
             //* Від 1600px
