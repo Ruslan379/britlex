@@ -79,9 +79,20 @@
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
-            display: flex;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-wrap: wrap;
             gap: 30px;
+
+            // CSS Grid
+            display: grid;
+            //* Встановлюємо колонки контейнера
+            //? 2 (дві) колонки з однаковою шириною
+            // grid-template-columns: repeat(2, 1fr);
+            // grid-template-columns: repeat(2, auto);
+            // grid-template-columns:  auto;
+            // 2 (два) додаткових рядка з висотою 400px 100px 
+            // grid-auto-rows: auto;
+            // grid-auto-flow: row;
         }
         
         //* Від 767px
@@ -148,7 +159,8 @@
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
-                width: 240px;
+                // width: 240px;
+                // width: 210px;
                 // height: 534px; //? для перевірки - md
                 display: flex;
                 flex-direction: column;
@@ -428,7 +440,7 @@
                 }
             }
         
-            //* Задаємо розміщення кожного елемента в сітці
+            //* Задаємо розміщення кожного елемента в сітці Від 767px
             // 1-first
             // 2-second
             // 3-third
