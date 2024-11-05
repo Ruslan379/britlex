@@ -106,6 +106,7 @@
                 width: 418px; 
             }
         
+            //? Додаткові властивості до деяких з карток
             &:nth-child(1) {
                 // height: 451px; //? для перевірки - sm
                 margin-bottom: 63px;
@@ -322,7 +323,7 @@
                 }
             }
         
-            //? ЗАГОЛОВКИ карток
+            //? ЗАГОЛОВКИ карток (додаткові властивості)
             &:nth-child(1) .pricing-list__title  {
                 margin-bottom: 17px;
             
@@ -402,7 +403,7 @@
                 }
             }
         
-            //? ТЕКСТИ карток
+            //? ТЕКСТИ карток (додаткові властивості)
             &:nth-child(1) .pricing-list__text  {
                 margin-bottom: 33px;
             
@@ -488,6 +489,7 @@
             }
         }
     
+        //? ЗАГОЛОВКИ карток (загальні властивості)
         &__title {
             //? ++++++++++++ Replaced by mixin ++++++++++++
             // // font-family: getFont("main-family");
@@ -503,6 +505,7 @@
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 @include title(24px, 1.17);
+                color: getColor("title-first");
             }
             
             //* Від 767px
@@ -510,21 +513,25 @@
                 // margin-bottom: 15px;
                 @include title(20px, 1.40);
                 text-align: left;
+                color: getColor("title-first");
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 // margin-bottom: 7px;
                 @include title(22px, 2.18);
+                color: getColor("title-first");
             }
             
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 // margin-bottom: 20px;
                 @include title(30px, 1.6);
+                color: getColor("title-first");
             }
         }
     
+        //? ТЕКСТИ карток (загальні властивості)
         &__text {
             width: 290px; //? для правильного форматування тексту
             margin-right: auto;
@@ -570,6 +577,7 @@
             }
         }
     
+        //? Кнопки "PRICE per month" карток
         &__price {
             width: 170px;
             height: 37px;
