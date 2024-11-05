@@ -163,34 +163,226 @@
                 display: block;
                 height: 213px;
                 margin-bottom: 10px;
-                margin-left: 3px;
+                margin-left: 3px; //? так в макеті
                 border-radius: 5px; //? ТИМЧАСОВО, для background-color
                 // background-size: auto auto; //? ТИМЧАСОВО
                 background-repeat: no-repeat;
                 background-position: center;
                 background-color:getColor("background-image"); //? ТИМЧАСОВО
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    height: 185px;
+                    margin-bottom: -15px;
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    // min-height: 214px;
+                    // height: max-content;
+                    // max-height: 390px;
+                    // height: max-content;
+                    height: 214px;
+                    // margin-bottom: 10px;
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // height: 213px;
+                    // margin-bottom: 10px;
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // height: 213px;
+                    // margin-bottom: 10px; 
+                }
             }
             
             &:nth-child(1)::before {
                 background-image: url(../images/03_1-1_skills_speaking-sm.svg);
                 // background-image: url(../images/03-1_skills_speaking-md.svg); //? ТИМЧАСОВО, для візуалізації різниці
                 // background-size: 213px 213px; //? ТИМЧАСОВО, для візуалізації розмірів
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    // height: 185px;
+                    // margin-bottom: -15px;
+                    background-image: url(../images/03_2-1_skills_speaking-md.svg);
+                    // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    // height: 214px;
+                    // margin-top: 5px;
+                    // margin-bottom: 23px;
+                    background-image: url(../images/03_3-1_skills_speaking-lg.svg);
+                    // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // height: 260px;
+                    // margin-top: 12px;
+                    // margin-bottom: 13px; 
+                    background-image: url(../images/03_4-1_skills_speaking-xl.svg);
+                    // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // height: 360px;
+                    // margin-top: 0;
+                    // margin-bottom: 40px;
+                    background-image: url(../images/03_5-1_skills_speaking-xxl.svg);
+                    // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
             
             &:nth-child(2)::before {
                 background-image: url(../images/03_1-2_skills_writing-sm.svg);
                 // background-size: 204px 204px; //? ТИМЧАСОВО, для візуалізації розмірів
-                background-size: 213px 213px; //? для збільшення розмірів
+                // background-size: 213px 213px; //? для збільшення розмірів
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    // height: 182px;
+                    // margin-bottom: -19px;
+                    background-image: url(../images/03_2-2_skills_writing-md.svg);
+                    // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    // height: 197px;
+                    // margin-top: 5px;
+                    // margin-bottom: 23px;
+                    background-image: url(../images/03_3-2_skills_writing-lg.svg);
+                    // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // height: 222px;
+                    // margin-top: 12px;
+                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
+                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    background-image: url(../images/03_4-2_skills_writing-xl.svg);
+                    // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // height: 311px;
+                    // margin-top: 0;
+                    // margin-bottom: 40px;
+                    background-image: url(../images/03_5-2_skills_writing-xxl.svg);
+                    // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
             
             &:nth-child(3)::before {
                 background-image: url(../images/03_1-3_skills_reading-sm.svg);
                 // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    // height: 182px;
+                    // margin-bottom: -19px;
+                    background-image: url(../images/03_2-3_skills_reading-md.svg);
+                    // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    // height: 197px;
+                    // margin-top: 5px;
+                    // margin-bottom: 23px;
+                    background-image: url(../images/03_3-3_skills_reading-lg.svg);
+                    // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // height: 222px;
+                    // margin-top: 12px;
+                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
+                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    background-image: url(../images/03_4-3_skills_reading-xl.svg);
+                    // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // height: 311px;
+                    // margin-top: 0;
+                    // margin-bottom: 40px;
+                    background-image: url(../images/03_5-3_skills_reading-xxl.svg);
+                    // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
             
             &:nth-child(4)::before {
                 background-image: url(../images/03_1-4_skills_listening-sm.svg);
                 // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
+            
+                //! Медіа-запити
+                //* Від 575px
+                @media screen and (min-width: getBreakPoint('md')) {
+                    // height: 182px;
+                    // margin-bottom: -19px;
+                    background-image: url(../images/03_2-4_skills_listening-md.svg);
+                    // background-size: 291px 291px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    // height: 197px;
+                    // margin-top: 5px;
+                    // margin-bottom: 23px;
+                    background-image: url(../images/03_3-4_skills_listening-lg.svg);
+                    // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 992px
+                @media screen and (min-width: getBreakPoint('xl')) {
+                    // height: 222px;
+                    // margin-top: 12px;
+                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
+                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    background-image: url(../images/03_4-4_skills_listening-xl.svg);
+                    // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+                
+                //* Від 1600px
+                @media screen and (min-width: getBreakPoint('xxl')) {
+                    // height: 311px;
+                    // margin-top: 0;
+                    // margin-bottom: 40px;
+                    background-image: url(../images/03_5-4_skills_listening-xxl.svg);
+                    // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
+                    // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
             }
         }
     
