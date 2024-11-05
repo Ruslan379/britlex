@@ -87,22 +87,52 @@
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             display: grid;
-            // gap: 10px;
-            gap: 9px;
+            gap: 10px;
+            // gap: 9px;
+            
+            // * Встановлюємо сітку контейнера
+            // ? 3 (три) колонки з однаковою шириною
+            grid-template-columns: repeat(3, 1fr);
+            // todo 3 (три) рядки з однаковою висотою 150px
+            grid-template-rows: repeat(3, 214px);
+            
+            // * Робимо розмітку сітки контейнера
+            grid-template-areas:
+                "first second third"
+                "first second third"
+                "first fourth fourth"
+                ;
+                // 1-first
+                // 2-second
+                // 3-third
+                // 4-fourth
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
-            display: grid;
             // gap: 13px;
             gap: 12px;
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
-            display: grid;
+            gap: initial;
             column-gap: 18px;
             row-gap: 20px;
+        }
+    
+        //? Додатковий Контейнер до Картки №4 (fourth),(nth-child(4)) для для стилізації, що відрізняється
+        &__сontents-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            //! Медіа-запити
+            //* Від 767px
+            // @media screen and (min-width: getBreakPoint('lg')) {
+            //     flex-grow: 1;
+            //     display: flex;
+            //     flex-direction: column;
+            // }
         }
     
         &__item {
@@ -119,15 +149,16 @@
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 width: 240px;
-                // height: 534px;
+                // height: 534px; //? для перевірки - md
                 display: flex;
                 flex-direction: column;
             }
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                // width: 240px;
+                width: auto;
                 // height: 534px;
+                border-radius: 10px;
             }
             
             //* Від 992px
@@ -150,15 +181,11 @@
                 @media screen and (min-width: getBreakPoint('md')) {
                     margin-bottom: 0px;
                 }
-                
-                //* Від 767px
-                @media screen and (min-width: getBreakPoint('lg')) {
-                    // margin-bottom: 0;
-                }
             }
         
             //? ЗОБРАЖЕННЯ карток
-            &::before {
+            &::before,
+            &::after {
                 content: "";
                 display: block;
                 height: 213px;
@@ -183,21 +210,27 @@
                     // height: max-content;
                     // max-height: 390px;
                     // height: max-content;
-                    height: 214px;
+                    height: 214px; //? тимчасово
+                    border-radius: 10px; //? ТИМЧАСОВО, для background-color
                     // margin-bottom: 10px;
                 }
                 
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    // height: 213px;
+                    // height: 260px;
                     // margin-bottom: 10px;
                 }
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    // height: 213px;
+                    // height: 360px;
                     // margin-bottom: 10px; 
                 }
+            }
+
+            //? Це Зображення з'явиться потім тільки на nth-child(4) і тільки Від 767px 
+            &::after {
+                display: none;
             }
             
             &:nth-child(1)::before {
@@ -217,9 +250,9 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    // height: 214px;
+                    height: 214px;
                     // margin-top: 5px;
-                    // margin-bottom: 23px;
+                    margin-bottom: 0;
                     background-image: url(../images/03_3-1_skills_speaking-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -227,9 +260,9 @@
                 
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    // height: 260px;
+                    height: 260px;
                     // margin-top: 12px;
-                    // margin-bottom: 13px; 
+                    // margin-bottom: 0;
                     background-image: url(../images/03_4-1_skills_speaking-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -237,9 +270,9 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    // height: 360px;
+                    height: 360px;
                     // margin-top: 0;
-                    // margin-bottom: 40px;
+                    // margin-bottom: 0;
                     background-image: url(../images/03_5-1_skills_speaking-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -263,9 +296,9 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    // height: 197px;
+                    height: 200px;
                     // margin-top: 5px;
-                    // margin-bottom: 23px;
+                    margin-bottom: -32px;
                     background-image: url(../images/03_3-2_skills_writing-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -273,10 +306,9 @@
                 
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    // height: 222px;
+                    height: 205px;
                     // margin-top: 12px;
-                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
-                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    margin-bottom: -30px;
                     background-image: url(../images/03_4-2_skills_writing-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -284,16 +316,16 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    // height: 311px;
+                    height: 293px;
                     // margin-top: 0;
-                    // margin-bottom: 40px;
+                    margin-bottom: -38px;
                     background-image: url(../images/03_5-2_skills_writing-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
             }
             
-            &:nth-child(3)::before {
+            &:nth-child(3)::before {           
                 background-image: url(../images/03_1-3_skills_reading-sm.svg);
                 // background-size: 236px 157px; //? ТИМЧАСОВО, для візуалізації розмірів
             
@@ -309,9 +341,9 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    // height: 197px;
+                    height: 144px;
                     // margin-top: 5px;
-                    // margin-bottom: 23px;
+                    margin-bottom: 0;
                     background-image: url(../images/03_3-3_skills_reading-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -319,10 +351,9 @@
                 
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    // height: 222px;
+                    height: 162px;
                     // margin-top: 12px;
-                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
-                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    margin-bottom: 3px;
                     background-image: url(../images/03_4-3_skills_reading-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -330,9 +361,9 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    // height: 311px;
+                    height: 247px;
                     // margin-top: 0;
-                    // margin-bottom: 40px;
+                    margin-bottom: 0;
                     background-image: url(../images/03_5-3_skills_reading-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -355,9 +386,22 @@
                 
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
-                    // height: 197px;
-                    // margin-top: 5px;
-                    // margin-bottom: 23px;
+                    display: none;
+                }
+            }
+            
+             //? Це Зображення з'являється тільки на nth-child(4) і тільки Від 767px 
+            &:nth-child(4)::after {
+                background-image: url(../images/03_1-4_skills_listening-sm.svg);
+                // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
+            
+                //! Медіа-запити
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    display: block;
+                    height: 134px;
+                    margin-top: 59px; //? изменить
+                    margin-left: 0px;
                     background-image: url(../images/03_3-4_skills_listening-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -365,10 +409,9 @@
                 
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
-                    // height: 222px;
-                    // margin-top: 12px;
-                    // margin-bottom: 20px; //? так в макеті, якщо у заголока line-height: 1.55
-                    margin-bottom: 13px; //? так ПРАВИЛЬНО, якщо у заголока line-height: 2.18
+                    height: 169px;
+                    margin-top: 33px; //? изменить
+                    // margin-left: 0px;
                     background-image: url(../images/03_4-4_skills_listening-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -376,12 +419,50 @@
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
-                    // height: 311px;
-                    // margin-top: 0;
-                    // margin-bottom: 40px;
+                    height: 255px;
+                    margin-top: 44px; //? изменить
+                    margin-left: 0px;
                     background-image: url(../images/03_5-4_skills_listening-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
+                }
+            }
+        
+            //* Задаємо розміщення кожного елемента в сітці
+            // 1-first
+            // 2-second
+            // 3-third
+            // 4-fourth
+            
+            &:nth-child(1) {
+                //! Медіа-запити
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    grid-area: first;
+                }
+            }
+            
+            &:nth-child(2) {
+                //! Медіа-запити
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    grid-area: second;
+                }
+            }
+            
+            &:nth-child(3) {
+                grid-area: third;
+            }
+            
+            &:nth-child(4) {
+                //! Медіа-запити
+                //* Від 767px
+                @media screen and (min-width: getBreakPoint('lg')) {
+                    grid-area: fourth;
+                    //? Додаткові Grid-властивості для для стилізації, що відрізняється
+                    display: grid;
+                    // gap: 10px;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 }
             }
         }
