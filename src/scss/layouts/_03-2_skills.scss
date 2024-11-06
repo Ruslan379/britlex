@@ -172,9 +172,9 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                padding: 16px 16px 37px 13px;
                 // width: auto;
                 // height: 534px;
+                padding: 16px 16px 16px 13px;
                 border-radius: 10px;
             }
             
@@ -188,6 +188,7 @@
             @media screen and (min-width: getBreakPoint('xxl')) {
                 // width: 240px;
                 // height: 534px;
+                padding: 18px 18px 30px 15px;
             }
         
             //? Додаткові властивості до деяких з карток
@@ -316,7 +317,8 @@
                 @media screen and (min-width: getBreakPoint('lg')) {
                     height: 200px;
                     // margin-top: 5px;
-                    margin-bottom: -32px;
+                    // margin-bottom: -32px;
+                    margin-bottom: 0;
                     background-image: url(../images/03_3-2_skills_writing-lg.svg);
                     // background-size: 197px 197px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -326,7 +328,8 @@
                 @media screen and (min-width: getBreakPoint('xl')) {
                     height: 205px;
                     // margin-top: 12px;
-                    margin-bottom: -30px;
+                    // margin-bottom: -30px;
+                    // margin-bottom: 0;
                     background-image: url(../images/03_4-2_skills_writing-xl.svg);
                     // background-size: 222px 222px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -336,7 +339,8 @@
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     height: 293px;
                     // margin-top: 0;
-                    margin-bottom: -38px;
+                    // margin-bottom: -38px;
+                    // margin-bottom: 0;
                     background-image: url(../images/03_5-2_skills_writing-xxl.svg);
                     // background-size: 311px 311px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
@@ -419,7 +423,7 @@
                     display: block;
                     height: 134px;
                     // margin-top: 59px; //? изменить
-                    margin-top: 40px;
+                    margin-top: 38px;
                     // align-self: center;
                     margin-left: 0px;
                     background-image: url(../images/03_3-4_skills_listening-lg.svg);
@@ -506,6 +510,14 @@
                     gap: 102px;
                     grid-template-columns: 1fr 382px;
                 }
+            
+                & .skills-list__title {
+                    line-height: 2.5;
+                }
+            
+                & .skills-list__text {
+                    margin-bottom: 12px;
+                }
             }
         }
     
@@ -531,8 +543,9 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
-                margin-bottom: -3px; // -6px  -6px -8px
-                @include title(20px, 4);
+                margin-bottom: 0; // -3px -6px  -6px -8px
+                // @include title(20px, 4);
+                @include title(20px, 2);
                 // text-align: left;
                 color: getColor("title-first");
             }
@@ -617,13 +630,13 @@
             @media screen and (min-width: getBreakPoint('lg')) {
                 @include button();
                 // font-size: 16px;
+                margin: 0;
             }
             
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 @include button(196px, 57px);
                 font-size: 18px;
-                margin: 0;
             }
             
             //* Від 1600px
