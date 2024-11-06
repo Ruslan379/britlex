@@ -512,11 +512,19 @@
                 }
             
                 & .skills-list__title {
-                    line-height: 2.5;
+                    //! Медіа-запити
+                    //* Від 767px
+                    @media screen and (min-width: getBreakPoint('lg')) {
+                        line-height: 2.5;
+                    }
                 }
             
                 & .skills-list__text {
-                    margin-bottom: 12px;
+                    //! Медіа-запити
+                    //* Від 767px
+                    @media screen and (min-width: getBreakPoint('lg')) {
+                        margin-bottom: 12px;
+                    }
                 }
             }
         }
