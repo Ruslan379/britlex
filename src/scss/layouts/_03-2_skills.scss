@@ -111,9 +111,9 @@
 
             // * Робимо розмітку сітки контейнера
             grid-template-areas:
-                "first second third"
-                "first second third"
-                "first fourth fourth"
+                'first second third'
+                'first second third'
+                'first fourth fourth'
             ;
             // 1-first
             // 2-second
@@ -163,7 +163,7 @@
             // padding-left: 13px;
             padding: 16px 16px 45px 13px;
             border-radius: 5px;
-            background-color: getColor("background-card");
+            background-color: getColor('background-card');
             // @include outline($type: dotted, $color: #1100ff);
 
             //! Медіа-запити
@@ -211,7 +211,7 @@
             //? ЗОБРАЖЕННЯ карток
             &::before,
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 height: 213px;
                 margin-bottom: 10px;
@@ -220,7 +220,7 @@
                 // background-size: auto auto; //? ТИМЧАСОВО
                 background-repeat: no-repeat;
                 background-position: center;
-                background-color: getColor("background-image"); //? ТИМЧАСОВО
+                background-color: getColor('background-image'); //? ТИМЧАСОВО
 
                 //! Медіа-запити
                 //* Від 575px
@@ -249,11 +249,11 @@
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     // height: 360px;
-                    // margin-bottom: 10px; 
+                    // margin-bottom: 10px;
                 }
             }
 
-            //? Це Зображення з'явиться потім, тільки на nth-child(4) і тільки Від 767px 
+            //? Це Зображення з'явиться потім, тільки на nth-child(4) і тільки Від 767px
             &::after {
                 display: none;
             }
@@ -418,7 +418,7 @@
                 }
             }
 
-            //? Це Зображення з'являється тільки на nth-child(4) і тільки Від 767px 
+            //? Це Зображення з'являється тільки на nth-child(4) і тільки Від 767px
             &:nth-child(4)::after {
                 background-image: url(../images/03_1-4_skills_listening-sm.svg);
                 // background-size: 232px 154px; //? ТИМЧАСОВО, для візуалізації розмірів
@@ -505,8 +505,6 @@
                     gap: 0px;
                     // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                     grid-template-columns: 1fr 202px;
-
-
                 }
 
                 //* Від 992px
@@ -553,7 +551,7 @@
             // color: getColor('title-first');
             //? ____________ Replaced by mixin ____________
             @include title(18px, 4.44);
-            color: getColor("title-first");
+            color: getColor('title-first');
 
             //! Медіа-запити
             //* Від 575px
@@ -567,21 +565,21 @@
                 // @include title(20px, 4);
                 @include title(20px, 2);
                 // text-align: left;
-                color: getColor("title-first");
+                color: getColor('title-first');
             }
 
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 margin-bottom: 3px; // -1px  -4px -3px
                 @include title(22px, 3.64);
-                color: getColor("title-first");
+                color: getColor('title-first');
             }
 
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 margin-bottom: 5px; // -9px  -14px -5px
                 @include title(30px, 2.67);
-                color: getColor("title-first");
+                color: getColor('title-first');
             }
         }
 
