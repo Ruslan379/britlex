@@ -346,7 +346,7 @@
                     // background-size: 198px 132px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-
+                
                 //* Від 767px
                 @media screen and (min-width: getBreakPoint('lg')) {
                     // height: 144px;
@@ -355,7 +355,7 @@
                     // background-size: 216px 144px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-
+                
                 //* Від 992px
                 @media screen and (min-width: getBreakPoint('xl')) {
                     // height: 162px;
@@ -364,7 +364,7 @@
                     // background-size: 243px 162px; //? ТИМЧАСОВО, для візуалізації розмірів
                     // background-color:getColor("background-image"); //? ТИМЧАСОВО
                 }
-
+                
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     // height: 247px;
@@ -494,16 +494,14 @@
             
                 //? Додаткові властивості до ЗАГОЛОВКІВ та ТЕКСТІВ карток в nth-child(4) Від 767px
                 & .skills-list__title {
-                
                     //! Медіа-запити
                     //* Від 767px
                     @media screen and (min-width: getBreakPoint('lg')) {
                         line-height: 2.5;
                     }
                 }
-
+            
                 & .skills-list__text {
-
                     //! Медіа-запити
                     //* Від 767px
                     @media screen and (min-width: getBreakPoint('lg')) {
