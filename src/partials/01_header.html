@@ -3,11 +3,11 @@
         <nav class="header__navigation">
             <!-- ? LOGO  - moved to partials/components -->
             <!-- <a class="logo" href="#">Brit<span class="logo__light">lex</span></a> -->
-            <load ="/partials/components/main-logo.html" />
+            <load="/partials/components/main-logo.html" />
             <!--? Список (прихований в sm, md, lg)-->
             <ul class="header-list">
                 <li class="header-list__item">
-                    <a class="header-list__link" href="/index.html">Home</a>
+                    <a class="header-list__link" href="./index.html">Home</a>
                 </li>
                 <li class="header-list__item">
                     <a class="header-list__link" href="#skills">Skills</a>
@@ -26,11 +26,7 @@
         <!--? Кнопка "Let’s Talk" -->
         <button class="header__button">Let’s Talk</button>
         <!--? Кнопка "Бургер-меню" -->
-        <button
-            class="button-menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-        >
+        <button class="button-menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
             <!--? Using inline SVG -->
             <!-- <svg 
                 width="34" 
@@ -45,27 +41,15 @@
             </svg> -->
             <!--? Using SVG-sprite -->
             <!--! sm -->
-            <svg
-                class="button-menu-toggle__sm" 
-                width="30" 
-                height="17"
-            >
+            <svg class="button-menu-toggle__sm" width="30" height="17">
                 <use href="/images/01_icons-sprite.svg#button-burger-sm"></use>
             </svg>
             <!--! md -->
-            <svg
-                class="button-menu-toggle__md" 
-                width="34" 
-                height="19"
-            >
+            <svg class="button-menu-toggle__md" width="34" height="19">
                 <use href="/images/01_icons-sprite.svg#button-burger-md"></use>
             </svg>
             <!--! lg -->
-            <svg
-                class="button-menu-toggle__lg" 
-                width="43" 
-                height="24"
-            >
+            <svg class="button-menu-toggle__lg" width="43" height="24">
                 <use href="/images/01_icons-sprite.svg#button-burger-lg"></use>
             </svg>
         </button>
