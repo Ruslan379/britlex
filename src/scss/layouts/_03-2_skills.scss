@@ -6,7 +6,7 @@
     // height: 2337px; //? MY- для перевірки - sm
     padding-bottom: 50px;
     background-color: rgb(255, 210, 193);
-
+    
     //! Медіа-запити
     //* Від 575px
     @media screen and (min-width: getBreakPoint('md')) {
@@ -14,19 +14,19 @@
         // height: 1276px; //? MY- для перевірки - md
         padding-bottom: 84px;
     }
-
+    
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
         // height: 830px; //? для перевірки - lg
         padding-bottom: 52px;
     }
-
+    
     //* Від 992px
     @media screen and (min-width: getBreakPoint('xl')) {
         // height: 934px; //? для перевірки - xl
         padding-bottom: 106px;
     }
-
+    
     //* Від 1600px
     @media screen and (min-width: getBreakPoint('xxl')) {
         // height: 1322px; //? для перевірки - xxl
@@ -51,26 +51,26 @@
         //? ____________ Replaced by mixin ____________
         @include title(24px, 3.33);
         text-align: center;
-
+    
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             margin-bottom: 34px;
             @include title(30px, 2.67);
         }
-
+        
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             margin-bottom: 36px;
             // @include title(30px, 2.67);
         }
-
+        
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             margin-bottom: 52px;
             @include title(36px, 2.22);
         }
-
+        
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             margin-bottom: 96px;
@@ -80,31 +80,31 @@
 
     &-list {
         // @include outline($type: solid, $color: black);
-
+    
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             //! var.1 - Flexbox
             // display: flex;
             // flex-wrap: wrap;
-
+            
             column-gap: 30px;
             row-gap: 34px;
-
+            
             //! var.2 - CSS Grid
             display: grid;
             //* Встановлюємо колонки контейнера
             //? 2 (дві) колонки з однаковою шириною
             grid-template-columns: repeat(2, 1fr);
         }
-
+        
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             // height: 662px; //? для перевірки - lg
             display: grid;
             // gap: 10px;
             gap: 9px;
-
+            
             // * Встановлюємо сітку контейнера
             // ? 3 (три) колонки з однаковою шириною
             grid-template-columns: repeat(3, 1fr);
@@ -112,7 +112,7 @@
             // grid-template-rows: repeat(3, 214px); //! var.1
             // todo 3 (три) рядки: з них 2 (два) рядки з однаковою висотою, а третій = 210px
             grid-template-rows: repeat(2, 1fr) 210px; //! var.2
-
+            
             // * Робимо розмітку сітки контейнера
             grid-template-areas:
                 'first second third'
@@ -124,7 +124,7 @@
             // 3-third
             // 4-fourth
         }
-
+        
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             // height: 696px; //? для перевірки - xl
@@ -135,7 +135,7 @@
             // todo 3 (три) рядки: з них 2 (два) рядки з однаковою висотою, а третій = 241px
             grid-template-rows: repeat(2, 1fr) 241px; //! var.2
         }
-
+        
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             // height: 894px; //? для перевірки - xxl
@@ -147,14 +147,14 @@
             // todo 3 (три) рядки: з них 2 (два) рядки з однаковою висотою, а третій = 343px
             grid-template-rows: repeat(2, 1fr) 343px; //! var.2
         }
-
+        
         //? Додатковий Контейнер до Картки №4 (fourth),(nth-child(4)) для для стилізації, що відрізняється
         &__сontents-container {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
-
+        
         &__item {
             // padding-top: 16px;
             // padding-right: 16px;
@@ -164,7 +164,7 @@
             border-radius: 5px;
             background-color: getColor('background-card');
             // @include outline($type: dotted, $color: #1100ff);
-
+            
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
@@ -174,7 +174,7 @@
                 display: flex;
                 flex-direction: column;
             }
-
+            
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
                 // width: auto;
@@ -182,31 +182,31 @@
                 padding: 16px 16px 16px 13px;
                 border-radius: 10px;
             }
-
+            
             //* Від 992px
             @media screen and (min-width: getBreakPoint('xl')) {
                 // width: 240px;
                 // height: 534px;
             }
-
+            
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 // width: 240px;
                 // height: 534px;
                 padding: 18px 18px 30px 15px;
             }
-
+            
             //? Додаткові властивості до деяких з карток
             &:not(:last-child) {
                 margin-bottom: 21px;
-
+            
                 //! Медіа-запити
                 //* Від 575px
                 @media screen and (min-width: getBreakPoint('md')) {
                     margin-bottom: 0px;
                 }
             }
-
+        
             //? ЗОБРАЖЕННЯ карток
             &::before,
             &::after {
