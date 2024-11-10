@@ -38,7 +38,7 @@
         @include flex_JCsb;
         // ! міксін outline
         // @include outline($type: dashed, $color: red);
-        
+    
         //! Медіа-запити
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
@@ -54,7 +54,7 @@
     &__navigation {
         // ! міксін outline
         // @include outline($size: 2px, $type: dashed, $color: red);
-        
+    
         //! Медіа-запити
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
@@ -75,7 +75,7 @@
         // &__light {
         //     color: getColor("gray-first");
         // }
-        
+    
         //! Медіа-запити
         //* До 574px
         @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
@@ -92,7 +92,7 @@
     &-list {
         //? Прихований до 991px (sm, md, lg)
         display: none;
-        
+    
         //! Медіа-запити
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
@@ -105,13 +105,13 @@
         @media screen and (min-width: getBreakPoint('xxl')) {
             gap: 40px;
         }
-        
+    
         &__link {
             // font-family: getFont('main-family');
             font-weight: 500;
             font-size: 16px;
             color: getColor("title-first");
-            
+        
             //! Медіа-запити
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
@@ -120,11 +120,66 @@
         }
     }
 
-    // ? Кнопка "Let’s Talk"
-    &__button {
-        //? Прихована до 991px (sm, md, lg)
-        display: none;
+    //? Кнопка "Бургер-меню"
+    //? Відображається до 991px (sm, md, lg)
+    .button-menu-toggle {
+        @include buttons-menu-toggle;
+        // &:focus,
+        // &:hover {
+        //     color: getColor('hover');
+        // }
+    
+        //? Приховуємо SVG-іконки md та lg
+        //? Відображається тільки SVG-іконка sm
+        &__md {
+            display: none;
+        }
+    
+        &__lg {
+            display: none;
+        }
+    
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            //? Відображаємо SVG-іконку md
+            &__md {
+                display: block;
+            }
+            
+            //? Приховуємо SVG-іконку sm
+            //?  SVG-іконка lg прихована раніше
+            &__sm {
+                display: none;
+            }
+        }
         
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            //? Відображаємо SVG-іконку lg
+            &__lg {
+                display: block;
+            }
+            
+            //? Приховуємо SVG-іконку md
+            //?  SVG-іконка sm прихована раніше
+            &__md {
+                display: none;
+            }
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            //? Приховуємо кнопку Бургер-меню
+            display: none;
+        }
+    }
+
+    // ? Кнопка "Let’s Talk"
+    //? Прихована до 991px (sm, md, lg)
+    &__button {
+        display: none;
+    
         //! Медіа-запити
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
@@ -146,58 +201,6 @@
             width: 220px;
             height: 70px;
             font-size: 24px;
-        }
-    }
-
-    //? Кнопка "Бургер-меню"
-    .button-menu-toggle {
-        @include buttons-menu-toggle;
-        // &:focus,
-        // &:hover {
-        //     color: getColor('hover');
-        // }
-        
-        //? Приховуємо SVG-іконки md та lg
-        //? Відображається тільки SVG-іконка sm
-        &__md {
-            display: none;
-        }
-        
-        &__lg {
-            display: none;
-        }
-        
-        //! Медіа-запити
-        //* Від 575px
-        @media screen and (min-width: getBreakPoint('md')) {
-            //? Відображаємо SVG-іконку md
-            &__md {
-                display: block;
-            }
-            //? Приховуємо SVG-іконку sm
-            //?  SVG-іконка lg прихована раніше
-            &__sm {
-                display: none;
-            }
-        }
-        
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            //? Відображаємо SVG-іконку lg
-            &__lg {
-                display: block;
-            }
-            //? Приховуємо SVG-іконку md
-            //?  SVG-іконка sm прихована раніше
-            &__md {
-                display: none;
-            }
-        }
-        
-        //* Від 992px
-        @media screen and (min-width: getBreakPoint('xl')) {
-            //? Приховуємо кнопку Бургер-меню
-            display: none;
         }
     }
 }
