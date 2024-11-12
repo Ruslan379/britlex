@@ -2,6 +2,7 @@
     const mobileMenu = document.querySelector('.js-menu-container');
     const openMenuBtn = document.querySelector('.js-open-menu');
     const closeMenuBtn = document.querySelector('.js-close-menu');
+    const mobileMenuItemRef = document.querySelectorAll(".js-item");
 
     const toggleMenu = () => {
         const isMenuOpen =
@@ -18,11 +19,21 @@
     openMenuBtn.addEventListener('click', toggleMenu);
     closeMenuBtn.addEventListener('click', toggleMenu);
 
-    // Close the mobile menu on wider screens if the device orientation changes
-    window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    //! Close the mobile menu on wider screens if the device orientation changes
+    window.matchMedia('(min-width: 992px)').addEventListener('change', e => {
         if (!e.matches) return;
         mobileMenu.classList.remove('is-open');
         openMenuBtn.setAttribute('aria-expanded', false);
         bodyScrollLock.enableBodyScroll(document.body);
+    });
+
+    //! Закриття burger-menu по кліку на елементі списку nav-list
+    mobileMenuItemRef.forEach(function (item) {
+        item.addEventListener('click', function () {
+            expanded = mobileMenu.getAttribute("aria-expanded") === "true" || false;
+            mobileMenu.classList.toggle("is-open");
+            mobileMenu.setAttribute("aria-expanded", !expanded);
+            bodyScrollLock.enableBodyScroll(document.body);
+        });
     });
 })();
