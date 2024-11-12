@@ -124,6 +124,7 @@
     //? Відображається до 991px (sm, md, lg)
     .button-menu-toggle {
         @include buttons-menu-toggle;
+    
         // &:focus,
         // &:hover {
         //     color: getColor('hover');
