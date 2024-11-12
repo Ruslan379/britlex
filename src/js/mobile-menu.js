@@ -24,7 +24,7 @@
     //! Закриття burger-menu на екранах ширших ніж 991px, або якщо орієнтація пристрою змінюється
     window.matchMedia('(min-width: 992px)').addEventListener('change', e => {
         if (!e.matches) return;
-        backdrop.classList.toggle("is-hidden");
+        backdrop.classList.add("is-hidden");
         mobileMenu.classList.remove('is-open');
         openMenuBtn.setAttribute('aria-expanded', false);
         bodyScrollLock.enableBodyScroll(document.body);
