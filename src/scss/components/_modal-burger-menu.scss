@@ -1,17 +1,14 @@
-//todo backdrop + Модальнє вікно (modal-window) для burger-menu
+//todo backdrop + Модальнє вікно (modal-window) для Бургер-меню
 .backdrop {
     z-index: 1;
+    width: 100%;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    // height: 100%;
-    height: 100vh;
     background-color: getColor('background-backdrop');
     opacity: 1;
     transition: all 450ms ease-in-out;
-    // !
-    // overflow-y: scroll;
 }
 
 .is-hidden {
@@ -22,14 +19,14 @@
 
 //? Контейнер для Бургер-меню (modal-window)
 .menu-container {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     padding: 36px 14px;
     background-color: hsla(0, 0%, 93%, 0.95);
-    z-index: 1;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
     
@@ -38,18 +35,13 @@
     @media screen and (min-width: getBreakPoint('md')) {
         padding: 39px 32px;
     }
-
+    
     //* Від 767px
     @media screen and (min-width: getBreakPoint('lg')) {
-        padding: 39px 40px;
         width: 60%;
+        padding: 39px 40px;
         transform: translateX(170%);
     }
-    
-    //* Від 992px
-    // @media screen and (min-width: getBreakPoint('xl')) {
-    //     display: none;
-    // }
 
     &.is-open {
         transform: translateX(0);
@@ -59,8 +51,8 @@
     .logo {
         //? LOGO-sm  - moved to scss/components
         width: 100%;
-        display: block;
         margin-bottom: 48px;
+        display: block;
         
         //! Медіа-запити
         //* До 574px
@@ -108,7 +100,6 @@
         right: 14px;
         border-radius: 50%;
         background-color: transparent;
-        // @include buttons-menu-toggle;
     
         //! Медіа-запити
         //* Від 575px
@@ -166,14 +157,12 @@
 
     //? Кнопка "Let’s Talk" для Бургер-меню
     .header__button {
-        display: block;
-        display: block;
-        // width: 160px;
         width: 100%;
         height: 50px;
+        display: block;
         font-size: 16px;
-        border-radius: 5px;
         border: 2px solid getColor("title-first");
+        border-radius: 5px;
         color: getColor("dark");
         background-color: transparent;
     
