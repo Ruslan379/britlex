@@ -1,0 +1,93 @@
+//todo Модальнє вікно для burger-menu
+//? Контейнер для Бургер-меню
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // width: 100vw;
+    width: 100%;
+    height: 100vh;
+    padding: 37px 37px;
+    background-color: hsla(0, 0%, 93%, 0.95);
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    //? LOGO
+    .logo {
+        //? LOGO-sm  - moved to scss/components
+        width: 100%;
+        margin-left: 1px;
+        display: block;
+    
+        //! Медіа-запити
+        //* До 574px
+        @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+            font-size: 24px;
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            font-size: 36px;
+        }
+    
+        //? Нижня лінія – межа секції
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: red; //? ТИМЧАСОВО
+            // background-color: getColor("border-contacts");
+        }
+    }
+
+    //? Кнопка Бургер-меню_(close)
+    .button-menu-toggle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #fff;
+        @include buttons-menu-toggle;
+        
+        &:hover,
+        &:focus {
+            color: #3cff00;
+        }
+    }
+
+    // ? Список для Бургер-меню
+    .header-list {
+        display: grid;
+        // gap: 16px;
+    
+        &__link {
+            display: block;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 2.95;
+            color: getColor("title-first");
+            
+            &:hover {
+                color: getColor('hover');
+            }
+        }
+    }
+
+    // Кнопка "Let’s Talk"
+    .header__button {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
