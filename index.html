@@ -25,7 +25,7 @@
 		<!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 		<!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
 		
-		<link rel="stylesheet" href="/britlex/assets/index-6686c8c9.css">
+		<link rel="stylesheet" href="/britlex/assets/index-e9c9c757.css">
 	</head>
 
 	<body>
@@ -57,7 +57,11 @@
             </ul>
         </nav>
         <!--? Кнопка "Бургер-меню" -->
-        <button class="button-menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button 
+            class="button-menu-toggle js-open-menu" 
+            aria-expanded="false" 
+            aria-controls="mobile-menu"
+        >
             <!--? Using inline SVG -->
             <!-- <svg 
                 width="34" 
@@ -352,42 +356,45 @@
         </ul>
     </div>
 </footer>
-
+		
 		<!--? Контейнер для Бургер-меню -->
 		<div class="menu-container js-menu-container" id="mobile-menu">
 			<!--? Кнопка Бургер-меню_(close)-->
 			<button class="button-menu-toggle js-close-menu">
-				<svg
-					fill="currentColor"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-				>
-					<path
-						fill-rule="evenodd"
+				<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+					<path fill-rule="evenodd"
 						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-						clip-rule="evenodd"
-					>
+						clip-rule="evenodd">
 					</path>
 				</svg>
 			</button>
 			<!--? Список для Бургер-меню -->
-			<ul class="nav-list">
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="./lifestyle.html">LIFESTYLE</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="./photodiary.html">PHOTODIARY</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="./music.html">MUSIC</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="./travel.html">TRAVEL</a>
-				</li>
-			</ul>
+			<nav class="header__navigation">
+				<a class="logo" href="./index.html">Brit<span class="logo__light">lex</span></a>
+				<!--? Список для Бургер-меню -->
+				<ul class="header-list">
+					<li class="header-list__item">
+						<a class="header-list__link" href="./index.html">Home</a>
+					</li>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#skills">Skills</a>
+					</li>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#about">About Us</a>
+					</li>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#pricing">Pricing</a>
+					</li>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#contacts">Contacts</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<!--? Кнопка "Let’s Talk" -->
+			<button class="header__button">Let’s Talk</button>
 		</div>
+		
 		<!--? Скрипт для блокування вертикальної смуги прокрутки  -->
 		<script
 			defer
