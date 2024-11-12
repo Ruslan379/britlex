@@ -19,7 +19,8 @@
     openMenuBtn.addEventListener('click', toggleMenu);
     closeMenuBtn.addEventListener('click', toggleMenu);
 
-    //! Close the mobile menu on wider screens if the device orientation changes
+
+    //! Закриття burger-menu на екранах ширших ніж 991px, або якщо орієнтація пристрою змінюється
     window.matchMedia('(min-width: 992px)').addEventListener('change', e => {
         if (!e.matches) return;
         mobileMenu.classList.remove('is-open');
@@ -27,7 +28,7 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    //! Закриття burger-menu по кліку на елементі списку nav-list
+    //! Закриття burger-menu по кліку на елементі списку header-list
     mobileMenuItemRef.forEach(function (item) {
         item.addEventListener('click', function () {
             expanded = mobileMenu.getAttribute("aria-expanded") === "true" || false;

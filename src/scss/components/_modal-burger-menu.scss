@@ -134,6 +134,7 @@
             
             &:hover {
                 color: getColor('hover');
+                text-shadow: 1px 1px 2px getColor('dark');
             }
         }
     }
@@ -142,15 +143,27 @@
     .header__button {
         display: block;
         display: block;
-        width: 160px;
+        // width: 160px;
+        width: 100%;
         height: 50px;
-        // font-family: getFont('main-family');
-        // font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         border-radius: 5px;
         border: 2px solid getColor("title-first");
         color: getColor("dark");
         background-color: transparent;
+    
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            width: 60%;
+            font-size: 24px;
+        }
+        
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            width: 50%;
+            font-size: 20px;
+        }
     }
 }
 
