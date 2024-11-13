@@ -459,26 +459,31 @@
 				<button class="header__button">Let’s Talk</button>
 			</div>
 		</div>
-		
-		<!--? Скрипт для блокування вертикальної смуги прокрутки  -->
-		<script
-			defer
-			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-			crossorigin="anonymous"
-		>
-		</script>
 
 		<!--? Скрипт для Бургер-меню -->
 		<!--! Так ПРАЦЮЭ і в localhost і на GitHuB якщо ДОДАТИ  -->
 		<!--! точну копію фала mobile-menu.js в папку public -->
 		<!-- <script defer src="/mobile-menu.js"></script> -->
+		
 		<!--! Так ПРАЦЮЭ ТІЛЬКИ в localhost -->
 		<!--! і НЕ працює на GitHuB якщо -->
 		<!--! НЕ додати точну копію фала mobile-menu.js в папку public -->
 		<!-- <script src="./mobile-menu.js"></script> -->
+		
 		<!--* Так ПРАЦЮЭ і в localhost і на GitHuB навіть якщо НЕ додати  -->
 		<!--* точну копію фала mobile-menu.js в папку public -->
+		<!-- <script type="module" src="./mobile-menu.js"></script> -->
 		
+		<!--* Так ПРАЦЮЭ і в localhost і на GitHuB якщо   -->
+		<!--* в файл index.js додати: import "./js/mobile-menu"; -->
+		
+
+		<!--? Скрипт для блокування вертикальної смуги прокрутки  -->
+		<script 
+			defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		>
+		</script>
 	</body>
 </html>
