@@ -30,15 +30,19 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    //! Закриття burger-menu по кліку на елементі списку header-list
-    mobileMenuItemRef.forEach(function (item) {
-        item.addEventListener('click', function () {
-            expanded = mobileMenu.getAttribute("aria-expanded") === "true" || false;
-            backdrop.classList.toggle("is-hidden");
-            mobileMenu.classList.toggle("is-open");
-            mobileMenu.setAttribute("aria-expanded", !expanded);
-            openMenuBtn.setAttribute('aria-expanded', false);
-            bodyScrollLock.enableBodyScroll(document.body);
+    //! Закриття burger-menu по кліку на елементі списку header-list на екранах меньших ніж 992px
+    window.matchMedia('(max-width: 991px)').addEventListener('change', e => {
+        if (!e.matches) return;
+        mobileMenuItemRef.forEach(function (item) {
+            item.addEventListener('click', function () {
+                expanded = mobileMenu.getAttribute("aria-expanded") === "true" || false;
+                backdrop.classList.add("is-hidden");
+                mobileMenu.classList.remove("is-open");
+                mobileMenu.setAttribute("aria-expanded", !expanded);
+                openMenuBtn.setAttribute('aria-expanded', false);
+                bodyScrollLock.enableBodyScroll(document.body);
+            });
         });
     });
+
 })();
