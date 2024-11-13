@@ -5,6 +5,7 @@
     const closeMenuBtn = document.querySelector('.js-close-menu');
     const mobileMenuItemRef = document.querySelectorAll('.js-menu-container .js-item');
 
+
     const toggleMenu = () => {
         const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
         backdrop.classList.toggle('is-hidden');
@@ -14,8 +15,10 @@
         const scrollLockMethod = !isMenuOpen
             ? 'disableBodyScroll'
             : 'enableBodyScroll';
+        
         bodyScrollLock[scrollLockMethod](document.body);
     };
+
 
     openMenuBtn.addEventListener('click', toggleMenu);
     closeMenuBtn.addEventListener('click', toggleMenu);
@@ -34,18 +37,18 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    // //! Закриття burger-menu по кліку на елементі списку header-list (на екранах меньших ніж 992px)
-        mobileMenuItemRef.forEach(function (item) {
-            item.addEventListener('click', function () {
-                console.log('Це клік в item (тільки для Бургер-меню)');
-                // expanded = mobileMenu.getAttribute('aria-expanded') === 'true' || false;
-                backdrop.classList.add('is-hidden');
-                mobileMenu.classList.remove('is-open');
-                // mobileMenu.setAttribute('aria-expanded', !expanded);
-                openMenuBtn.setAttribute('aria-expanded', false);
-                bodyScrollLock.enableBodyScroll(document.body);
-            });
+
+    //! Закриття burger-menu по кліку на елементі списку header-list (на екранах меньших ніж 992px)
+    mobileMenuItemRef.forEach(function (item) {
+        item.addEventListener('click', function () {
+            console.log('Це клік в item (тільки для Бургер-меню)');
+            backdrop.classList.add('is-hidden');
+            mobileMenu.classList.remove('is-open');
+            openMenuBtn.setAttribute('aria-expanded', false);
+            bodyScrollLock.enableBodyScroll(document.body);
         });
+    });
+
 
     //! var.2 Закриття burger-menu по кліку на елементі списку header-list на екранах меньших ніж 992px
     // function handleClick() {
