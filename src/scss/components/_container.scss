@@ -5,6 +5,7 @@
     margin: 0 auto;
 	// ! міксін outline
 	@include outline();
+	// outline: none;
 
 	@media (min-width: getBreakPoint('sm')) {
 		padding: 0 14px;
@@ -12,6 +13,7 @@
 		max-width: getBreakPoint('sm');
 		// ! міксін outline
 		@include outline($color: teal);
+		// outline: none;
 	}
 	@media (min-width: getBreakPoint('md')) {
 		padding: 0 32px;
@@ -19,6 +21,7 @@
 		max-width: getBreakPoint('md');
 		// ! міксін outline
 		@include outline($color: violet);
+		// outline: none;
 	}
 	@media (min-width: getBreakPoint('lg')) {
 		padding: 0 40px;
@@ -26,6 +29,7 @@
 		max-width: getBreakPoint('lg');
 		// ! міксін outline
 		@include outline($color: green);
+		// outline: none;
 	}
 	@media (min-width: getBreakPoint('xl')) {
 		padding: 0 32px;
@@ -33,6 +37,7 @@
 		max-width: getBreakPoint('xl');
 		// ! міксін outline
 		@include outline($color: orange);
+		// outline: none;
 	}
 	@media (min-width: getBreakPoint('xxl')) {
 		padding: 0 132px;
@@ -40,5 +45,6 @@
 		max-width: getBreakPoint('xxl');
 		// ! міксін outline
 		@include outline($color: blue);
+		// outline: none;
 	}
 }
