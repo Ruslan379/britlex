@@ -30,7 +30,7 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    //! Закриття burger-menu по кліку на елементі списку header-list на екранах меньших ніж 992px
+    // //! Закриття burger-menu по кліку на елементі списку header-list на екранах меньших ніж 992px
     window.matchMedia('(max-width: 991px)').addEventListener('change', e => {
         if (!e.matches) return;
         mobileMenuItemRef.forEach(function (item) {
@@ -44,5 +44,22 @@
             });
         });
     });
+
+    //! var.2 Закриття burger-menu по кліку на елементі списку header-list на екранах меньших ніж 992px
+    // function handleClick() {
+    //     backdrop.classList.add("is-hidden");
+    //     mobileMenu.classList.remove("is-open");
+    //     bodyScrollLock.enableBodyScroll(document.body);
+    // }
+
+    // //? Добавляем слушатели
+    // mobileMenuItemRef.forEach(function (item) {
+    //     item.addEventListener('click', handleClick);
+    // });
+
+    // //? Чтобы удалить слушатели, используем removeEventListener с той же функцией
+    // mobileMenuItemRef.forEach(function (item) {
+    //     item.removeEventListener('click', handleClick);
+    // });
 
 })();

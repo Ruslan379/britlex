@@ -45,7 +45,11 @@
 			<!--? Контейнер для Бургер-меню (modal-window) -->
 			<div class="menu-container js-menu-container" id="mobile-menu">
 				<!--? Кнопка Бургер-меню_(close)-->
-				<button class="button-burger-menu-close js-close-menu">
+				<button 
+					class="button-burger-menu-close js-close-menu"
+					aria-expanded="false" 
+					aria-controls="mobile-menu"
+				>
 					<!--? Using inline SVG -->
 					<!-- <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_598_10820)">
@@ -103,6 +107,8 @@
 		</script>
 
 		<!--? Скрипт для Бургер-меню -->
-		<script defer src="/mobile-menu.js"></script>
+		<!-- <script defer src="/mobile-menu.js"></script> -->
+		<script src="/mobile-menu.js"></script>
+		<!-- <script type="module" src="./mobile-menu.js"></script> -->
 	</body>
 </html>
