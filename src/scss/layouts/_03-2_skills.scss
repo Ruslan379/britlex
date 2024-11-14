@@ -481,16 +481,19 @@
                 @media screen and (min-width: getBreakPoint('xl')) {
                     padding: 16px;
                     gap: 25px;
-                    grid-template-columns: repeat(auto-fit, minmax(254px, 1fr)); //! var.1
-                    grid-template-columns: 1fr 254px; //! var.2
+                    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); //! var.1
+                    // grid-template-columns: 1fr 254px; //! var.2
+                    grid-template-columns: 1fr 275px; //! var.2
                 }
                 
                 //* Від 1600px
                 @media screen and (min-width: getBreakPoint('xxl')) {
                     padding: 18px 18px 30px 18px;
-                    gap: 102px;
+                    // gap: 102px;
+                    gap: 30px;
                     grid-template-columns: repeat(auto-fit, minmax(373px, 1fr)); //! var.1
-                    grid-template-columns: 1fr 382px; //! var.2
+                    // grid-template-columns: 1fr 382px; //! var.2
+                    grid-template-columns: 1fr 406px; //! var.2
                 }
             
                 //? Додаткові властивості до ЗАГОЛОВКІВ та ТЕКСТІВ карток в nth-child(4) Від 767px

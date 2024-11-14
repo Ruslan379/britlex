@@ -137,19 +137,25 @@
 	// height: 36px;
 	// width: 34px;
 	// height: 19px;
-    // padding: 0;
+    // padding: 0; //? in reset.css
     // @include flex_JCcen-AIcen;
-    // cursor: pointer;
+    // cursor: pointer; //? in reset.css
     // border: none; //? in reset.css
 	// border-radius: 5px;
     // outline: none; //? in reset.css
+	fill: getColor("button-svg");
     background-color: transparent;
+	transition: all 250ms ease-in-out;
 	// ! міксін outline
 	// @include outline($size: 1px, $type: dashed, $color: blue);
     
 	// &:focus,
     &:hover {
-        background-color: getColor('hover');
+		fill: getColor("button-svg-hover");
+		stroke: getColor("button-svg-stroke");
+		stroke-opacity: 0.5;
+		stroke-width: 1px;
+        // background-color: getColor('hover');
 		// background-color: red;
     }
 }

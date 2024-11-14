@@ -73,19 +73,14 @@
             transform: translateX(0);
         }
     
-        //? LOGO для Бургер-меню
-        .logo {
-            //? LOGO-sm  - moved to scss/components
+        //? logo-container (для hover) для Бургер-меню
+        .logo-container {
             width: 100%;
             margin-bottom: 48px;
-            display: block;
+            // ! міксін outline
+            // @include outline($type: dashed, $color: red);
         
             //! Медіа-запити
-            //* До 574px
-            @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
-                font-size: 24px;
-            }
-            
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 margin-bottom: 35px;
@@ -93,6 +88,7 @@
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
+                // margin-bottom: 35px;
                 margin-bottom: 45px;
             }
         
@@ -117,33 +113,51 @@
                     margin-top: 63px;
                 }
             }
+        
+            //? LOGO для Бургер-меню
+            .logo {
+                //? LOGO-sm  - moved to scss/components
+                //! Медіа-запити
+                //* До 574px
+                @media screen and (max-width: calc(#{getBreakPoint('md')} - 1px)) {
+                    font-size: 24px;
+                }
+            }
         }
     
         //? Кнопка Бургер-меню_(close)
         .button-burger-menu-close {
             position: absolute;
-            top: 36px;
-            right: 14px;
+            top: 32px; //? 36px
+            right: 4px; //? 14px
             border-radius: 50%;
+            fill: getColor("button-svg");
             background-color: transparent;
+            transition: all 350ms ease-in-out;
         
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
                 top: 39px;
-                right: 32px;
+                right: 22px; //? 32px
             }
             
             //* Від 767px
             @media screen and (min-width: getBreakPoint('lg')) {
                 // top: 39px;
-                right: 40px;
+                right: 30px; //? 40px
             }
         
             // &:focus,
             &:hover {
-                background-color: getColor('hover');
+                // fill: getColor("button-svg-hover");
+                fill: darkred;
+                fill-opacity: 0.5;
+                // background-color: getColor('hover');
                 // background-color: red;
+                box-shadow: 
+                    inset 0 0 10px 4px rgba(0, 0, 0, 0.3),
+                    2px 2px 6px getColor('dark');
             }
         }
     
@@ -173,6 +187,7 @@
                 font-size: 22px;
                 line-height: 2.95;
                 color: getColor("title-first");
+                transition: text-shadow, 250ms ease-in-out;
             
                 &:hover {
                     color: getColor('hover');

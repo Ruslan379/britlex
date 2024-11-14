@@ -112,11 +112,22 @@
             font-weight: 500;
             font-size: 16px;
             color: getColor("title-first");
+            transition: text-shadow, 250ms ease-in-out;
+            
+            &:hover {
+                color: getColor('hover');
+                text-shadow: 1px 1px 1px getColor('dark');
+            }
         
             //! Медіа-запити
             //* Від 1600px
             @media screen and (min-width: getBreakPoint('xxl')) {
                 font-size: 20px;
+                
+                &:hover {
+                    color: getColor('hover');
+                    text-shadow: 2px 2px 2px getColor('dark');
+                }
             }
         }
     }
@@ -125,11 +136,6 @@
     //? Відображається до 991px (sm, md, lg)
     .button-menu-toggle {
         @include buttons-menu-toggle;
-    
-        // &:focus,
-        // &:hover {
-        //     color: getColor('hover');
-        // }
     
         //? Приховуємо SVG-іконки md та lg
         //? Відображається тільки SVG-іконка sm

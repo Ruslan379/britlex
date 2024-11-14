@@ -6,6 +6,12 @@
     font-size: 30px;
     // line-height: 1.5;
     color: getColor("dark");
+    transition: box-shadow, 350ms ease-in-out;
+    
+    &:hover {
+        color: getColor('hover');
+        text-shadow: 1px 1px 1px getColor('dark');
+    }
     
     &__light {
         color: getColor("gray-first");
