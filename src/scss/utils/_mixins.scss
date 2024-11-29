@@ -118,6 +118,46 @@
 	// @include outline($size: 1px, $type: dotted, $color: green);
 }
 
+@mixin title-section() {
+	// font-family: getFont("main-family");
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 3.33;
+	text-align: center;
+	color: getColor('dark');
+	// ! міксін outline
+	// @include outline($size: 1px, $type: dotted, $color: green);
+
+	//! Медіа-запити
+	//* Від 575px
+		@media screen and (min-width: getBreakPoint('md')) {
+			// @include title(30px, 2.67);
+			font-size: 24px;
+			line-height: 2.67;
+		}
+	
+		//* Від 767px
+		// @media screen and (min-width: getBreakPoint('lg')) {
+		// 	// @include title(30px, 2.67);
+		// 	font-size: 24px;
+		// 	line-height: 2.67;
+		// }
+	
+		//* Від 992px
+		@media screen and (min-width: getBreakPoint('xl')) {
+			// @include title(36px, 2.22);
+			font-size: 36px;
+			line-height: 2.22;
+		}
+	
+		//* Від 1600px
+		@media screen and (min-width: getBreakPoint('xxl')) {
+			@include title(48px, 1.67);
+			font-size: 48px;
+			line-height: 1.67;
+		}
+}
+
 
 //! ----------- SASS: Загальні стилі Kнопок -----------
 @mixin button($width: 178px, $height: 50px) {
