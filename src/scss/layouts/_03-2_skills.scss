@@ -50,32 +50,33 @@
         // line-height: 3.33;
         // color: getColor('dark');
         //? ____________ Replaced by mixin ____________
-        @include title(24px, 3.33);
-        text-align: center;
+        // @include title(24px, 3.33); //todo var.1 
+        // text-align: center; //todo var.1
+        @include title-section(); //todo var.2
     
         //! Медіа-запити
         //* Від 575px
         @media screen and (min-width: getBreakPoint('md')) {
             margin-bottom: 34px;
-            @include title(30px, 2.67);
+            // @include title(30px, 2.67); //todo var.1 
         }
         
         //* Від 767px
         @media screen and (min-width: getBreakPoint('lg')) {
             margin-bottom: 36px;
-            // @include title(30px, 2.67);
+            // // @include title(30px, 2.67); //todo var.1
         }
         
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             margin-bottom: 52px;
-            @include title(36px, 2.22);
+            // @include title(36px, 2.22); //todo var.1 
         }
         
         //* Від 1600px
         @media screen and (min-width: getBreakPoint('xxl')) {
             margin-bottom: 96px;
-            @include title(48px, 1.67);
+            // @include title(48px, 1.67); //todo var.1 
         }
     }
 

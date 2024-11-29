@@ -107,6 +107,7 @@
 
 
 //! ----------- SASS: Загальні стилі Заголовків -----------
+//todo var.1
 @mixin title($ont-size: 30px, $line-height: 1.5) {
 	// font-family: getFont("main-family");
 	font-weight: 600;
@@ -118,6 +119,7 @@
 	// @include outline($size: 1px, $type: dotted, $color: green);
 }
 
+//todo var.2
 @mixin title-section() {
 	// font-family: getFont("main-family");
 	font-weight: 600;
@@ -131,28 +133,24 @@
 	//! Медіа-запити
 	//* Від 575px
 		@media screen and (min-width: getBreakPoint('md')) {
-			// @include title(30px, 2.67);
-			font-size: 24px;
+			font-size: 30px;
 			line-height: 2.67;
 		}
 	
 		//* Від 767px
 		// @media screen and (min-width: getBreakPoint('lg')) {
-		// 	// @include title(30px, 2.67);
-		// 	font-size: 24px;
+		// 	font-size: 30px;
 		// 	line-height: 2.67;
 		// }
 	
 		//* Від 992px
 		@media screen and (min-width: getBreakPoint('xl')) {
-			// @include title(36px, 2.22);
 			font-size: 36px;
 			line-height: 2.22;
 		}
 	
 		//* Від 1600px
 		@media screen and (min-width: getBreakPoint('xxl')) {
-			@include title(48px, 1.67);
 			font-size: 48px;
 			line-height: 1.67;
 		}
