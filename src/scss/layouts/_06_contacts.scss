@@ -130,9 +130,35 @@
         // line-height: 3.33;
         // color: getColor('dark');
         //? ____________ Replaced by mixin ____________
-        @include title(24px, 3.33);
+        // @include title(24px, 3.33); //todo var.1 
         // text-align: center;
+        @include title-section(); //todo var.2
+    
+        //! Медіа-запити
+        //* Від 575px
+        @media screen and (min-width: getBreakPoint('md')) {
+            margin-bottom: 34px;
+            // @include title(30px, 2.67); //todo var.1 
+        }
         
+        //* Від 767px
+        @media screen and (min-width: getBreakPoint('lg')) {
+            margin-bottom: -9px;
+            // // @include title(30px, 2.67); //todo var.1
+        }
+        
+        //* Від 992px
+        @media screen and (min-width: getBreakPoint('xl')) {
+            margin-bottom: 3px;
+            // @include title(36px, 2.22); //todo var.1
+        }
+        
+        //* Від 1600px
+        @media screen and (min-width: getBreakPoint('xxl')) {
+            margin-bottom: 37px;
+            // @include title(48px, 1.67); //todo var.1
+        }
+    
         &::after {
             content: "";
             display: block;
@@ -147,7 +173,7 @@
             background-repeat: no-repeat;
             background-position: 30px center;
             // background-color:getColor("background-image"); //? ТИМЧАСОВО
-            
+        
             //! Медіа-запити
             //* Від 575px
             @media screen and (min-width: getBreakPoint('md')) {
@@ -167,31 +193,6 @@
             @media screen and (min-width: getBreakPoint('lg')) {
                 display: none;
             }
-        }
-        
-        //! Медіа-запити
-        //* Від 575px
-        @media screen and (min-width: getBreakPoint('md')) {
-            margin-bottom: 34px;
-            @include title(30px, 2.67);
-        }
-        
-        //* Від 767px
-        @media screen and (min-width: getBreakPoint('lg')) {
-            margin-bottom: -9px;
-            // @include title(30px, 2.67);
-        }
-        
-        //* Від 992px
-        @media screen and (min-width: getBreakPoint('xl')) {
-            margin-bottom: 3px;
-            @include title(36px, 2.22);
-        }
-        
-        //* Від 1600px
-        @media screen and (min-width: getBreakPoint('xxl')) {
-            margin-bottom: 37px;
-            @include title(48px, 1.67);
         }
     }
 
