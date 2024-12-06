@@ -71,8 +71,10 @@
             display: flex;
             // @include outline($type: dashed, $color: darkgrey);
             
-            &:nth-child(2)::before,
-            &:nth-child(2):after {
+            // &:nth-child(2)::before, //todo var.1
+            // &:nth-child(2):after { //todo var.1
+            //todo або
+            &:not(:last-child):after { //todo var.2
                 content: "•";
                 height: 100%;
                 margin: 0 2px;
