@@ -198,16 +198,18 @@
     
         //? Кнопка "Let’s Talk" для Бургер-меню
         .header__button {
-            width: 100%;
-            height: 50px;
-            display: block;
-            // font-family: getFont('main-family');
-            // font-weight: 400;
-            font-size: 16px;
-            border: 2px solid getColor("title-first");
-            border-radius: 5px;
-            color: getColor("dark");
-            background-color: transparent;
+            // width: 100%;
+            // height: 50px;
+            // display: block;
+            // // font-family: getFont('main-family');
+            // // font-weight: 400;
+            // font-size: 16px;
+            // border: 2px solid getColor("title-first");
+            // border-radius: 5px;
+            // color: getColor("dark");
+            // background-color: transparent;
+            @include button-lets-talk(100%);
+            // font-size: 16px;
         
             //! Медіа-запити
             //* Від 575px

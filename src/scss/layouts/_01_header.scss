@@ -192,16 +192,17 @@
         //* Від 992px
         @media screen and (min-width: getBreakPoint('xl')) {
             //? Відображаємо від 992px (xl, xxl)
-            width: 160px;
-            height: 50px;
-            display: block;
-            // font-family: getFont('main-family');
-            // font-weight: 400;
-            font-size: 18px;
-            border: 2px solid getColor("title-first");
-            border-radius: 5px;
-            color: getColor("dark");
-            background-color: transparent;
+            // width: 160px;
+            // height: 50px;
+            // display: block;
+            // // font-family: getFont('main-family');
+            // // font-weight: 400;
+            // font-size: 18px;
+            // border: 2px solid getColor("title-first");
+            // border-radius: 5px;
+            // color: getColor("dark");
+            // background-color: transparent;
+            @include button-lets-talk();
         }
         
         //* Від 1600px

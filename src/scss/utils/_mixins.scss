@@ -197,3 +197,16 @@
 		// background-color: red;
     }
 }
+
+@mixin button-lets-talk($width: 160px, $height: 50px) {
+	width: $width;
+	height: $height;
+	display: block;
+	// font-family: getFont('main-family');
+	// font-weight: 400;
+	font-size: 18px;
+	border: 2px solid getColor("title-first");
+	border-radius: 5px;
+	color: getColor("dark");
+	background-color: transparent;
+}
