@@ -3,23 +3,23 @@
     // @include outline($type: dashed, $color: blue);
 
     .logo {
-            display: inline-flex;
-            // font-family: getFont("main-family");
-            // font-weight: 400;
-            font-size: 30px;
-            // line-height: 1.5;
-            color: getColor("dark");
-            transition: box-shadow, 350ms ease-in-out;
-            // ! міксін outline
-            // @include outline($type: dotted, $color: tomato);
-            
-            &:hover {
-                color: getColor('hover');
-                text-shadow: 1px 1px 1px getColor('dark');
-            }
+        display: inline-flex;
+        // font-family: getFont("main-family");
+        // font-weight: 400;
+        font-size: 30px;
+        // line-height: 1.5;
+        color: getColor("dark");
+        transition: box-shadow, 350ms ease-in-out;
+        // ! міксін outline
+        // @include outline($type: dotted, $color: tomato);
         
-            &__light {
-                color: getColor("gray-first");
-            }
+        &:hover {
+            color: getColor('hover');
+            text-shadow: 1px 1px 1px getColor('dark');
         }
+    
+        &__light {
+            color: getColor("gray-first");
+        }
+    }
 }
