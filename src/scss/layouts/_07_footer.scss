@@ -65,7 +65,7 @@
     &-list {
         // width: 100%;
         display: flex;
-        @include outline($type: dotted, $color: black);
+        // @include outline($type: dotted, $color: black);
         
         &__item {
             display: flex;
